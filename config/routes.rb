@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   resources :field_data
   resources :projects
   resources :welcomes
-  devise_for :companies
-  devise_for :admins
-  devise_for :users
+  # devise_for :companies
+  # devise_for :admins
+  # devise_for :users
   get '/sign_out' => 'devise/sessions#destroy'
   controller :manage do
     get 'manage/users'   => :users
