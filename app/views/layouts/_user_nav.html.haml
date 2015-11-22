@@ -1,0 +1,80 @@
+%li
+  %a{"data-target" => "#projects", "data-toggle" => "collapse", :href => "javascript:;"}
+    %i.fa.fa-files-o
+    Projects
+    %i.fa.fa-fw.fa-caret-down
+  %ul#projects.collapse
+    %li
+      =link_to 'New <i class="fa fa-fw fa-plus"></i>'.html_safe, new_project_path
+    %li
+      =link_to 'Manage <i class="fa fa-fw fa-pencil"></i>'.html_safe, projects_path
+%li
+  %a{"data-target" => "#field_data", "data-toggle" => "collapse", :href => "javascript:;"}
+    %i.fa.fa-database
+    Field Data
+    %i.fa.fa-fw.fa-caret-down
+  %ul#field_data.collapse
+    %li
+      =link_to 'New <i class="fa fa-fw fa-plus"></i>'.html_safe, new_field_datum_path
+    %li
+      =link_to 'Manage <i class="fa fa-fw fa-pencil"></i>'.html_safe, field_data_path
+%li
+  %a{"data-target" => "#species_family", "data-toggle" => "collapse", :href => "javascript:;"}
+    %i.fa.fa-globe
+    Speices Family
+    %i.fa.fa-fw.fa-caret-down
+  %ul#species_family.collapse
+    %li
+      =link_to 'New <i class="fa fa-fw fa-plus"></i>'.html_safe, new_species_family_path
+    %li
+      =link_to 'Manage <i class="fa fa-fw fa-pencil"></i>'.html_safe,  species_families_path
+%li
+  %a{"data-target" => "#species", "data-toggle" => "collapse", :href => "javascript:;"}
+    %i.fa.fa-pagelines
+    Speices
+    %i.fa.fa-fw.fa-caret-down
+  %ul#species.collapse
+    %li
+      =link_to 'New <i class="fa fa-fw fa-plus"></i>'.html_safe, new_species_path
+    %li
+      =link_to 'Manage <i class="fa fa-fw fa-pencil"></i>'.html_safe,  species_index_path
+%li
+  %a{"data-target" => "#location", "data-toggle" => "collapse", :href => "javascript:;"}
+    %i.fa.fa-map-marker
+    Locations
+    %i.fa.fa-fw.fa-caret-down
+  %ul#location.collapse
+    %li
+      =link_to 'New <i class="fa fa-fw fa-plus"></i>'.html_safe, new_location_path
+    %li
+      =link_to 'Manage <i class="fa fa-fw fa-pencil"></i>'.html_safe, locations_path
+%li
+  %a{"data-target" => "#communities", "data-toggle" => "collapse", :href => "javascript:;"}
+    %i.fa.fa-users
+    Communities
+    %i.fa.fa-fw.fa-caret-down
+  %ul#communities.collapse
+    %li
+      =link_to 'New <i class="fa fa-fw fa-plus"></i>'.html_safe, new_community_path
+    %li
+      =link_to 'Manage <i class="fa fa-fw fa-pencil"></i>'.html_safe, communities_path
+%li
+  %a{"data-target" => "#community-report", "data-toggle" => "collapse", :href => "javascript:;"}
+    %i.fa.fa-file-text-o
+    Community Reports
+    %i.fa.fa-fw.fa-caret-down
+  %ul#community-report.collapse
+    %li
+      =link_to 'New <i class="fa fa-fw fa-plus"></i>'.html_safe, new_report_community_path
+    %li
+      =link_to 'Manage <i class="fa fa-fw fa-pencil"></i>'.html_safe, report_communities_path
+%li
+  %a{"data-target" => "#community-growth", "data-toggle" => "collapse", :href => "javascript:;"}
+    %i.fa.fa-line-chart
+    Community Growth
+    %i.fa.fa-fw.fa-caret-down
+  %ul#community-growth.collapse
+    %li
+      =link_to 'New <i class="fa fa-fw fa-plus"></i>'.html_safe, new_community_growth_form_path
+    %li
+      =link_to 'Manage <i class="fa fa-fw fa-pencil"></i>'.html_safe, community_growth_forms_path

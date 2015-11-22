@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  percentage: 1.5
+  lower_class_limit: 1.5
+  upper_class_limit: 1.5
+  class_interval: 1.5
+
+two:
+  percentage: 1.5
+  lower_class_limit: 1.5
+  upper_class_limit: 1.5
+  class_interval: 1.5

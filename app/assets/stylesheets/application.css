@@ -1,0 +1,184 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.alert{
+  border-radius: 0px !important;
+  margin: 0px;
+  text-align: center;
+}
+.navbar-brand {
+    height: 60px;
+    margin: 0px;
+    padding: 5px;
+}
+.navbar-inverse {
+  border-radius: 0px;
+  border: 0px;
+}
+.navbar-inverse .navbar-nav a{
+    height: 60px;
+    padding-top: 25px;
+}
+.login-container {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 5px 9px #888;
+    background: #FFF none repeat scroll 0% 0%;
+    color: #666;
+}
+
+.login-container h2 {
+    padding: 10px;
+    text-align: center;
+    color: #777;
+    background: rgb(34, 34, 34) none repeat scroll 0%
+}
+
+.login-form-container {
+    padding: 15px;
+}
+.login-form-container a{
+  color: #666;
+  text-align: center;
+  width: 100%;
+}
+a:hover{
+  background: none;
+  text-decoration: none;
+}
+.panel-footer{
+  min-height: 50px;
+}
+.panel.panel-primary.create{
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0px;
+  box-shadow: 10px 10px 5px 9px #888;
+
+}
+#error_explanation h2{
+ background: #D12116;
+}
+#error_explanation {
+ border: 1px solid #D12116;
+}
+.field_with_errors{
+  background: none;
+  color: #D12116;
+  display: block;
+  padding: 0px;
+}
+.field_with_errors input{
+    border: 2px solid #D12116;
+}
+.error{
+  color: #D12116;
+}
+.panel.panel-primary.create .panel-heading{
+  border-radius: 0px;
+
+}
+.panel.panel-primary.create input{
+  border-radius: 0px;
+}
+.btn-success:hover{
+  color: #fff;
+}
+a.btn-success{
+  color: #fff;
+}
+a:hover,a:focus{
+  outline: none;
+}
+.nav.nav-pills > li > a{
+  height: auto;
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+.nav.nav-pills > li > a:hover{
+  color: #FFF;
+  background-color: #080808;
+}
+.nav.nav-pills > li.active > a {
+   color: #FFF;
+   background-color: #080808;
+}
+.z-index{
+  z-index: 2;
+  display: block;
+  position: relative;
+}
+.btn-primary{
+  color: #fff !important;
+}
+.btn-danger{
+  color: #fff !important;
+}
+.btn-default{
+  color: #444;
+}
+select{
+  display: block;
+  width: 33.333%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #555;
+  background-color: #FFF;
+  background-image: none;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  float: left;
+}
+td .fa-check{
+color: rgb(16, 144, 18);
+}
+td .fa-times{
+  color: rgb(144, 16, 16);
+}
+.clear-20{
+  clear: both;
+  height: 20px;
+}
+div.field, div.actions {
+    margin-bottom:0px;
+}
+.navbar-nav > li > .dropdown-menu{
+  padding: 0px;
+}
+.no-padding-left{
+  padding-left: 0px;
+}
+.no-padding-right{
+  padding-right: 0px;
+}
+.nested-fields{
+    border: 1px solid #c3c3c3;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 5px 0px #c3c3c3;
+    -moz-box-shadow: 10px 10px 5px 0px  #c3c3c3;
+    box-shadow: 10px 10px 5px 0px #c3c3c3;
+}
+/*body {
+    background-color: #F1F1F1;
+  }*/

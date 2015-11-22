@@ -1,0 +1,27 @@
+%h1.page-header
+  Listing
+  %small
+    Companies
+= link_to '<i class="fa fa-plus"></i> New Company'.html_safe, new_company_path, class: "btn btn-success pull-right"
+%table.table
+  %thead
+    %tr
+      %th Name
+      %th Email
+      -# %th Admin email
+      %th
+      %th
+      %th
+  %tbody
+    - @companies.each do |company|
+      %tr
+        %td= company.company_name
+        %td= company.email
+        -# %td= Admin.find(company.admin_id).email
+        %td
+          %a.btn.btn-default{:href => "/edit/company/#{company.id}"}Edit
+        %td
+          %a.btn.btn-primary{:href => "/edit/company/password/#{company.id}"}Password Update
+        -# %td
+        -#   %a.btn.btn-danger{:href => "/delete/company/#{company.id}"}Delete
+%br

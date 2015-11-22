@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  potential_biomass: MyString
+  species: MyString
+  threat_status: MyString
+  sa_endemic: MyString
+  sysnonym_of: MyString
+  common_name: MyString
+  life_cycle: MyString
+  growth_forms: MyString
+  min_hieght: MyString
+  max_height: MyString
+  min_altitude: MyString
+  max_altitude: MyString
+  distribution: MyString
+
+two:
+  name: MyString
+  potential_biomass: MyString
+  species: MyString
+  threat_status: MyString
+  sa_endemic: MyString
+  sysnonym_of: MyString
+  common_name: MyString
+  life_cycle: MyString
+  growth_forms: MyString
+  min_hieght: MyString
+  max_height: MyString
+  min_altitude: MyString
+  max_altitude: MyString
+  distribution: MyString

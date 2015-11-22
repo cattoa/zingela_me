@@ -1,0 +1,11 @@
+%h1.page-header
+  Showing
+  %small
+    = @species_family.name
+%h4
+  %b Name:
+  = @species_family.name
+
+= link_to 'Edit', edit_species_family_path(@species_family), class: "btn btn-primary"
+
+= link_to 'Back', species_families_path, class: "btn btn-default"

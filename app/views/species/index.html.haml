@@ -1,0 +1,25 @@
+%h1.page-header
+  Listing
+  %small
+    species
+= link_to '<i class="fa fa-plus"></i> New Species'.html_safe, new_species_path, class: "btn btn-success pull-right"
+%table.table
+  %thead
+    %tr
+      %th Name
+      %th Species Family
+      %th
+      %th
+      %th
+
+  %tbody
+    - @species.each do |species|
+      %tr
+        %td= species.name
+        -if SpeciesFamily.exists?(species.species_family_id)
+          %td= species.species_family.name
+        %td= link_to 'Show', species, class:  "btn btn-default"
+        %td= link_to 'Edit', edit_species_path(species), class:  "btn btn-primary"
+        -# %td= link_to 'Destroy', species, :method => :delete, :data => { :confirm => 'Are you sure?' }, class:  "btn btn-danger"
+
+%br

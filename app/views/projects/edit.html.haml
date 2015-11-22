@@ -1,0 +1,8 @@
+%h1.page-header
+  Edit
+  %small
+    Project
+.col-lg-10
+  = render 'form'
+  = link_to 'Show', @project, class: "btn btn-primary"
+  = link_to 'Back', projects_path, class: "btn btn-default"

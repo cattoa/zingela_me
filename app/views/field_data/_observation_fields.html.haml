@@ -1,0 +1,40 @@
+.nested-fields
+  .clear-20
+  %h2.page-header
+    %b Observation
+    = link_to_remove_association "<i class='fa-minus fa'></i> Remove".html_safe, f, class:"btn btn-danger btn-sm pull-right"
+  .field
+    = f.label :notes
+    = f.text_field :notes, class: "form-control"
+  .field
+    = f.label :notes
+    = f.collection_select(:species_id, Species.all, :id, :name, {}, {:class=>'form-control'})
+  .clear-20
+  #plant_covers
+    - has_item =false
+    = f.fields_for :plant_covers do |builder|
+      - has_item =true
+      = render 'plant_cover_fields', f:builder
+    - if !has_item
+      .links
+        = link_to_add_association '<i class="fa-plus fa"></i> Add Plant cover'.html_safe, f, :plant_covers, class: "btn btn-primary btn-sm", onclick:"$(this).hide();"
+
+  .clear-20
+  #growth_forms
+    - has_item =false
+    = f.fields_for :growth_forms do |builder|
+      - has_item =true
+      = render 'growth_form_fields', f:builder
+    - if !has_item
+      .links
+        = link_to_add_association '<i class="fa-plus fa"></i> Add Growth forms'.html_safe, f, :growth_forms, class: "btn btn-primary btn-sm", onclick:"$(this).hide();"
+  .clear-20
+  #crown_diameters
+    - has_item =false
+    = f.fields_for :crown_diameters do |builder|
+      - has_item =true
+      = render 'crown_diameter_fields', f:builder
+    - if !has_item
+      .links
+        = link_to_add_association '<i class="fa-plus fa"></i> Add Crown Diameters'.html_safe, f, :crown_diameters, class: "btn btn-primary btn-sm", onclick:"$(this).hide();"
+  .clear-20

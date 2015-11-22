@@ -1,0 +1,9 @@
+%h1.page-header
+  Editing
+  %small
+    Community
+.col-lg-10
+  = render 'form'
+
+  = link_to 'Show', @community, class: "btn btn-primary"
+  = link_to 'Back', communities_path, class: "btn btn-default"

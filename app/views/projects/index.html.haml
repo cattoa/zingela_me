@@ -1,0 +1,33 @@
+%h1.page-header
+  Listing
+  %small
+    Projects
+= link_to '<i class="fa fa-plus"></i> New Project'.html_safe, new_project_path, class: "btn btn-success pull-right"
+%table.table
+  %thead
+    %tr
+      %th Name
+      %th Active
+      %th User
+      %th
+      %th
+      %th
+  %tbody
+    - @projects.each do |project|
+      %tr
+        %td= project.name
+        %td
+          -if project.active
+            %i.fa.fa-check
+          -else
+            %i.fa.fa-times
+
+        -if User.exists?(project.user_id)
+          %td= User.find(project.user_id).email
+        - else
+          %td.error User Deleted
+        %td= link_to 'Show', project, class: "btn btn-primary"
+        %td= link_to 'Edit', edit_project_path(project), class: "btn btn-default"
+        %td= link_to 'Delete', project, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "btn btn-danger"
+
+%br

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  start_date: 2015-11-11
+  expected_delivery_date: 2015-11-11
+  actual_delivery_date: 2015-11-11
+  active: false
+  date_changed: 2015-11-11
+  user_id: 1
+  company_id: 1
+
+two:
+  name: MyString
+  start_date: 2015-11-11
+  expected_delivery_date: 2015-11-11
+  actual_delivery_date: 2015-11-11
+  active: false
+  date_changed: 2015-11-11
+  user_id: 1
+  company_id: 1

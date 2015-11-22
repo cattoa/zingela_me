@@ -1,0 +1,8 @@
+%h1.page-header
+  Edit
+  %small
+    Location
+.col-lg-10
+  = render 'form'
+  = link_to 'Show', @location, class: "btn btn-primary"
+  = link_to 'Back', locations_path, class: "btn btn-default"

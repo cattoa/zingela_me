@@ -1,0 +1,35 @@
+%h1.page-header
+  New
+  %small
+    =resource_name
+.col-lg-10
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = devise_error_messages!
+    - if resource_name.to_s == "company"
+      .field
+        = f.label :company_name
+        %br/
+        = f.text_field :company_name, autofocus: true, class: "form-control max-200"
+    - else
+      .field
+        = f.label :company_id
+        %br/
+        = f.collection_select(:company_id, Company.all, :id, :company_name, {}, {:class=>'form-control'})
+    .field
+      = f.label :email
+      %br/
+      = f.email_field :email, class: "form-control max-200"
+    .field
+      = f.label :password
+      - if @minimum_password_length
+        %em
+          (#{@minimum_password_length} characters minimum)
+      %br/
+      = f.password_field :password, autocomplete: "off", class: "form-control max-200"
+    .field
+      = f.label :password_confirmation
+      %br/
+      = f.password_field :password_confirmation, autocomplete: "off", class: "form-control max-200"
+    .clear-20
+    .actions
+      = f.submit "Create", class: "btn btn-success pull-right"

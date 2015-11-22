@@ -1,0 +1,8 @@
+%h1.page-header
+  Editing
+  %small
+    species
+.col-lg-10
+  = render 'form'
+  = link_to 'Show', @species, class: "btn btn-primary"
+  = link_to 'Back', species_index_path, class: "btn btn-default"

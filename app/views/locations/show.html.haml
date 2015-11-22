@@ -1,0 +1,27 @@
+%h1.page-header
+  Show
+  %small
+    Location
+.col-lg-10
+  %h4
+    %b Name:
+    = @location.name
+  %h4
+    %b Country:
+    = @location.country
+  %h4
+    %b Province:
+    = @location.province
+  %h4
+    %b City:
+    = @location.city
+  %h4
+    %b Address 1:
+    = @location.address_1
+  %h4
+    %b Address 2:
+    = @location.address_2
+
+  = link_to 'Edit', edit_location_path(@location), class: "btn btn-primary"
+
+  = link_to 'Back', locations_path, class: "btn btn-default"

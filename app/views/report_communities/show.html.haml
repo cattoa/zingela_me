@@ -1,0 +1,18 @@
+%h1.page-header
+  Showing
+  %small
+    Report Community
+%h4
+  %b Percentage cover:
+  = @report_community.percentage_cover
+%h4
+  %b Mean canopy diameter:
+  = @report_community.mean_canopy_diameter
+%h4
+  %b Individuals per hectare:
+  = @report_community.individuals_per_hectare
+%h4
+  %b Community:
+  = @report_community.community.name
+= link_to 'Edit', edit_report_community_path(@report_community), class: "btn btn-primary"
+= link_to 'Back', report_communities_path, class: "btn btn-default"

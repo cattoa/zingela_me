@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  count: 1
+  percentage_cover_mean: 1.5
+  occurance_mean: 1.5
+  slope: 1.5
+  intercept: 1.5
+  percentage_cover: 1.5
+  proportional_cover: 1.5
+  mean_canopy_diameter: 1.5
+  individuals_per_hectare: 1.5
+  std_deviation: 1.5
+  std_error: 1.5
+  has_strong_competitor: false
+  has_normal_competitor: false
+  has_weak_competitor: false
+
+two:
+  description: MyString
+  count: 1
+  percentage_cover_mean: 1.5
+  occurance_mean: 1.5
+  slope: 1.5
+  intercept: 1.5
+  percentage_cover: 1.5
+  proportional_cover: 1.5
+  mean_canopy_diameter: 1.5
+  individuals_per_hectare: 1.5
+  std_deviation: 1.5
+  std_error: 1.5
+  has_strong_competitor: false
+  has_normal_competitor: false
+  has_weak_competitor: false

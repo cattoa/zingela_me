@@ -1,0 +1,28 @@
+%h1.page-header
+  New
+  %small
+    Company
+.col-lg-10
+  = form_for(@company, url: "/create/company/") do |f|
+    .field
+      = f.label :company_name
+      %br/
+      = f.text_field :company_name, autofocus: true, class: "form-control max-200"
+    .field
+      = f.label :email
+      %br/
+      = f.email_field :email, class: "form-control max-200"
+    .field
+      = f.label :password
+      - if @minimum_password_length
+        %em
+          (#{@minimum_password_length} characters minimum)
+      %br/
+      = f.password_field :password, autocomplete: "off", class: "form-control max-200"
+    .field
+      = f.label :password_confirmation
+      %br/
+      = f.password_field :password_confirmation, autocomplete: "off", class: "form-control max-200"
+    .clear-20
+    .actions
+      = f.submit "Save", class: "btn btn-success pull-right"

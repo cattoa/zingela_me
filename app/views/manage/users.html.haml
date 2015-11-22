@@ -1,0 +1,24 @@
+%h1.page-header
+  Listing
+  %small
+    Users
+= link_to '<i class="fa fa-plus"></i> New user'.html_safe, new_user_path, class: "btn btn-success pull-right"
+%table.table
+  %thead
+    %tr
+      %th Email
+      %th Company
+      %th
+      %th
+      %th
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.email
+        %td= Company.find(user.company_id).company_name
+        %td
+          %a.btn.btn-default{:href => "/edit/user/#{user.id}"}Edit
+        %td
+          %a.btn.btn-primary{:href => "/edit/user/password/#{user.id}"}Password Update
+        -# %td
+        -#   %a.btn.btn-danger{:href => "/delete/user/#{user.id}"}Delete

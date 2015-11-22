@@ -1,0 +1,35 @@
+%nav.navbar.navbar-inverse
+  .container-fluid.z-index
+    .navbar-header
+      %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      =link_to image_tag("zingela_logo.png",:class => 'navbar-brand'), root_path
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+      %ul.nav.navbar-nav.navbar-right
+        = render "layouts/login_nav"
+  -if notice
+    .alert.alert-success.alert-dismissibl{:role => "alert"}
+      %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+        %span{"aria-hidden" => "true"} ×
+      = notice
+  -if alert
+    .alert.alert-danger.alert-dismissible{:role => "alert"}
+      %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+        %span{"aria-hidden" => "true"} ×
+      = alert
+  %ul.nav.navbar-nav.side-nav
+    - if admin_signed_in?
+      %li
+        =link_to 'New Company', new_company_path
+      %li
+        =link_to 'Manage Companies', manage_companies_path
+      %li
+        =link_to 'New User', new_user_path
+      %li
+        =link_to 'Manage Users', manage_users_path
+    - if user_signed_in?
+      = render "layouts/user_nav"
