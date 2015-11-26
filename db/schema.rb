@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151122173411) do
+ActiveRecord::Schema.define(version: 20151126163109) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(version: 20151122173411) do
     t.float    "transect_length"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+    t.string   "code"
   end
 
   create_table "field_data", force: :cascade do |t|
@@ -152,6 +153,7 @@ ActiveRecord::Schema.define(version: 20151122173411) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.integer  "observation_id"
+    t.string   "code"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -231,4 +233,18 @@ ActiveRecord::Schema.define(version: 20151122173411) do
   end
 
   add_foreign_key "report_communities", "communities"
+  create_trigger("crown_diameters_after_insert_row_tr", :generated => true, :compatibility => 1).
+      on("crown_diameters").
+      after(:insert) do
+    <<-SQL_ACTIONS
+        IF (NEW.code = 'g') THEN
+          UPDATE crown_diameters
+          SET lower_crown_diameter = '0.131',
+          upper_crown_diameter = '0.21',
+          transect_length ='5.1'
+          WHERE id = NEW.id;
+        END IF;
+    SQL_ACTIONS
+  end
+
 end

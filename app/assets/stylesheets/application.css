@@ -179,6 +179,21 @@ div.field, div.actions {
     -moz-box-shadow: 10px 10px 5px 0px  #c3c3c3;
     box-shadow: 10px 10px 5px 0px #c3c3c3;
 }
+.thirth-three {
+    width: 30%;
+    float: left;
+    box-shadow: none;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.thirth-three select{
+  width: 100%;
+}
+.add_fields{
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+}
 /*body {
     background-color: #F1F1F1;
   }*/

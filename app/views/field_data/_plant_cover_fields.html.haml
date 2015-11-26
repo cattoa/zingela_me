@@ -1,13 +1,12 @@
-.nested-fields
-  .clear-20
+.nested-fields.thirth-three
   %h4.page-header
     %b Plant Covers
-  = f.label :percentage
-  = f.text_field :percentage, class: "form-control"
-  = f.label :lower_class_limit
-  = f.text_field :lower_class_limit, class: "form-control"
-  = f.label :upper_class_limit
-  = f.text_field :upper_class_limit, class: "form-control"
-  = f.label :class_interval
-  = f.text_field :class_interval, class: "form-control"
-  .clear-20
+  -# = f.label :percentage
+  -# = f.text_field :percentage, class: "form-control"
+  -# = f.label :lower_class_limit
+  -# = f.text_field :lower_class_limit, class: "form-control"
+  -# = f.label :upper_class_limit
+  -# = f.text_field :upper_class_limit, class: "form-control"
+  -# = f.label :class_interval
+  -# = f.text_field :class_interval, class: "form-control"
+  = f.select(:code, ["1","+","W","G","O","8","J","V","I","C","H","M","R","6","E","5","Q","A","U","T","P","L","N","2","B","3","7","D","4","F","S","9"])

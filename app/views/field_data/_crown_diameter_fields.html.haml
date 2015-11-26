@@ -1,11 +1,10 @@
-.nested-fields
-  .clear-20
+.nested-fields.thirth-three
   %h4.page-header
     %b Crown Diameter
-  = f.label :lower_crown_diameter
-  = f.text_field :lower_crown_diameter, class: "form-control"
-  = f.label :upper_crown_diameter
-  = f.text_field :upper_crown_diameter, class: "form-control"
-  = f.label :transect_length
-  = f.text_field :transect_length, class: "form-control"
-  .clear-20
+  -# = f.label :lower_crown_diameter
+  -# = f.text_field :lower_crown_diameter, class: "form-control"
+  -# = f.label :upper_crown_diameter
+  -# = f.text_field :upper_crown_diameter, class: "form-control"
+  -# = f.label :transect_length
+  -# = f.text_field :transect_length, class: "form-control"
+  = f.select(:code, ['G','K','O','A','N','L','J','I','C','B','H','M','D','E','F'])

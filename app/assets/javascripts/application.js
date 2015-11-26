@@ -15,3 +15,14 @@
 //= require turbolinks
 //= require_tree .
 //= require cocoon
+
+var ready;
+ready = function() {
+  if($(".add_fields").length == 1&& $("#edit").length == 0){
+    $(".add_fields").click();
+    $(".nested-fields .add_fields").click();
+  }
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);

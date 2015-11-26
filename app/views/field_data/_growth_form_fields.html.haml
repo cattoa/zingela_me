@@ -1,7 +1,4 @@
-.nested-fields
-  .clear-20
+.nested-fields.thirth-three
   %h4.page-header
-    %b Growth Forms 
-  = f.label :description
-  = f.text_field :description, class: "form-control"
-  .clear-20
+    %b Growth Forms
+  = f.select(:description, [['G','Grasses'],['D','Dwarf Shrubs'],['F','Forbs'],['T','Trees'],['S','Shrubs']])
