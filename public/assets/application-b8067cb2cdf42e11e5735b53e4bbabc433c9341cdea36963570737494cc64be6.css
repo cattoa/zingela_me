@@ -1,0 +1,546 @@
+/*!
+ * Start Bootstrap - SB Admin Bootstrap Admin Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+/* Global Styles */
+/* line 10, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+body {
+  background-color: #222;
+}
+
+/* line 17, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+#wrapper {
+  padding-left: 0;
+}
+
+/* line 21, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+#page-wrapper {
+  width: 100%;
+  padding: 0;
+  background-color: #fff;
+}
+
+/* line 27, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.huge {
+  font-size: 50px;
+  line-height: normal;
+}
+
+@media (min-width: 768px) {
+  /* line 33, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+  #wrapper {
+    padding-left: 225px;
+  }
+
+  /* line 37, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+  #page-wrapper {
+    padding: 10px;
+  }
+}
+/* Top Navigation */
+/* line 44, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.top-nav {
+  padding: 0 15px;
+}
+
+/* line 48, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.top-nav > li {
+  display: inline-block;
+  float: left;
+}
+
+/* line 53, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.top-nav > li > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  line-height: 20px;
+  color: #999;
+}
+
+/* line 60, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.top-nav > li > a:hover,
+.top-nav > li > a:focus,
+.top-nav > .open > a,
+.top-nav > .open > a:hover,
+.top-nav > .open > a:focus {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 69, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.top-nav > .open > .dropdown-menu {
+  float: left;
+  position: absolute;
+  margin-top: 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #fff;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+/* line 81, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.top-nav > .open > .dropdown-menu > li > a {
+  white-space: normal;
+}
+
+/* line 85, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+ul.message-dropdown {
+  padding: 0;
+  max-height: 250px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* line 92, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+li.message-preview {
+  width: 275px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* line 97, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+li.message-preview > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* line 102, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+li.message-footer {
+  margin: 5px 0;
+}
+
+/* line 106, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+ul.alert-dropdown {
+  width: 200px;
+}
+
+/* Side Navigation */
+@media (min-width: 768px) {
+  /* line 113, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+  .side-nav {
+    position: fixed;
+    top: 0px;
+    left: 225px;
+    width: 225px;
+    margin-left: -225px;
+    border: none;
+    border-radius: 0;
+    overflow-y: auto;
+    background-color: #222;
+    bottom: 0;
+    overflow-x: hidden;
+    padding-bottom: 40px;
+    padding-top: 60px;
+    z-index: 1;
+  }
+
+  /* line 130, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+  .side-nav > li > a {
+    width: 225px;
+  }
+
+  /* line 134, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+  .side-nav li a:hover,
+  .side-nav li a:focus {
+    outline: none;
+    background-color: #000 !important;
+  }
+}
+/* line 141, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.side-nav > li > ul {
+  padding: 0;
+}
+
+/* line 145, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.side-nav > li > ul > li > a {
+  display: block;
+  padding: 10px 15px 10px 38px;
+  text-decoration: none;
+  color: #999;
+}
+
+/* line 152, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.side-nav > li > ul > li > a:hover {
+  color: #fff;
+}
+
+/* Flot Chart Containers */
+/* line 158, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.flot-chart {
+  display: block;
+  height: 400px;
+}
+
+/* line 163, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.flot-chart-content {
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom Colored Panels */
+/* line 170, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.huge {
+  font-size: 40px;
+}
+
+/* line 174, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.panel-green {
+  border-color: #5cb85c;
+}
+
+/* line 178, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.panel-green > .panel-heading {
+  border-color: #5cb85c;
+  color: #fff;
+  background-color: #5cb85c;
+}
+
+/* line 184, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.panel-green > a {
+  color: #5cb85c;
+}
+
+/* line 188, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.panel-green > a:hover {
+  color: #3d8b3d;
+}
+
+/* line 192, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.panel-red {
+  border-color: #d9534f;
+}
+
+/* line 196, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.panel-red > .panel-heading {
+  border-color: #d9534f;
+  color: #fff;
+  background-color: #d9534f;
+}
+
+/* line 202, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.panel-red > a {
+  color: #d9534f;
+}
+
+/* line 206, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.panel-red > a:hover {
+  color: #b52b27;
+}
+
+/* line 210, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.panel-yellow {
+  border-color: #f0ad4e;
+}
+
+/* line 214, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.panel-yellow > .panel-heading {
+  border-color: #f0ad4e;
+  color: #fff;
+  background-color: #f0ad4e;
+}
+
+/* line 220, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.panel-yellow > a {
+  color: #f0ad4e;
+}
+
+/* line 224, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/bootstrap_admin.scss */
+.panel-yellow > a:hover {
+  color: #df8a13;
+}
+/* line 1, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 24, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 28, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 40, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 44, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 50, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 58, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 69, /Users/Murray/Desktop/Projects/Bobcat/zingela/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+ *,p,h1,h2,h3,h4,h5,a,.btn{
+   font-family: 'Roboto', sans-serif;
+ }
+.alert{
+  border-radius: 0px !important;
+  margin: 0px;
+  text-align: center;
+}
+.navbar-brand {
+    height: 60px;
+    margin: 0px;
+    padding: 5px;
+}
+.navbar-inverse {
+  border-radius: 0px;
+  border: 0px;
+  background: #871838;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover {
+    background: none;
+}
+.dropdown-menu > li > a{
+    color: #262626;
+
+}
+.navbar-inverse .navbar-nav a{
+    height: 60px;
+    padding-top: 25px;
+}
+.login-container {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 5px 9px #888;
+    background: #FFF none repeat scroll 0% 0%;
+    color: #666;
+}
+
+.login-container h2 {
+    padding: 10px;
+    text-align: center;
+    color: #777;
+    background: rgb(34, 34, 34) none repeat scroll 0%
+}
+
+.login-form-container {
+    padding: 15px;
+}
+.login-form-container a{
+  color: #666;
+  text-align: center;
+  width: 100%;
+}
+a:hover{
+  background: none;
+  text-decoration: none;
+}
+.panel-footer{
+  min-height: 50px;
+}
+.panel.panel-primary.create{
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0px;
+  box-shadow: 10px 10px 5px 9px #888;
+
+}
+#error_explanation h2{
+ background: #D12116;
+}
+#error_explanation {
+ border: 1px solid #D12116;
+}
+.field_with_errors{
+  background: none;
+  color: #D12116;
+  display: block;
+  padding: 0px;
+}
+.field_with_errors input{
+    border: 2px solid #D12116;
+}
+.error{
+  color: #D12116;
+}
+.panel.panel-primary.create .panel-heading{
+  border-radius: 0px;
+
+}
+.panel.panel-primary.create input{
+  border-radius: 0px;
+}
+.btn-success:hover{
+  color: #fff;
+}
+a.btn-success{
+  color: #fff;
+}
+a:hover,a:focus{
+  outline: none;
+}
+.nav.nav-pills > li > a{
+  height: auto;
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-right: 5px;
+  color: #fff;
+}
+.nav.nav-pills > li > a:hover{
+  color: #871838;
+  background-color: #fff;
+}
+.nav.nav-pills > li.active > a {
+   color: #871838;
+   background-color: #fff;
+}
+.z-index{
+  z-index: 2;
+  display: block;
+  position: relative;
+}
+.btn-primary{
+  color: #fff !important;
+}
+.btn-danger{
+  color: #fff !important;
+}
+.btn-default{
+  color: #444;
+}
+select{
+  display: block;
+  width: 33.333%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #555;
+  background-color: #FFF;
+  background-image: none;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  float: left;
+}
+td .fa-check{
+color: rgb(16, 144, 18);
+}
+td .fa-times{
+  color: rgb(144, 16, 16);
+}
+.clear-20{
+  clear: both;
+  height: 20px;
+}
+div.field, div.actions {
+    margin-bottom:0px;
+}
+.navbar-nav > li > .dropdown-menu{
+  padding: 0px;
+}
+.no-padding-left{
+  padding-left: 0px;
+}
+.no-padding-right{
+  padding-right: 0px;
+}
+.nested-fields{
+    border: 1px solid #c3c3c3;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 5px 0px #c3c3c3;
+    -moz-box-shadow: 10px 10px 5px 0px  #c3c3c3;
+    box-shadow: 10px 10px 5px 0px #c3c3c3;
+}
+.thirth-three {
+    width: 30%;
+    float: left;
+    box-shadow: none;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.thirth-three select{
+  width: 100%;
+}
+.add_fields{
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+/*body {
+    background-color: #F1F1F1;
+  }*/
