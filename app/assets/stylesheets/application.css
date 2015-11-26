@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ *,p,h1,h2,h3,h4,h5,a,.btn{
+   font-family: 'Roboto', sans-serif;
+ }
 .alert{
   border-radius: 0px !important;
   margin: 0px;
@@ -26,6 +29,17 @@
 .navbar-inverse {
   border-radius: 0px;
   border: 0px;
+  background: #871838;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover {
+    background: none;
+}
+.dropdown-menu > li > a{
+    color: #262626;
+
 }
 .navbar-inverse .navbar-nav a{
     height: 60px;
@@ -109,14 +123,15 @@ a:hover,a:focus{
   padding-top: 10px;
   margin-top: 10px;
   margin-right: 5px;
+  color: #fff;
 }
 .nav.nav-pills > li > a:hover{
-  color: #FFF;
-  background-color: #080808;
+  color: #871838;
+  background-color: #fff;
 }
 .nav.nav-pills > li.active > a {
-   color: #FFF;
-   background-color: #080808;
+   color: #871838;
+   background-color: #fff;
 }
 .z-index{
   z-index: 2;
