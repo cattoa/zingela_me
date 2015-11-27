@@ -218,6 +218,17 @@ div.field, div.actions {
 .no-margin-top{
  margin-top: 5px;
 }
-/*body {
-    background-color: #F1F1F1;
-  }*/
+@media screen and (max-width: 767px) {
+  .alert {
+      margin: 0px;
+  }
+  .navbar-inverse .navbar-nav > li > a{
+      text-align: center;
+  }
+  .navbar-nav {
+      margin: 0px;
+  }
+  .no-padding-left {
+      padding-left: 15px;
+  }
+}
