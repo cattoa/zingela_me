@@ -1,8 +1,7 @@
 .nested-fields
-  .clear-20
-  %h2.page-header
+  %h2.page-header.no-margin-top
     %b Observation
-    = link_to_remove_association "<i class='fa-minus fa'></i> Remove".html_safe, f, class:"btn btn-danger btn-sm pull-right"
+    = link_to_remove_association "<i class='fa-times fa'></i>".html_safe, f, class:" btn-sm pull-right"
   .field
     = f.label :notes
     = f.text_field :notes, class: "form-control"

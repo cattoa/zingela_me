@@ -18,13 +18,16 @@
  }
 .alert{
   border-radius: 0px !important;
-  margin: 0px;
+  margin: 0px 0px 0px 225px;
   text-align: center;
 }
 .navbar-brand {
     height: 60px;
     margin: 0px;
     padding: 5px;
+}
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: 0px;
 }
 .navbar-inverse {
   border-radius: 0px;
@@ -208,6 +211,12 @@ div.field, div.actions {
   float: left;
   margin-left: 20px;
   margin-top: 20px;
+}
+.btn-sm:hover{
+  color: #444;
+}
+.no-margin-top{
+ margin-top: 5px;
 }
 /*body {
     background-color: #F1F1F1;
