@@ -47,7 +47,7 @@
       %small
         Observations
     - @field_datum.observations.each do |observation|
-      .nested-fields
+      .nested-field
         %h4
           %b Notes
           = observation.notes
@@ -55,7 +55,7 @@
           %b Species
           = observation.species.name
         - if observation.growth_forms.count > 0
-          .nested-fields
+          .nested-field
             %h2.page-header
               Listing
               %small
@@ -65,7 +65,7 @@
                 %b Description
                 = grow.description
         - if observation.crown_diameters.count > 0
-          .nested-fields
+          .nested-field
             %h2.page-header
               Listing
               %small
@@ -82,7 +82,7 @@
                 = crown.transect_length
 
         - if observation.plant_covers.count > 0
-          .nested-fields
+          .nested-field
             %h2.page-header
               Listing
               %small

@@ -19,7 +19,11 @@
       -# -if field_datum.project.company_id == current_user.company_id
       %tr
         %td= field_datum.date
-        %td= field_datum.location.name
+        - if Location.exists?(field_datum.location_id)
+          %td= field_datum.location.name
+        - else
+          %td.error
+            Location deleted
         %td= field_datum.project.name
         %td
           - if User.exists?(field_datum.user_id)
