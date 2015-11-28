@@ -6,6 +6,9 @@
         - @field_datum.errors.full_messages.each do |msg|
           %li= msg
   .field
+    = f.label :project_id
+    = f.collection_select(:project_id, Project.where(company_id:current_user.company_id), :id, :name, {}, {:class=>'form-control'})
+  .field
     = f.label :date
     %br
     = f.date_select :date
@@ -33,16 +36,18 @@
   .field
     = f.label :habitat_description
     = f.text_field :habitat_description,:class=>'form-control'
-  .field
-    = f.label :project_id
-    = f.collection_select(:project_id, Project.where(company_id:current_user.company_id), :id, :name, {}, {:class=>'form-control'})
+  -# .field
+  -#   = f.label :habitat_description
+  -#   = f.collection_select(:community_id, Comunity.where(company_id:current_user.company_id), :id, :name, {}, {:class=>'form-control'})
   .clear-20
   #observations
+    %h2.page-header
+      Observations
     = f.fields_for :observations do |builder|
       = render 'observation_fields', f:builder
-  .clear-20
-  .links
-    = link_to_add_association '<i class="fa-plus fa"></i> Add Observation'.html_safe, f, :observations, class: "btn btn-primary btn-sm"
+    .clear-20
+    .links
+      = link_to_add_association '<i class="fa-plus fa"></i> Add Observation'.html_safe, f, :observations, class: "btn btn-primary btn-sm pull-right add_obs"
   .clear-20
   .actions
     = f.submit 'Save', class: "btn btn-success pull-right"

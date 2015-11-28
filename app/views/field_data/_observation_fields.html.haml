@@ -1,23 +1,19 @@
 .nested-fields
-  %h2.page-header.no-margin-top
-    %b Observation
+  -# %h2.page-header.no-margin-top
+  -#   %b Observation
+  .col-lg-2
+    %b Growth form
+  .col-lg-3
+    %b Species
+  .col-lg-2
+    %b Crown Diameters
+  .col-lg-2
+    %b Plant Covers
+  .col-lg-3
+    %b Notes
     = link_to_remove_association "<i class='fa-times fa'></i>".html_safe, f, class:" btn-sm pull-right"
-  .field
-    = f.label :notes
-    = f.text_field :notes, class: "form-control"
-  .field
-    = f.label :notes
-    = f.collection_select(:species_id, Species.all, :id, :name, {}, {:class=>'form-control'})
-  #plant_covers
-    - has_item =false
-    = f.fields_for :plant_covers do |builder|
-      - has_item =true
-      = render 'plant_cover_fields', f:builder
-    - if !has_item
-      .links
-        = link_to_add_association '<i class="fa-plus fa"></i> Add Plant cover'.html_safe, f, :plant_covers, class: "btn btn-primary btn-sm", onclick:"$(this).hide();"
-
-  #growth_forms
+  .clear-20
+  #growth_forms.col-lg-2.full-select
     - has_item =false
     = f.fields_for :growth_forms do |builder|
       - has_item =true
@@ -25,7 +21,9 @@
     - if !has_item
       .links
         = link_to_add_association '<i class="fa-plus fa"></i> Add Growth forms'.html_safe, f, :growth_forms, class: "btn btn-primary btn-sm", onclick:"$(this).hide();"
-  #crown_diameters
+  .col-lg-3.full-select
+    = f.collection_select(:species_id, Species.all, :id, :name, {}, {:class=>'form-control collection_select'})
+  #crown_diameters.col-lg-2.full-select
     - has_item =false
     = f.fields_for :crown_diameters do |builder|
       - has_item =true
@@ -33,4 +31,14 @@
     - if !has_item
       .links
         = link_to_add_association '<i class="fa-plus fa"></i> Add Crown Diameters'.html_safe, f, :crown_diameters, class: "btn btn-primary btn-sm", onclick:"$(this).hide();"
+  #plant_covers.col-lg-2.full-select
+    - has_item =false
+    = f.fields_for :plant_covers do |builder|
+      - has_item =true
+      = render 'plant_cover_fields', f:builder
+    - if !has_item
+      .links
+        = link_to_add_association '<i class="fa-plus fa"></i> Add Plant cover'.html_safe, f, :plant_covers, class: "btn btn-primary btn-sm", onclick:"$(this).hide();"
+  .col-lg-3
+    = f.text_field :notes, class: "form-control", onfocus:'CreateNewObs(this);'
   .clear-20
