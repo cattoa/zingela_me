@@ -33,16 +33,16 @@
           Location deleted
   .col-lg-6.no-padding
     %h4
-      %b Habitat description:
-      = @field_datum.habitat_description
-  .col-lg-6.no-padding
-    %h4
       %b User:
       - if User.exists?(@field_datum.user_id)
         = User.find(@field_datum.user_id).email
       - else
         %span.error
           User Deleted
+  .col-lg-12.no-padding
+    %h4
+      %b Habitat description:
+      = @field_datum.habitat_description
   - if @field_datum.observations.count > 0
     .clear-20
     %table.table
@@ -57,8 +57,8 @@
           Plant cover
         %th
           Notes
-      %tr
-        - @field_datum.observations.each do |observation|
+      - @field_datum.observations.each do |observation|
+        %tr
           %td
             - if observation.growth_forms.count > 0
               - observation.growth_forms.each do |grow|
