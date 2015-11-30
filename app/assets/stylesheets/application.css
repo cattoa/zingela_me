@@ -13,6 +13,13 @@
  *= require_tree .
  *= require_self
  */
+ body{
+   background: #fff;
+ }
+ a {
+    color: #444;
+    text-decoration: none;
+}
  *,p,h1,h2,h3,h4,h5,a,.btn{
    font-family: 'Roboto', sans-serif;
  }
@@ -187,6 +194,9 @@ div.field, div.actions {
 }
 .no-padding-right{
   padding-right: 0px;
+}
+.no-padding{
+  padding: 0px;
 }
 .nested-field{
     border: 1px solid #c3c3c3;

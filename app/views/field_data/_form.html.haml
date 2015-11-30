@@ -57,7 +57,6 @@
 
     = f.fields_for :observations do |builder|
       = render 'observation_fields', f:builder
-    .clear-20
     .links
       = link_to_add_association '<i class="fa-plus fa"></i> Add Observation'.html_safe, f, :observations, class: "btn btn-primary btn-sm pull-right add_obs"
   .clear-20

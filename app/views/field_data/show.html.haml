@@ -3,104 +3,78 @@
   %small
     Field Data
 .col-lg-10
-  %h4
-    %b Date:
-    = @field_datum.date
-  %h4
-    %b Location:
-    = @field_datum.location.name
-  %h4
-    %b Latitude degree:
-    = @field_datum.latitude_degree
-  %h4
-    %b Latitude minutes:
-    = @field_datum.latitude_minutes
-  %h4
-    %b Latitude seconds:
-    = @field_datum.latitude_seconds
-  %h4
-    %b Longitude degree:
-    = @field_datum.longitude_degree
-  %h4
-    %b Longitude minutes:
-    = @field_datum.longitude_minutes
-  %h4
-    %b Longitude seconds:
-    = @field_datum.longitude_seconds
-  %h4
-    %b Habitat description:
-    = @field_datum.habitat_description
-  %h4
-    %b Project:
-    = @field_datum.project.name
-  %h4
-    %b User:
-    - if User.exists?(@field_datum.user_id)
-      = User.find(@field_datum.user_id).email
-    - else
-      %span.error
-        User Deleted
+  .col-lg-6.no-padding
+    %h4
+      %b Project:
+      = @field_datum.project.name
+  .col-lg-6.no-padding
+    %h4
+      %b Date:
+      = @field_datum.date
+  .col-lg-6.no-padding
+    %h4
+      %b Latitude:
+      = "#{@field_datum.latitude_degree} &deg;".html_safe
+      = "#{@field_datum.latitude_minutes} '"
+      = "#{@field_datum.latitude_seconds} ''"
+  .col-lg-6.no-padding
+    %h4
+      %b Longitude:
+      = "#{@field_datum.longitude_degree} &deg;".html_safe
+      = "#{@field_datum.longitude_minutes} '"
+      = "#{@field_datum.longitude_seconds} ''"
+  .col-lg-6.no-padding
+    %h4
+      %b Location:
+      - if Location.exists?(@field_datum.location_id)
+        = @field_datum.location.name
+      - else
+        %span.error
+          Location deleted
+  .col-lg-6.no-padding
+    %h4
+      %b Habitat description:
+      = @field_datum.habitat_description
+  .col-lg-6.no-padding
+    %h4
+      %b User:
+      - if User.exists?(@field_datum.user_id)
+        = User.find(@field_datum.user_id).email
+      - else
+        %span.error
+          User Deleted
   - if @field_datum.observations.count > 0
     .clear-20
-    %h1.page-header
-      Listing
-      %small
-        Observations
-    - @field_datum.observations.each do |observation|
-      .nested-field
-        %h4
-          %b Notes
-          = observation.notes
-        %h4
-          %b Species
-          = observation.species.name
-        - if observation.growth_forms.count > 0
-          .nested-field
-            %h2.page-header
-              Listing
-              %small
-                Growth forms
-            - observation.growth_forms.each do |grow|
-              %h4
-                %b Description
+    %table.table
+      %tr
+        %th
+          Growth form
+        %th
+          Species
+        %th
+          Crown Diameter
+        %th
+          Plant cover
+        %th
+          Notes
+      %tr
+        - @field_datum.observations.each do |observation|
+          %td
+            - if observation.growth_forms.count > 0
+              - observation.growth_forms.each do |grow|
                 = grow.description
-        - if observation.crown_diameters.count > 0
-          .nested-field
-            %h2.page-header
-              Listing
-              %small
-                Crown Diameters
-            - observation.crown_diameters.each do |crown|
-              %h4
-                %b Lower Crown Diameter
-                = crown.lower_crown_diameter
-              %h4
-                %b Upper Crown Diameter
-                = crown.upper_crown_diameter
-              %h4
-                %b Transect Crown Diameter
-                = crown.transect_length
-
-        - if observation.plant_covers.count > 0
-          .nested-field
-            %h2.page-header
-              Listing
-              %small
-                Plant Cover
-            - observation.plant_covers.each do |plant|
-              %h4
-                %b Percentage
-                = plant.percentage
-              %h4
-                %b Lower Class Limit
-                = plant.lower_class_limit
-              %h4
-                %b Upper Class Limit
-                = plant.upper_class_limit
-              %h4
-                %b Class Interval
-                = plant.class_interval
-  .clear-20
+          %td
+            = observation.species.name
+          %td
+            - if observation.crown_diameters.count > 0
+              - observation.crown_diameters.each do |crown|
+                = crown.code
+          %td
+            - if observation.plant_covers.count > 0
+              - observation.plant_covers.each do |plant|
+                = plant.code
+          %td
+            = observation.notes
   .clear-20
   = link_to 'Edit', edit_field_datum_path(@field_datum), class: "btn btn-primary"
   = link_to 'Back', field_data_path, class: "btn btn-default"
