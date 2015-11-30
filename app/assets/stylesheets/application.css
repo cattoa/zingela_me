@@ -221,8 +221,13 @@ div.field, div.actions {
 .full-select select{
   width: 100%;
 }
-.nested-fields{
+.sub-headings{
   font-size: 12px;
+}
+.remove-item {
+    position: absolute;
+    top: 5px;
+    right: -10px;
 }
 @media screen and (max-width: 767px) {
   .alert {

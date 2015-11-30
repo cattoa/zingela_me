@@ -40,9 +40,21 @@
   -#   = f.label :habitat_description
   -#   = f.collection_select(:community_id, Comunity.where(company_id:current_user.company_id), :id, :name, {}, {:class=>'form-control'})
   .clear-20
+  %h2.page-header
+    Observations
+  .sub-headings
+    .col-lg-2
+      %b Growth form
+    .col-lg-3
+      %b Species
+    .col-lg-2
+      %b Crown Diameters
+    .col-lg-2
+      %b Plant Covers
+    .col-lg-3
+      %b Notes
   #observations
-    %h2.page-header
-      Observations
+
     = f.fields_for :observations do |builder|
       = render 'observation_fields', f:builder
     .clear-20

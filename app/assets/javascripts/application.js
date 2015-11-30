@@ -15,7 +15,6 @@
 //= require turbolinks
 //= require_tree .
 //= require cocoon
-
 var ready;
 ready = function() {
   if($(".add_fields").length == 1&& $("#edit").length == 0){
@@ -39,6 +38,7 @@ ready = function() {
 function CreateNewObs(el){
 
   last = $( "input[type=text]:last-of-type" ).length;
+  console.log($( "input[type=text]:last-of-type"));
   if($(el)['0'].id == $( "input[type=text]:last-of-type" )[last-1].id){
     $(".add_obs").click();
   }
