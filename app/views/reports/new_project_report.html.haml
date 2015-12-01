@@ -1,0 +1,14 @@
+%h1.page-header
+  New
+  %small
+    Project report
+.col-lg-10
+  = form_for(@project_report, url: "/create/project/report/") do |f|
+    .field
+      %label
+        Select a project
+      = f.collection_select(:project_id, Project.where(company_id:current_user.company_id), :id, :name, {}, {:class=>'form-control'})
+    .clear-20
+    .actions
+      = f.submit 'Save', class: "btn btn-success pull-right"
+      = link_to 'Back', root_path, class: "btn btn-default"

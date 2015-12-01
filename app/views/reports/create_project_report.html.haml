@@ -1,0 +1,41 @@
+%table.table
+  %th Species family:
+  %th Species:
+  %th Threat status:
+  %th Sa endemic:
+  %th Common name:
+  %th Life cycle:
+  %th Growth forms:
+  %th Min hieght:
+  %th Max height:
+  %th Min altitude:
+  %th Max altitude:
+  %th Distribution:
+  - @project.field_datum.each do |field_data|
+    - field_data.observations.each do |observation|
+      -@species = observation.species
+      %tr
+        %td
+          = @species.species_family.name
+        %td
+          = @species.name
+        %td
+          = @species.threat_status
+        %td
+          = @species.sa_endemic
+        %td
+          = @species.sysnonym_of
+        %td
+          = @species.life_cycle
+        %td
+          = @species.growth_forms
+        %td
+          = @species.min_hieght
+        %td
+          = @species.max_height
+        %td
+          = @species.min_altitude
+        %td
+          = @species.max_altitude
+        %td
+          = @species.distribution

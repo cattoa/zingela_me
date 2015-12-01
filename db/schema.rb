@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151126163109) do
+ActiveRecord::Schema.define(version: 20151201142812) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -156,6 +156,12 @@ ActiveRecord::Schema.define(version: 20151126163109) do
     t.string   "code"
   end
 
+  create_table "project_reports", force: :cascade do |t|
+    t.integer  "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string   "name"
     t.date     "start_date"
@@ -233,18 +239,4 @@ ActiveRecord::Schema.define(version: 20151126163109) do
   end
 
   add_foreign_key "report_communities", "communities"
-  create_trigger("crown_diameters_after_insert_row_tr", :generated => true, :compatibility => 1).
-      on("crown_diameters").
-      after(:insert) do
-    <<-SQL_ACTIONS
-        IF (NEW.code = 'g') THEN
-          UPDATE crown_diameters
-          SET lower_crown_diameter = '0.131',
-          upper_crown_diameter = '0.21',
-          transect_length ='5.1'
-          WHERE id = NEW.id;
-        END IF;
-    SQL_ACTIONS
-  end
-
 end

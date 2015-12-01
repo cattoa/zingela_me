@@ -12,6 +12,10 @@ Rails.application.routes.draw do
   devise_for :admins
   devise_for :users
   get '/sign_out' => 'devise/sessions#destroy'
+  controller :reports do
+    get 'new/project/report/'   => :new_project_report
+    post 'create/project/report/'   => :create_project_report
+  end
   controller :manage do
     get 'manage/users'   => :users
     get 'edit/user/:id'   => :edit_user
