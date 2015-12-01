@@ -1,5 +1,5 @@
-%table.table
-  %th Species family:
+%table.table.table-striped
+  %th Family:
   %th Species:
   %th Threat status:
   %th Sa endemic:
@@ -11,31 +11,34 @@
   %th Min altitude:
   %th Max altitude:
   %th Distribution:
+  - objArray = Array.new
   - @project.field_datum.each do |field_data|
     - field_data.observations.each do |observation|
-      -@species = observation.species
-      %tr
-        %td
-          = @species.species_family.name
-        %td
-          = @species.name
-        %td
-          = @species.threat_status
-        %td
-          = @species.sa_endemic
-        %td
-          = @species.sysnonym_of
-        %td
-          = @species.life_cycle
-        %td
-          = @species.growth_forms
-        %td
-          = @species.min_hieght
-        %td
-          = @species.max_height
-        %td
-          = @species.min_altitude
-        %td
-          = @species.max_altitude
-        %td
-          = @species.distribution
+      - @species = observation.species
+      - if !objArray.include? @species.id
+        - objArray.push @species.id
+        %tr
+          %td
+            = @species.species_family.name
+          %td
+            = @species.name
+          %td
+            = @species.threat_status
+          %td
+            = @species.sa_endemic
+          %td
+            = @species.sysnonym_of
+          %td
+            = @species.life_cycle
+          %td
+            = @species.growth_forms
+          %td
+            = @species.min_hieght
+          %td
+            = @species.max_height
+          %td
+            = @species.min_altitude
+          %td
+            = @species.max_altitude
+          %td
+            = @species.distribution
