@@ -13,6 +13,12 @@
     %br
     = f.date_select :date
   .field
+    = f.label :scale
+    = f.text_field :scale,:class=>'form-control'
+  .field
+    = f.label :releve_number
+    = f.number_field :releve_number,:class=>'form-control' 
+  .field
     = f.label :location_id
     = f.collection_select(:location_id, Location.where(company_id: current_user.company_id), :id, :name, {}, {:class=>'form-control'})
   .field.col-lg-4.no-padding-left

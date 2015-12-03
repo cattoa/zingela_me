@@ -69,7 +69,7 @@ class FieldDataController < ApplicationController
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     def field_datum_params
-      params.require(:field_datum).permit(:date,:location_id,:latitude_degree,:latitude_minutes,:latitude_seconds,:longitude_degree,:longitude_minutes,:longitude_seconds,:habitat_description,:project_id,observations_attributes:[:id,:notes,:species_id,:_destroy,growth_forms_attributes:[:id,:description,:_destroy],plant_covers_attributes:[:id,:code,:_destroy],crown_diameters_attributes:[:id,:code,:_destroy]])
+      params.require(:field_datum).permit(:date,:releve_number,:scale,:location_id,:latitude_degree,:latitude_minutes,:latitude_seconds,:longitude_degree,:longitude_minutes,:longitude_seconds,:habitat_description,:project_id,observations_attributes:[:id,:notes,:species_id,:_destroy,growth_forms_attributes:[:id,:description,:_destroy],plant_covers_attributes:[:id,:code,:_destroy],crown_diameters_attributes:[:id,:code,:_destroy]])
     end
     def deny_to_admins_and_companies
       redirect_to new_user_session_path unless user_signed_in?

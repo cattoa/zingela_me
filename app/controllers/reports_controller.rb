@@ -8,7 +8,15 @@ class ReportsController < ApplicationController
 
   def create_project_report
     @project = Project.find(project_report_params[:project_id])
+    respond_to do |format|
+      format.html
+      format.pdf { render :create_project_report => PDFKit.new( post_url(@post) ).to_pdf }
+    end
   end
+  def root
+    redirect_to root_path
+  end
+
 protected
   def project_report_params
     params.require(:project_report).permit(:project_id)

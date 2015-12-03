@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   controller :reports do
     get 'new/project/report/'   => :new_project_report
     post 'create/project/report/'   => :create_project_report
+    get 'create/project/report/'   => :root
+
   end
   controller :manage do
     get 'manage/users'   => :users

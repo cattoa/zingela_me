@@ -3,7 +3,7 @@
   %small
     Project report
 .col-lg-10
-  = form_for(@project_report, url: "/create/project/report/") do |f|
+  = form_for(@project_report, url: "/create/project/report/",format: "pdf") do |f|
     .field
       %label
         Select a project
