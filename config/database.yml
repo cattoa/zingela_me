@@ -23,6 +23,10 @@ production:
 development:
   <<: *default
   database: zingela_development
+  username: postgres
+  password: 2
+  host: 127.0.0.1
+  port: 5432
   # adapter: postgresql
   # host: localhost
   # username: user
@@ -34,6 +38,10 @@ development:
 test:
   <<: *default
   database: zingela_test
+  username: postgres
+  password: 2
+  host: 127.0.0.1
+  port: 5432
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
