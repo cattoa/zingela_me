@@ -5,20 +5,24 @@
       %ul
         - @field_datum.errors.full_messages.each do |msg|
           %li= msg
-  .field
+  .field.col-lg-6.no-padding-left
     = f.label :project_id
     = f.collection_select(:project_id, Project.where(company_id:current_user.company_id), :id, :name, {}, {:class=>'form-control'})
-  .field
+  .field.col-lg-6.no-padding-right
     = f.label :date
     %br
     = f.date_select :date
-  .field
+  .field.col-lg-6.no-padding-left
+    =f.label :observer
+    =f.text_field :observer,:class=>'form-control'
+
+  .field.col-lg-6.no-padding-right
     = f.label :scale
     = f.text_field :scale,:class=>'form-control'
-  .field
+  .field.col-lg-6.no-padding-left
     = f.label :releve_number
-    = f.number_field :releve_number,:class=>'form-control' 
-  .field
+    = f.number_field :releve_number,:class=>'form-control'
+  .field.col-lg-6.no-padding-right
     = f.label :location_id
     = f.collection_select(:location_id, Location.where(company_id: current_user.company_id), :id, :name, {}, {:class=>'form-control'})
   .field.col-lg-4.no-padding-left
@@ -29,7 +33,7 @@
     = f.number_field :latitude_minutes,:class=>'form-control'
   .field.col-lg-4.no-padding-right
     = f.label :latitude_seconds
-    = f.text_field :latitude_seconds,:class=>'form-control'
+    = f.number_field :latitude_seconds,:class=>'form-control'
   .field.col-lg-4.no-padding-left
     = f.label :longitude_degree
     = f.number_field :longitude_degree,:class=>'form-control'
@@ -38,7 +42,7 @@
     = f.number_field :longitude_minutes,:class=>'form-control'
   .field.col-lg-4.no-padding-right
     = f.label :longitude_seconds
-    = f.text_field :longitude_seconds,:class=>'form-control'
+    = f.number_field :longitude_seconds,:class=>'form-control'
   .field
     = f.label :habitat_description
     = f.text_field :habitat_description,:class=>'form-control'

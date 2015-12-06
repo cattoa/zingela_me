@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151203190517) do
+ActiveRecord::Schema.define(version: 20151206091438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -102,17 +102,17 @@ ActiveRecord::Schema.define(version: 20151203190517) do
     t.integer  "location_id"
     t.integer  "latitude_degree"
     t.integer  "latitude_minutes"
-    t.float    "latitude_seconds"
+    t.integer  "latitude_seconds"
     t.integer  "longitude_degree"
     t.integer  "longitude_minutes"
-    t.float    "longitude_seconds"
+    t.integer  "longitude_seconds"
     t.string   "habitat_description"
     t.integer  "project_id"
-    t.integer  "user_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.string   "scale"
     t.integer  "releve_number"
+    t.string   "observer"
   end
 
   create_table "growth_forms", force: :cascade do |t|
@@ -120,18 +120,6 @@ ActiveRecord::Schema.define(version: 20151203190517) do
     t.string   "description"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-  end
-
-  create_table "locations", force: :cascade do |t|
-    t.string   "name"
-    t.string   "country"
-    t.string   "province"
-    t.string   "city"
-    t.string   "address_1"
-    t.string   "address_2"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "company_id"
   end
 
   create_table "manages", force: :cascade do |t|

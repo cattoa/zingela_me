@@ -41,12 +41,8 @@
           Location deleted
   .col-lg-6.no-padding
     %h4
-      %b User:
-      - if User.exists?(@field_datum.user_id)
-        = User.find(@field_datum.user_id).email
-      - else
-        %span.error
-          User Deleted
+      %b Observer:
+      = @field_datum.observer
   .col-lg-12.no-padding
     %h4
       %b Habitat description:

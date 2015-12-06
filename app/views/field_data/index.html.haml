@@ -10,7 +10,7 @@
       %th Date
       %th Location
       %th Project
-      %th User
+      %th Observer
       %th
       %th
       %th
@@ -25,14 +25,8 @@
           %td.error
             Location deleted
         %td= field_datum.project.name
-        %td
-          - if User.exists?(field_datum.user_id)
-            = User.find(field_datum.user_id).email
-          - else
-            %span.error
-              User Deleted
+        %td= field_datum.observer
         %td= link_to 'Show', field_datum, class: "btn btn-primary"
         %td= link_to 'Edit', edit_field_datum_path(field_datum), class: "btn btn-default"
-        - if field_datum.user_id == current_user.id
-          %td= link_to 'Delete', field_datum, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "btn btn-danger"
+        %td= link_to 'Delete', field_datum, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "btn btn-danger"
 %br
