@@ -34,11 +34,7 @@
   .col-lg-6.no-padding
     %h4
       %b Location:
-      - if Location.exists?(@field_datum.location_id)
-        = @field_datum.location.name
-      - else
-        %span.error
-          Location deleted
+      = @field_datum.location
   .col-lg-6.no-padding
     %h4
       %b Observer:

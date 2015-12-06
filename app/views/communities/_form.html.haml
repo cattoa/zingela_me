@@ -6,14 +6,11 @@
         - @community.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label :name
-    = f.text_field :name, class: "form-control"
-  .field
-    %label Description
-    = f.text_field :desctiption, class: "form-control"
-  .field
     = f.label :project_id
     = f.collection_select(:project_id, Project.where(company_id:current_user.company_id), :id, :name, {}, {:class=>'form-control'})
+  .field
+    %label Description
+    = f.text_field :description, class: "form-control"
   .clear-20
   .actions
     = f.submit 'Save', class: "btn btn-success pull-right"

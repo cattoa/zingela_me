@@ -39,16 +39,6 @@
     %li
       =link_to 'Manage <i class="fa fa-fw fa-pencil"></i>'.html_safe,  species_index_path
 %li
-  %a{"data-target" => "#location", "data-toggle" => "collapse", :href => "javascript:;"}
-    %i.fa.fa-map-marker
-    Locations
-    %i.fa.fa-fw.fa-caret-down
-  %ul#location.collapse
-    %li
-      =link_to 'New <i class="fa fa-fw fa-plus"></i>'.html_safe, new_location_path
-    %li
-      =link_to 'Manage <i class="fa fa-fw fa-pencil"></i>'.html_safe, locations_path
-%li
   %a{"data-target" => "#communities", "data-toggle" => "collapse", :href => "javascript:;"}
     %i.fa.fa-users
     Communities

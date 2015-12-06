@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151206091438) do
+ActiveRecord::Schema.define(version: 20151206164259) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,8 +38,7 @@ ActiveRecord::Schema.define(version: 20151206091438) do
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
   create_table "communities", force: :cascade do |t|
-    t.string   "name"
-    t.string   "desctiption"
+    t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "project_id"
@@ -99,7 +98,7 @@ ActiveRecord::Schema.define(version: 20151206091438) do
 
   create_table "field_data", force: :cascade do |t|
     t.date     "date"
-    t.integer  "location_id"
+    t.string   "location"
     t.integer  "latitude_degree"
     t.integer  "latitude_minutes"
     t.integer  "latitude_seconds"
@@ -113,6 +112,7 @@ ActiveRecord::Schema.define(version: 20151206091438) do
     t.string   "scale"
     t.integer  "releve_number"
     t.string   "observer"
+    t.integer  "community_id"
   end
 
   create_table "growth_forms", force: :cascade do |t|

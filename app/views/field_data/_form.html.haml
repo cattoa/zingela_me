@@ -23,8 +23,8 @@
     = f.label :releve_number
     = f.number_field :releve_number,:class=>'form-control'
   .field.col-lg-6.no-padding-right
-    = f.label :location_id
-    = f.collection_select(:location_id, Location.where(company_id: current_user.company_id), :id, :name, {}, {:class=>'form-control'})
+    = f.label :location
+    = f.text_field :location,:class=>'form-control'
   .field.col-lg-4.no-padding-left
     = f.label :latitude_degree
     = f.number_field :latitude_degree,:class=>'form-control'
@@ -43,9 +43,14 @@
   .field.col-lg-4.no-padding-right
     = f.label :longitude_seconds
     = f.number_field :longitude_seconds,:class=>'form-control'
-  .field
+  .field.col-lg-6.no-padding-left
     = f.label :habitat_description
     = f.text_field :habitat_description,:class=>'form-control'
+  .field.col-lg-6.no-padding-right
+    = f.label :community_id
+
+    = f.collection_select(:community_id, Community.select(:id, :description), :id, :description, {},{:class=>'form-control'} )
+  -#Community.where(project_id:f.collection_select(:project_id,Project.where(company_id:current_user.company_id),:id,:name,{})), :id, :description, {}, {:class=>'form-control'})
   -# .field
   -#   = f.label :habitat_description
   -#   = f.collection_select(:community_id, Comunity.where(company_id:current_user.company_id), :id, :name, {}, {:class=>'form-control'})

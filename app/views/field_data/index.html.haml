@@ -19,11 +19,7 @@
       -# -if field_datum.project.company_id == current_user.company_id
       %tr
         %td= field_datum.date
-        - if Location.exists?(field_datum.location_id)
-          %td= field_datum.location.name
-        - else
-          %td.error
-            Location deleted
+        %td= field_datum.location
         %td= field_datum.project.name
         %td= field_datum.observer
         %td= link_to 'Show', field_datum, class: "btn btn-primary"

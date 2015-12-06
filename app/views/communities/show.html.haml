@@ -3,14 +3,10 @@
   %small
     Community
 %h4
-  %b Name:
-  = @community.name
-%h4
-  %b Description:
-  = @community.desctiption
-%h4
   %b Project:
   = @community.project.name
-
+%h4
+  %b Description:
+  = @community.description
 = link_to 'Edit', edit_community_path(@community),class:"btn btn-primary"
 = link_to 'Back', communities_path,class:"btn btn-default"
