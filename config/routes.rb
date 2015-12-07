@@ -16,7 +16,9 @@ Rails.application.routes.draw do
     get 'new/project/report/'   => :new_project_report
     post 'create/project/report/'   => :create_project_report
     get 'create/project/report/'   => :root
-
+    get 'new/community_cover/report/'   => :new_community_cover_report
+    post 'create/community_cover/report/'   => :create_community_cover_report
+    get 'create/community_cover/report/'   => :root
   end
   controller :manage do
     get 'manage/users'   => :users

@@ -236,6 +236,13 @@ div.field, div.actions {
     top: 5px;
     right: -10px;
 }
+#page-wrapper {
+    padding: 10px 10px 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    width: auto;
+}
 @media screen and (max-width: 767px) {
   .alert {
       margin: 0px;

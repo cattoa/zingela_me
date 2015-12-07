@@ -16,6 +16,20 @@ class ReportsController < ApplicationController
   def root
     redirect_to root_path
   end
+  def new_community_cover_report
+    @project_report = ProjectReport.new
+  end
+
+  def create_community_cover_report
+    @project = Project.find(project_report_params[:project_id])
+    number_of_sites = 0
+    @project.field_datum.each do |field_data|
+      number_of_sites = number_of_sites+1
+      field_data.observations.each do |observation|
+        puts observation.to_yaml
+      end
+    end
+  end
 
 protected
   def project_report_params

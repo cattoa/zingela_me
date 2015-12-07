@@ -20,13 +20,15 @@ production:
   database: zingela_production
   pool: 5
   timeout: 5000
+
 development:
-  <<: *default
+  adapter: postgresql
+  host: localhost
+  username: Murray
   database: zingela_development
-  username: postgres
-  password: 2
-  host: 127.0.0.1
-  port: 5432
+  # database: zingela_development
+  # username: Murray
+  # password:
   # adapter: postgresql
   # host: localhost
   # username: user
