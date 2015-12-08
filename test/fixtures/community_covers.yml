@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  species_id: 1
+  percentage_cover: 1.5
+  proportional_cover: 1.5
+  count: 1
+  mean_canopy_diameter: 1.5
+  individual_per_hectare: 1.5
+  predicted_cover: 1.5
+  difference: 1.5
+  competitor: 1
+  number_of_communiunities: 1
+
+two:
+  species_id: 1
+  percentage_cover: 1.5
+  proportional_cover: 1.5
+  count: 1
+  mean_canopy_diameter: 1.5
+  individual_per_hectare: 1.5
+  predicted_cover: 1.5
+  difference: 1.5
+  competitor: 1
+  number_of_communiunities: 1

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151206164259) do
+ActiveRecord::Schema.define(version: 20151208130319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,21 @@ ActiveRecord::Schema.define(version: 20151206164259) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "project_id"
+  end
+
+  create_table "community_covers", force: :cascade do |t|
+    t.integer  "species_id"
+    t.float    "percentage_cover"
+    t.float    "proportional_cover"
+    t.integer  "count"
+    t.float    "mean_canopy_diameter"
+    t.float    "individual_per_hectare"
+    t.float    "predicted_cover"
+    t.float    "difference"
+    t.integer  "competitor"
+    t.integer  "number_of_communiunities"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "community_growth_forms", force: :cascade do |t|
