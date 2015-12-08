@@ -22,17 +22,14 @@ production:
   timeout: 5000
 
 development:
-  adapter: postgresql
-  host: localhost
-  username: Murray
-  database: zingela_development
-  # database: zingela_development
-  # username: Murray
-  # password:
   # adapter: postgresql
   # host: localhost
-  # username: user
-  # database: app-dev
+  # username: Murray
+  # database: zingela_development
+  adapter: postgresql
+  host: localhost
+  username: user
+  database: app-dev
   # Heroku
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
