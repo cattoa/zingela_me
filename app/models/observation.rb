@@ -2,6 +2,8 @@ class Observation < ActiveRecord::Base
   belongs_to :field_datum
   belongs_to :species
 
+  has_one :community_cover
+
   has_many :plant_covers , dependent: :destroy
   has_many :growth_forms , dependent: :destroy
   has_many :crown_diameters , dependent: :destroy

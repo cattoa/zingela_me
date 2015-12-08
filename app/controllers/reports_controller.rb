@@ -26,7 +26,17 @@ class ReportsController < ApplicationController
     @project.field_datum.each do |field_data|
       number_of_sites = number_of_sites+1
       field_data.observations.each do |observation|
-        puts observation.to_yaml
+          observation.crown_diameters.each do |crown_diameter|
+            mean_canopy_diameter =(crown_diameter.lower_crown_diameter.to_f + crown_diameter.upper_crown_diameter.to_f)/2
+          end
+          observation.plant_covers.each do |plant_cover|
+            percentage_cover = plant_cover.percentage
+          end
+          CommunityCover.find_or_create_by(observation_id:observation.id) do |community_cover|
+            community_cover.species = observation.species
+            community_cover.percentage_cover = percentage_cover
+            community_cover.mean_canopy_diameter = mean_canopy_diameter
+          end
       end
     end
   end
