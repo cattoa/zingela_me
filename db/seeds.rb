@@ -10,11 +10,11 @@
 #admin.password = 'Password123'
 #admin.password_confirmation = 'Password123'
 #admin.save!
-admin = Admin.new
-admin.email = 'murraycatto@live.co.za'
-admin.password = 'Password123'
-admin.password_confirmation = 'Password123'
-admin.save!
+# admin = Admin.new
+# admin.email = 'murraycatto@live.co.za'
+# admin.password = 'Password123'
+# admin.password_confirmation = 'Password123'
+# admin.save!
 
 File.open("#{Rails.root}/db/Species.csv", "r") do |f|
   f.each_line do |line|
@@ -26,6 +26,7 @@ File.open("#{Rails.root}/db/Species.csv", "r") do |f|
           :species_family_id => SpeciesFamily.find_by_name(species[0]),
           :potential_biomass => species[1],
           :species => species[2],
+          :name => species[2],
           :threat_status => species[3],
           :sysnonym_of => species[5],
           :sa_endemic => species[4],

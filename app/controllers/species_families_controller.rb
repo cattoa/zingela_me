@@ -6,6 +6,9 @@ class SpeciesFamiliesController < ApplicationController
   # GET /species_families.json
   def index
     @species_families = SpeciesFamily.all
+    # @species_families.each do|s|
+    #   s.delete
+    # end
   end
 
   # GET /species_families/1

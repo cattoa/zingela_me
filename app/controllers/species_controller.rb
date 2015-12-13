@@ -6,6 +6,9 @@ class SpeciesController < ApplicationController
   # GET /species.json
   def index
     @species = Species.all
+    # @species.each do|s|
+    #   s.delete
+    # end
   end
 
   # GET /species/1
@@ -73,7 +76,7 @@ class SpeciesController < ApplicationController
     def species_params
       params.require(:species).permit(:name, :potential_biomass, :species, :threat_status, :sa_endemic, :sysnonym_of, :common_name, :life_cycle, :growth_forms, :min_hieght, :max_height, :min_altitude, :max_altitude, :distribution,:species_family_id)
     end
-    
+
     def deny_to_admins_and_companies
       redirect_to new_user_session_path unless user_signed_in?
     end
