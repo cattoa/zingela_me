@@ -149,41 +149,52 @@ class ReportsController < ApplicationController
         community_growth_form.std_deviation = (community_growth_form.std_deviation/community_growth_form_count**0.5)
         community_growth_form.save!
         community_growth_form.community_covers.each do |community_cover|
-
+          community_cover.predicted_cover = (community_cover_count*community_growth_form.slope)+community_growth_form.intercept
+          community_cover.difference = community_cover.percentage_cover-community_cover.predicted_cover
+          community_cover.proportional_cover = community_cover.percentage_cover/total_percentage_cover
+          # ==== Competitor Key ====
+          #      0 = Strong
+          #      1 = Normal
+          #      2 = Weak
+          if community_cover.difference>community_growth_form.std_error
+            community_cover.competitor = 0
+            community_growth_form.has_strong_competitor = true
+          elsif community_cover.difference<(community_growth_form.std_error*-1)
+            community_cover.competitor = 2
+            community_growth_form.has_weak_competitor = true
+          else
+            community_cover.competitor = 1
+            community_growth_form.has_normal_competitor = true
+          end
+          community_cover.save!
         end
+        if @report_community.percentage_cover.nil?
+          @report_community.percentage_cover = community_growth_form.percentage_cover
+        else
+          @report_community.percentage_cover = @report_community.percentage_cover+community_growth_form.percentage_cover
+        end
+        if @report_community.mean_canopy_diameter.nil?
+          @report_community.mean_canopy_diameter = community_growth_form.mean_canopy_diameter
+        else
+          @report_community.mean_canopy_diameter = @report_community.mean_canopy_diameter+community_growth_form.mean_canopy_diameter
+        end
+        if @report_community.individuals_per_hectare.nil?
+          @report_community.individuals_per_hectare = community_growth_form.individuals_per_hectare
+        else
+          @report_community.individuals_per_hectare = @report_community.individuals_per_hectare+community_growth_form.individuals_per_hectare
+        end
+        @report_community.save!
+        total_percentage_cover=total_percentage_cover+community_growth_form.percentage_cover
+        community_growth_form.save!
+        if total_percentage_cover >0
+          community_growth_form.proportional_cover = (community_growth_form.percentage_cover/total_percentage_cover)*100
+        else
+          community_growth_form.proportional_cover = 0
+        end
+        
       end
-
-      # mean_canopy_diameter = mean_canopy_diameter.to_f/field_data.observations.count
-      # percentage_cover = percentage_cover.to_f/field_data.observations.count
-
-      # field_data.observations.each do |observation|
-      #   community_cover_count = 0
-      #   last_occurance_mean = 0
-      #   last_percentage_cover = 0
-      #   last_percentage_over_mean = 0
-      #   last_mean_canopy_diameter = 0
-      #   last_individual_per_hectare = 0
-      #   slope = 0
-      #   community_growth_form = CommunityGrowthForm.where(report_community_id:@report_community.id)
-      #   community_cover_count= community_cover_count + CommunityCover.where(community_growth_form:community_growth_form).count
-      #   last_occurance_mean = community_growth_form.occurance_mean
-      #   # last_percentage_over_mean = community_growth_form.percentage_cover_mean
-      #   last_percentage_cover = CommunityCover.where(community_growth_form:community_growth_form).each do |community_cover|
-      #     last_percentage_cover = community_cover.percentage_cover
-      #     last_mean_canopy_diameter = community_cover.mean_canopy_diameter
-      #     last_individual_per_hectare = community_cover.individual_per_hectare
-      #   end
-      #   # slope = (community_cover_count - last_occurance_mean) * (last_percentage_cover - last_percentage_over_mean)
-      #   slope_divisor = (community_cover_count - last_occurance_mean)**2
-      #   community_growth_form.slope = slope
-      #   yysquare = (last_percentage_cover - last_percentage_over_mean)**2
-      #   community_growth_form.percentage_cover = last_percentage_cover
-      #   community_growth_form.mean_canopy_diameter = last_mean_canopy_diameter
-      #   community_growth_form.individuals_per_hectare = last_individual_per_hectare
-      #   community_growth_form.save
-      #   puts community_growth_form.to_yaml
-      # end
     end
+
   end
 protected
   def project_report_params
