@@ -1,48 +1,31 @@
-%h1
-  Plant Species
+%h1.page-header
+  Appendix A
   %small
-    found in Project
+    Community Cover
+%h2
+  Date:
+  %small
+    = DateTime.now
 %table.table.table-striped
-  %th Family:
-  %th Species:
-  %th Threat status:
-  %th Sa endemic:
-  %th Common name:
-  %th Life cycle:
-  %th Growth forms:
-  %th Min hieght:
-  %th Max height:
-  %th Min altitude:
-  %th Max altitude:
-  %th Distribution:
+  %th Species
+  %th Mean Cover %
+  %th Mean Canopy dia
+  %th Individ per ha
   - objArray = Array.new
   - @project.field_datum.each do |field_data|
     - field_data.observations.each do |observation|
-      - @species = observation.species
-      - if !objArray.include? @species.id
-        - objArray.push @species.id
-        %tr
-          %td
-            = @species.species_family.name
-          %td
-            = @species.name
-          %td
-            = @species.threat_status
-          %td
-            = @species.sa_endemic
-          %td
-            = @species.sysnonym_of
-          %td
-            = @species.life_cycle
-          %td
-            = @species.growth_forms
-          %td
-            = @species.min_hieght
-          %td
-            = @species.max_height
-          %td
-            = @species.min_altitude
-          %td
-            = @species.max_altitude
-          %td
-            = @species.distribution
+      - @report_community = ReportCommunity.find_by(community:field_data.community)
+      -  observation.growth_forms.each do |growth_form|
+        - description = growth_form.code
+        - community_growth_form = CommunityGrowthForm.find_by(description:description,report_community_id:@report_community.id)
+        - community_cover = CommunityCover.find_by(species_id:observation.species.id,community_growth_form:community_growth_form)
+        - if !community_cover.nil?
+          %tr
+            %td
+              = community_cover.species.name
+            %td
+              = community_growth_form.percentage_cover_mean
+            %td
+              = community_growth_form.mean_canopy_diameter
+            %td
+              = community_growth_form.individuals_per_hectare
