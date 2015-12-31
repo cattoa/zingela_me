@@ -13,19 +13,43 @@
   %th Individ per ha
   - objArray = Array.new
   - @project.field_datum.each do |field_data|
-    - field_data.observations.each do |observation|
-      - @report_community = ReportCommunity.find_by(community:field_data.community)
-      -  observation.growth_forms.each do |growth_form|
-        - description = growth_form.code
-        - community_growth_form = CommunityGrowthForm.find_by(description:description,report_community_id:@report_community.id)
-        - community_cover = CommunityCover.find_by(species_id:observation.species.id,community_growth_form:community_growth_form)
-        - if !community_cover.nil?
-          %tr
-            %td
-              = community_cover.species.name
-            %td
-              = community_growth_form.percentage_cover_mean
-            %td
-              = community_growth_form.mean_canopy_diameter
-            %td
-              = community_growth_form.individuals_per_hectare
+    - @report_community = ReportCommunity.find_by(community:field_data.community)
+    - community_growth_forms = CommunityGrowthForm.where(report_community_id:@report_community.id)
+    - community_growth_forms.each do |community_growth_form|
+      - community_covers = CommunityCover.where(community_growth_form_id:community_growth_form.id)
+      %tr
+        %td
+          %b
+            Growth form
+        %td
+          = community_growth_form.description
+        %td
+        %td
+
+      - total_percentage_cover_mean = 0
+      - total_mean_canopy_diameter = 0
+      - total_individual_per_hectare = 0
+      - community_covers.each do |community_cover|
+        %tr
+          %td
+            = community_cover.species.name
+          %td
+            = community_growth_form.percentage_cover_mean
+            - total_percentage_cover_mean = total_percentage_cover_mean + community_growth_form.percentage_cover_mean
+          %td
+            = community_cover.mean_canopy_diameter
+            - total_mean_canopy_diameter = total_mean_canopy_diameter + community_cover.mean_canopy_diameter
+          %td
+            = community_cover.individual_per_hectare
+            - total_individual_per_hectare = total_individual_per_hectare + community_cover.individual_per_hectare
+
+      %tr
+        %td
+          %b
+            Growth form totals
+        %td
+          = total_percentage_cover_mean
+        %td
+          = total_mean_canopy_diameter
+        %td
+          = total_individual_per_hectare
