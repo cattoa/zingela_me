@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151213182637) do
+ActiveRecord::Schema.define(version: 20151231145420) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -117,11 +117,7 @@ ActiveRecord::Schema.define(version: 20151213182637) do
     t.date     "date"
     t.string   "location"
     t.integer  "latitude_degree"
-    t.integer  "latitude_minutes"
-    t.integer  "latitude_seconds"
     t.integer  "longitude_degree"
-    t.integer  "longitude_minutes"
-    t.integer  "longitude_seconds"
     t.string   "habitat_description"
     t.integer  "project_id"
     t.datetime "created_at",          null: false
@@ -130,6 +126,10 @@ ActiveRecord::Schema.define(version: 20151213182637) do
     t.integer  "releve_number"
     t.string   "observer"
     t.integer  "community_id"
+    t.float    "longitude_seconds"
+    t.float    "latitude_seconds"
+    t.float    "latitude_minutes"
+    t.float    "longitude_minutes"
   end
 
   create_table "growth_forms", force: :cascade do |t|
