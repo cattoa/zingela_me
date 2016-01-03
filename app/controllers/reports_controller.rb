@@ -22,7 +22,6 @@ class ReportsController < ApplicationController
 
   def create_community_cover_report
     @project = Project.find(project_report_params[:project_id])
-
     #------------------------------------
     # DELETE OLD REPORT COMMUNITIES
     @project.field_datum.each do |field_data|
@@ -32,29 +31,29 @@ class ReportsController < ApplicationController
     end
     # DELETE OLD REPORT COMMUNITIES
     #------------------------------------
-
     @project.field_datum.each do |field_data|
       @report_community = ReportCommunity.find_or_create_by(community:field_data.community)
       percentage_cover = 0
       mean_canopy_diameter = 0
       description = ''
-      field_data.observations.each do |observation|
-        observation.crown_diameters.each do |crown_diameter|
-          mean_canopy_diameter =mean_canopy_diameter+(crown_diameter.lower_crown_diameter.to_f + crown_diameter.upper_crown_diameter.to_f)/2
+      observations = Observation.where(field_datum_id:field_data.id)
+      observations.each do |observation|
+        crown_diameters = CrownDiameter.where(observation_id:observation.id)
+        crown_diameters.each do |crown_diameter|
+          mean_canopy_diameter = mean_canopy_diameter+(crown_diameter.lower_crown_diameter.to_f + crown_diameter.upper_crown_diameter.to_f)/2
         end
-
-        observation.plant_covers.each do |plant_cover|
-          percentage_cover =percentage_cover+plant_cover.percentage
+        plant_covers = PlantCover.where(observation_id:observation.id)
+        plant_covers.each do |plant_cover|
+          percentage_cover = percentage_cover+plant_cover.percentage
         end
-
-        observation.growth_forms.each do |growth_form|
+        growth_forms = GrowthForm.where(observation_id:observation.id)
+        growth_forms.each do |growth_form|
           description = growth_form.description
           CommunityGrowthForm.find_or_create_by(description:description,report_community_id:@report_community.id)
         end
         community_growth_forms = CommunityGrowthForm.where(report_community_id:@report_community.id)
         community_growth_forms.each do |community_growth_form|
           CommunityCover.find_or_create_by(species_id:observation.species.id,community_growth_form:community_growth_form) do |community_cover|
-            # community_cover.species = observation.species
             if community_cover.percentage_cover.nil?
               community_cover.percentage_cover = percentage_cover
             else
@@ -67,15 +66,15 @@ class ReportsController < ApplicationController
             end
             community_cover.save!
           end
-          puts "CREATED COMMUNITY COVER. #{community_growth_form.id}"
         end
       end
       # 1st Loop
       total_percentage_cover = 0.0
       community_growth_forms = CommunityGrowthForm.where(report_community_id:@report_community.id)
       community_growth_forms.each do |community_growth_form|
-        community_cover_count = community_growth_form.community_covers.count
-        community_growth_form.community_covers.each do |community_cover|
+        community_covers = CommunityCover.where(community_growth_form_id:community_growth_form.id)
+        community_cover_count = community_covers.count
+        community_covers.each do |community_cover|
           community_cover.percentage_cover = (community_cover.percentage_cover/@project.field_datum.count)
           community_cover.mean_canopy_diameter = (community_cover.mean_canopy_diameter/community_cover_count)
           community_cover.individual_per_hectare = ((community_cover.percentage_cover * 100)/(( Math::PI)*(community_cover.mean_canopy_diameter**2)/4)).to_i
@@ -85,7 +84,6 @@ class ReportsController < ApplicationController
           else
             community_growth_form.percentage_cover_mean = (community_cover.percentage_cover+community_growth_form.percentage_cover_mean)
           end
-
           if community_growth_form.occurance_mean.nil?
             community_growth_form.occurance_mean = community_cover_count
           else
@@ -93,11 +91,14 @@ class ReportsController < ApplicationController
           end
           community_growth_form.save!
         end
+        community_growth_form.occurance_mean = community_growth_form.occurance_mean/community_cover_count
+        community_growth_form.save!
         community_growth_form.percentage_cover_mean = community_growth_form.percentage_cover_mean/community_cover_count
         yysquare = 0
         slope_divisor = 0
         slope = 0
-        community_growth_form.community_covers.each do |community_cover|
+        community_covers = CommunityCover.where(community_growth_form_id:community_growth_form.id)
+        community_covers.each do |community_cover|
           if community_growth_form.slope.nil?
             community_growth_form.slope = (community_cover_count - community_growth_form.occurance_mean) * (community_cover.percentage_cover - community_growth_form.percentage_cover_mean)
           else
@@ -108,10 +109,11 @@ class ReportsController < ApplicationController
           else
             community_growth_form.std_deviation = community_growth_form.std_deviation+((community_cover.percentage_cover-community_growth_form.percentage_cover_mean)**2)
           end
+          puts "(#{community_growth_form.std_error} = (#{community_cover_count}-#{community_growth_form.occurance_mean})*(#{community_cover.percentage_cover}-#{community_growth_form.percentage_cover_mean})"
           if community_growth_form.std_error.nil?
-            community_growth_form.std_error = ((community_cover_count-community_growth_form.occurance_mean)*(community_cover.percentage_cover-community_growth_form.percentage_cover_mean))
+            community_growth_form.std_error = (community_cover_count-community_growth_form.occurance_mean)*(community_cover.percentage_cover-community_growth_form.percentage_cover_mean)
           else
-            community_growth_form.std_error = community_growth_form.std_error+((community_cover_count-community_growth_form.occurance_mean)*(community_cover.percentage_cover-community_growth_form.percentage_cover_mean))
+            community_growth_form.std_error = community_growth_form.std_error+(community_cover_count-community_growth_form.occurance_mean)*(community_cover.percentage_cover-community_growth_form.percentage_cover_mean)
           end
           community_growth_form.save!
           slope_divisor = (slope_divisor+(community_cover_count-community_growth_form.occurance_mean)**2)
@@ -150,7 +152,8 @@ class ReportsController < ApplicationController
         community_growth_form.intercept = (community_growth_form.percentage_cover_mean-(community_growth_form.occurance_mean*community_growth_form.slope))
         community_growth_form.std_deviation = (community_growth_form.std_deviation/community_growth_form_count**0.5)
         community_growth_form.save!
-        community_growth_form.community_covers.each do |community_cover|
+        community_covers = CommunityCover.where(community_growth_form_id:community_growth_form.id)
+        community_covers.each do |community_cover|
           community_cover.predicted_cover = (community_cover_count*community_growth_form.slope)+community_growth_form.intercept
           community_cover.difference = community_cover.percentage_cover-community_cover.predicted_cover
           community_cover.proportional_cover = community_cover.percentage_cover/total_percentage_cover
@@ -158,6 +161,8 @@ class ReportsController < ApplicationController
           #      0 = Strong
           #      1 = Normal
           #      2 = Weak
+          puts "Diffrence #{community_cover.difference}"
+          puts "std Error #{community_growth_form.std_error}"
           if community_cover.difference>community_growth_form.std_error
             community_cover.competitor = 0
             community_growth_form.has_strong_competitor = true
@@ -193,10 +198,9 @@ class ReportsController < ApplicationController
         else
           community_growth_form.proportional_cover = 0
         end
-
+        community_growth_form.save!
       end
     end
-
   end
 protected
   def project_report_params
