@@ -13,8 +13,9 @@ default: &default
   adapter: postgresql
   encoding: utf8
   pool: 5
-  username: Murray
-  password:
+  username: postgres
+  password: 2
+  port: 5432
 production:
   adapter: postgresql
   database: zingela_production
@@ -22,9 +23,10 @@ production:
   timeout: 5000
 
 development:
+  <<: *default
   adapter: postgresql
   host: localhost
-  username: Murray
+  username: postgres
   database: zingela_development
   # adapter: postgresql
   # host: localhost

@@ -191,7 +191,7 @@ class ReportsController < ApplicationController
         else
           community_growth_form.proportional_cover = 0
         end
-        
+
       end
     end
 
