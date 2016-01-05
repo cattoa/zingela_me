@@ -12,9 +12,8 @@
   %th Mean Canopy dia
   %th Individ per ha
   - objArray = Array.new
-  - @project.field_datum.each do |field_data|
-    - @report_community = ReportCommunity.find_by(community:field_data.community)
-    - community_growth_forms = CommunityGrowthForm.where(report_community_id:@report_community.id)
+  - @community.report_communities.each do |report_community|
+    - community_growth_forms = CommunityGrowthForm.where(report_community_id:report_community.id)
     - community_growth_forms.each do |community_growth_form|
       - community_covers = CommunityCover.where(community_growth_form_id:community_growth_form.id)
       %tr
@@ -65,9 +64,8 @@
   %th
   %th
   - objArray = Array.new
-  - @project.field_datum.each do |field_data|
-    - @report_community = ReportCommunity.find_by(community:field_data.community)
-    - community_growth_forms = CommunityGrowthForm.where(report_community_id:@report_community.id)
+  - @community.report_communities.each do |report_community|
+    - community_growth_forms = CommunityGrowthForm.where(report_community_id:report_community.id)
     - community_growth_forms.each do |community_growth_form|
       %tr
         %td
@@ -157,9 +155,8 @@
   %th
   %th
   - objArray = Array.new
-  - @project.field_datum.each do |field_data|
-    - @report_community = ReportCommunity.find_by(community:field_data.community)
-    - community_growth_forms = CommunityGrowthForm.where(report_community_id:@report_community.id)
+  - @community.report_communities.each do |report_community|
+    - community_growth_forms = CommunityGrowthForm.where(report_community_id:report_community.id)
     - community_growth_forms.each do |community_growth_form|
       %tr
         %td
