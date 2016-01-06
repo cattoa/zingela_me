@@ -38,10 +38,10 @@ class ReportsController < ApplicationController
         description = ''
         observations = Observation.where(field_datum_id:field_data.id)
         observations.each do |observation|
-          crown_diameters = CrownDiameter.where(observation_id:observation.id)
-          crown_diameters.each do |crown_diameter|
-            mean_canopy_diameter = mean_canopy_diameter+(crown_diameter.lower_crown_diameter.to_f + crown_diameter.upper_crown_diameter.to_f)/2
-          end
+
+          crown_diameter = CrownDiameter.find(observation_id:observation.id)
+          mean_canopy_diameter = mean_canopy_diameter+(crown_diameter.lower_crown_diameter.to_f + crown_diameter.upper_crown_diameter.to_f)/2
+
           plant_covers = PlantCover.where(observation_id:observation.id)
           plant_covers.each do |plant_cover|
             percentage_cover = percentage_cover+plant_cover.percentage
