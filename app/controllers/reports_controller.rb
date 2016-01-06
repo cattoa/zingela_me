@@ -20,7 +20,6 @@ class ReportsController < ApplicationController
     report_communities = ReportCommunity.where(community:@community)
     if (report_communities)
       report_communities.each do |report_community|
-        puts("-------------------------ReportCommunity : #{report_community.created_at}")
         report_community.destroy
       end
     end
@@ -33,23 +32,25 @@ class ReportsController < ApplicationController
       # Field Data Loop
       field_datum.each do |field_data|
 
-        description = ''
+
         observations = Observation.where(field_datum_id:field_data.id)
         if (observations)
           # Observation Loop
           observations.each do |observation|
-            CommunityGrowthForm.find_or_create_by(description:description,report_community_id:@report_community.id)
+            growth_form = GrowthForm.find_by(observation_id:observation.id)
+            description = growth_form.description
+            puts("--------------------------#{description}")
+            community_growth_form =CommunityGrowthForm.find_or_create_by(description:description,report_community_id:@report_community.id)
             plant_cover = PlantCover.find_by(observation_id:observation.id)
             species = observation.species
             crown_diameter = CrownDiameter.find_by(observation_id:observation.id)
-
-            community_cover = CommunityCover.find_or_create_by(species_id:species.id,community_growth_form:community_growth_form)
+            community_cover = CommunityCover.find_or_create_by(species_id:species.id,community_growth_form_id:community_growth_form.id)
 
             mean_canopy_diameter = (crown_diameter.lower_crown_diameter.to_f + crown_diameter.upper_crown_diameter.to_f)/2
             if community_cover.percentage_cover.nil?
-              community_cover.percentage_cover = plant_cover.percentage_cover
+              community_cover.percentage_cover = plant_cover.percentage
             else
-              community_cover.percentage_cover = community_cover.percentage_cover+plant_cover.percentage_cover
+              community_cover.percentage_cover = community_cover.percentage_cover+plant_cover.percentage
             end
             if community_cover.mean_canopy_diameter.nil?
               community_cover.mean_canopy_diameter = mean_canopy_diameter
@@ -77,9 +78,9 @@ class ReportsController < ApplicationController
         # community_growth_forms.each do |community_growth_form|
 
         # 1st Loop
-        total_percentage_cover = 0.0
-        community_growth_forms = CommunityGrowthForm.where(report_community_id:@report_community.id)
-        if (community_growth_forms)
+      total_percentage_cover = 0.0
+      community_growth_forms = CommunityGrowthForm.where(report_community_id:@report_community.id)
+      if (community_growth_forms)
           community_growth_forms.each do |community_growth_form|
             community_covers = CommunityCover.where(community_growth_form_id:community_growth_form.id)
             if (community_covers)
@@ -111,7 +112,7 @@ class ReportsController < ApplicationController
               slope_divisor = 0
               total_percentage_cover = 0.0
 
-  #slope = 0
+              #slope = 0
   # community_covers = CommunityCover.where(community_growth_form_id:community_growth_form.id)
               community_covers.each do |community_cover|
                 slope = (community_cover.count - community_growth_form.occurance_mean) * (community_cover.percentage_cover - community_growth_form.percentage_cover_mean)
@@ -153,7 +154,7 @@ class ReportsController < ApplicationController
                 end
                 community_growth_form.save!
                 total_percentage_cover = total_percentage_cover+community_cover.percentage_cover
-              end
+              end # community_covers loop
             end #if community_covers
             count2 = 0
             if community_growth_form.count > 2
@@ -172,12 +173,17 @@ class ReportsController < ApplicationController
               community_growth_form.slope = 0
               community_growth_form.std_error = 0
             end
+            if community_growth_form.count > 0
+              community_growth_form.std_deviation = ((community_growth_form.std_deviation/community_growth_form.count)**0.5)
+            else
+              community_growth_form.std_deviation = 0
+            end
             community_growth_form.intercept = (community_growth_form.percentage_cover_mean-(community_growth_form.occurance_mean*community_growth_form.slope))
-            community_growth_form.std_deviation = (community_growth_form.std_deviation/community_growth_form_count**0.5)
+
             community_growth_form.save!
-            community_covers = CommunityCover.where(community_growth_form_id:community_growth_form.id)
+            # community_covers = CommunityCover.where(community_growth_form_id:community_growth_form.id)
             community_covers.each do |community_cover|
-              community_cover.predicted_cover = (community_cover_count*community_growth_form.slope)+community_growth_form.intercept
+              community_cover.predicted_cover = (community_cover.count*community_growth_form.slope)+community_growth_form.intercept
               community_cover.difference = community_cover.percentage_cover-community_cover.predicted_cover
               community_cover.proportional_cover = community_cover.percentage_cover/total_percentage_cover
               # ==== Competitor Key ====
@@ -224,10 +230,9 @@ class ReportsController < ApplicationController
             community_growth_form.save!
 
           end # community_growth_forms loop
-        end #If community_growth_forms exist
-      end
-    end
-  end
+        end # End of if community_growth_forms exist
+    end # End of if field_datum
+  end # End of function create_community_cover_report
 protected
   def project_report_params
     params.require(:project_report).permit(:community_id)
