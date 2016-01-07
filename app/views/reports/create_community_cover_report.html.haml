@@ -6,10 +6,10 @@
   = DateTime.now.to_s(:db)
 
 - report_community = @community.report_communities.first
-- community_growth_forms = CommunityGrowthForm.where(report_community_id:report_community.id)
+- community_growth_forms = CommunityGrowthForm.where(report_community_id:report_community.id).order(:order)
 - community_growth_forms.each do |community_growth_form|
   %h3
-    Community Form -
+    Growth Form -
     = community_growth_form.description
   - community_covers = CommunityCover.where(community_growth_form_id:community_growth_form.id)
   - total_percentage_cover_mean = 0

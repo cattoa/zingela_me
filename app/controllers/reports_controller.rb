@@ -40,7 +40,7 @@ class ReportsController < ApplicationController
             growth_form = GrowthForm.find_by(observation_id:observation.id)
             description = growth_form.description
             puts("--------------------------#{description}")
-            community_growth_form =CommunityGrowthForm.find_or_create_by(description:description,report_community_id:@report_community.id)
+            community_growth_form =CommunityGrowthForm.find_or_create_by(description:description,report_community_id:@report_community.id,order:growth_form.order)
             plant_cover = PlantCover.find_by(observation_id:observation.id)
             species = observation.species
             crown_diameter = CrownDiameter.find_by(observation_id:observation.id)
