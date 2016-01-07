@@ -1,8 +1,10 @@
 %h1.page-header
-  Appendix A - Community Cover :
-  =@community.description
+  Appendix A - Community Cover
+
 %h2
-  Date:
+  =@community.description
+%h2.pull-right
+  Date Created :
   = DateTime.now.to_s(:db)
 
 - report_community = @community.report_communities.first
@@ -15,11 +17,11 @@
   - total_percentage_cover_mean = 0
   - total_mean_canopy_diameter = 0
   - total_individual_per_hectare = 0
-  %table.table.table-striped
-    %th Species
-    %th Mean Cover %
-    %th Mean Canopy dia
-    %th Individ per ha
+  %table.table.table-striped.table-bordered
+    %th.col-lg-6 Species
+    %th.col-lg-2 Mean Cover %
+    %th.col-lg-2 Mean Canopy diameter
+    %th.col-lg-2 Individ per ha
     - objArray = Array.new
     - community_covers.each do |community_cover|
       %tr
