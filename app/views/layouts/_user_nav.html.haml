@@ -51,18 +51,11 @@
 %li
   %a{"data-target" => "#community-report", "data-toggle" => "collapse", :href => "javascript:;"}
     %i.fa.fa-file-text-o
-    Community Reports
+    Reports
     %i.fa.fa-fw.fa-caret-down
   %ul#community-report.collapse
     %li
       =link_to 'Community growth report'.html_safe, new_community_cover_report_path
-%li
-  %a{"data-target" => "#community-growth", "data-toggle" => "collapse", :href => "javascript:;"}
-    %i.fa.fa-line-chart
-    Community Growth
-    %i.fa.fa-fw.fa-caret-down
-  %ul#community-growth.collapse
+  %ul#community-report.collapse
     %li
-      =link_to 'New <i class="fa fa-fw fa-plus"></i>'.html_safe, new_community_growth_form_path
-    %li
-      =link_to 'Manage <i class="fa fa-fw fa-pencil"></i>'.html_safe, community_growth_forms_path
+      =link_to 'Community composition report'.html_safe, new_community_cover_report_path

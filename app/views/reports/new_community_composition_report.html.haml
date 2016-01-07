@@ -1,14 +1,14 @@
 %h1.page-header
   New
   %small
-    Community Cover report
+    Community Composition report
 .col-lg-10
-  = form_for(@project_report, url: "/create/community_cover/report/") do |f|
+  = form_for(@project_report, url: "/create/community_composition/report/") do |f|
     .field
       %label
         Select a project
       = f.collection_select(:community_id, Community.where(project_id:Project.where(company_id:current_user.company_id)), :id, :description, {}, {:class=>'form-control'})
     .clear-20
     .actions
-      = f.submit 'Create', class: "btn btn-info pull-right"
+      = f.submit 'Create Report', class: "btn btn-info pull-right"
       = link_to 'Back', root_path, class: "btn btn-danger"
