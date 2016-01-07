@@ -1,8 +1,53 @@
 %h1.page-header
   Appendix B - Community Composition
-%h2
-  Date:
-  = Date.now.to_s(:db)
+h2
+  =@community.description
+%h2.pull-right
+  Date Created :
+  = DateTime.now.to_s(:db)
+- report_community = @community.report_communities.first
+- community_growth_forms = CommunityGrowthForm.where(report_community_id:report_community.id).order(:order)
+- community_growth_forms.each do |community_growth_form|
+  %h3
+    Growth Form :
+    = community_growth_form.description
+    Std Error of the mean :
+    = community_growth_form.std_error
+  %h3 Strong Competitors
+  - community_covers_strong = CommunityCover.where(community_growth_form_id:community_growth_form.id,competitor:0).order(:community_growth_form.order,:difference)
+  - total_percentage_cover_mean = 0
+  - total_mean_canopy_diameter = 0
+  - total_individual_per_hectare = 0
+  %table.table.table-striped.table-bordered
+    %th.col-lg-6 Species
+    %th.col-lg-2 Mean Cover %
+    %th.col-lg-2 Mean Canopy diameter
+    %th.col-lg-2 Individ per ha
+    - objArray = Array.new
+    - community_covers.each do |community_cover|
+      %tr
+        %td
+          = community_cover.species.name
+        %td
+          = community_growth_form.percentage_cover_mean.round(2)
+          - total_percentage_cover_mean = total_percentage_cover_mean + community_growth_form.percentage_cover_mean
+        %td
+          = community_cover.mean_canopy_diameter.round(2)
+          - total_mean_canopy_diameter = total_mean_canopy_diameter + community_cover.mean_canopy_diameter
+        %td
+          = community_cover.individual_per_hectare.round(2)
+          - total_individual_per_hectare = total_individual_per_hectare + community_cover.individual_per_hectare
+    %tr
+      %td
+        %b
+          Growth form totals
+      %td
+        = total_percentage_cover_mean.round(2)
+      %td
+        = total_mean_canopy_diameter.round(2)
+      %td
+        = total_individual_per_hectare.round(2)
+
 %table.table.table-striped
   %th Species
   %th

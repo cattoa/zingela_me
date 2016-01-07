@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :community_growth_forms
-  resources :report_communities
   resources :communities
   resources :species_families
   resources :species
@@ -13,12 +11,15 @@ Rails.application.routes.draw do
   devise_for :users
   get '/sign_out' => 'devise/sessions#destroy'
   controller :reports do
-    get 'new/project/report/'   => :new_project_report
-    post 'create/project/report/'   => :create_project_report
+    get 'new/species/report/'   => :new_species_report
+    post 'create/species/report/'   => :create_species_report
     get 'create/project/report/'   => :root
     get 'new/community_cover/report/'   => :new_community_cover_report
     post 'create/community_cover/report/'   => :create_community_cover_report
     get 'create/community_cover/report/'   => :root
+    get 'new/community_composition/report/'   => :new_community_composition_report
+    post 'create/community_composition/report/'   => :create_community_composition_report
+    get 'create/community_composition/report/'   => :root
   end
   controller :manage do
     get 'manage/users'   => :users

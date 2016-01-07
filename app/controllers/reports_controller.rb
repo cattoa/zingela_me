@@ -115,7 +115,7 @@ class ReportsController < ApplicationController
               total_percentage_cover = 0.0
 
               #slope = 0
-  # community_covers = CommunityCover.where(community_growth_form_id:community_growth_form.id)
+              # community_covers = CommunityCover.where(community_growth_form_id:community_growth_form.id)
               community_covers.each do |community_cover|
                 slope = (community_cover.count - community_growth_form.occurance_mean) * (community_cover.percentage_cover - community_growth_form.percentage_cover_mean)
                 std_deviation = (community_cover.percentage_cover-community_growth_form.percentage_cover_mean)**2
