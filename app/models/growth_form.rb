@@ -27,6 +27,7 @@ class GrowthForm < ActiveRecord::Base
     else
       puts "issue"
     end
-    last_item.update_columns(:description,description,:order,order)
+    last_item.update_column(:description,description)
+    last_item.update_column(:order,order)
   end
 end
