@@ -14,7 +14,7 @@
     = f.text_field :potential_biomass, class: "form-control"
   .field
     = f.label :species_family_id
-    = f.collection_select(:species_family_id, SpeciesFamily.all, :id, :name, {}, {:class=>'form-control'})
+    = f.collection_select(:species_family_id, SpeciesFamily.order('name ASC').all, :id, :name, {}, {:class=>'form-control'})
   .field
     = f.label :threat_status
     = f.text_field :threat_status, class: "form-control"
@@ -23,7 +23,7 @@
     = f.text_field :sa_endemic, class: "form-control"
   .field
     %label
-      Synonym of 
+      Synonym of
     = f.text_field :sysnonym_of, class: "form-control"
   .field
     = f.label :common_name

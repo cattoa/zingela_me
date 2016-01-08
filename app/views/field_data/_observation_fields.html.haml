@@ -12,7 +12,7 @@
       .links
         = link_to_add_association '<i class="fa-plus fa"></i> Add Growth forms'.html_safe, f, :growth_forms, class: "btn btn-primary btn-sm", onclick:"$(this).hide();"
   .col-lg-3.full-select
-    = f.collection_select(:species_id, Species.all, :id, :name, {}, {:class=>'form-control collection_select'})
+    = f.collection_select(:species_id, Species.order('name ASC').all, :id, :name, {}, {:class=>'form-control collection_select'})
   #crown_diameters.col-lg-2.full-select
     - has_item =false
     = f.fields_for :crown_diameters do |builder|
@@ -31,5 +31,5 @@
         = link_to_add_association '<i class="fa-plus fa"></i> Add Plant cover'.html_safe, f, :plant_covers, class: "btn btn-primary btn-sm", onclick:"$(this).hide();"
   .col-lg-3
     = link_to_remove_association "<i class='fa-times fa'></i>".html_safe, f, class:" btn-sm pull-right remove-item"
-    = f.text_field :notes, class: "form-control", onfocus:'CreateNewObs(this);'
+    = f.text_field :notes, class: "form-control"
   .clear-20
