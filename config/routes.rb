@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   controller :reports do
     get 'new/species/report/'   => :new_species_report
     post 'create/species/report/'   => :create_species_report
-    get 'create/project/report/'   => :root
+    get 'create/species/report/'   => :create_species_report
     get 'new/community_cover/report/'   => :new_community_cover_report
     post 'create/community_cover/report/'   => :create_community_cover_report
     get 'create/community_cover/report/'   => :root

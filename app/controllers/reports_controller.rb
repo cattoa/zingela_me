@@ -6,11 +6,27 @@ class ReportsController < ApplicationController
     @project_report = ProjectReport.new
   end
 
+  def new_community_composition_report
+    @project_report = ProjectReport.new
+  end
+
   def root
     redirect_to root_path
   end
 
   def create_community_cover_report
+    create_report_data
+  end
+
+  def create_community_composition_report
+    create_report_data
+  end
+
+  def create_species_report
+
+  end
+
+  def create_report_data
     @community = Community.find(project_report_params[:community_id])
     puts("-------------------------------------Community : #{@community.description}")
     #@project = Project.find(@community.project_id)

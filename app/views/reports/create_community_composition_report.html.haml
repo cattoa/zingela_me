@@ -1,222 +1,134 @@
 %h1.page-header
-  Appendix B - Community Composition
-h2
+  Appendix B - Community Composition -
   =@community.description
-%h2.pull-right
-  Date Created :
-  = DateTime.now.to_s(:db)
+%h3
+  %span.col-lg-12
+    Date Created :
+    = DateTime.now.to_s(:db)
 - report_community = @community.report_communities.first
 - community_growth_forms = CommunityGrowthForm.where(report_community_id:report_community.id).order(:order)
 - community_growth_forms.each do |community_growth_form|
   %h3
-    Growth Form :
-    = community_growth_form.description
-    Std Error of the mean :
-    = community_growth_form.std_error
-  %h3 Strong Competitors
-  - community_covers_strong = CommunityCover.where(community_growth_form_id:community_growth_form.id,competitor:0).order(:community_growth_form.order,:difference)
-  - total_percentage_cover_mean = 0
-  - total_mean_canopy_diameter = 0
-  - total_individual_per_hectare = 0
-  %table.table.table-striped.table-bordered
-    %th.col-lg-6 Species
-    %th.col-lg-2 Mean Cover %
-    %th.col-lg-2 Mean Canopy diameter
-    %th.col-lg-2 Individ per ha
-    - objArray = Array.new
-    - community_covers.each do |community_cover|
-      %tr
-        %td
-          = community_cover.species.name
-        %td
-          = community_growth_form.percentage_cover_mean.round(2)
-          - total_percentage_cover_mean = total_percentage_cover_mean + community_growth_form.percentage_cover_mean
-        %td
-          = community_cover.mean_canopy_diameter.round(2)
-          - total_mean_canopy_diameter = total_mean_canopy_diameter + community_cover.mean_canopy_diameter
-        %td
-          = community_cover.individual_per_hectare.round(2)
-          - total_individual_per_hectare = total_individual_per_hectare + community_cover.individual_per_hectare
-    %tr
-      %td
-        %b
-          Growth form totals
-      %td
-        = total_percentage_cover_mean.round(2)
-      %td
-        = total_mean_canopy_diameter.round(2)
-      %td
-        = total_individual_per_hectare.round(2)
-
-%table.table.table-striped
-  %th Species
-  %th
-  %th
-  %th
-  - objArray = Array.new
-  - @community.report_communities.each do |report_community|
-    - community_growth_forms = CommunityGrowthForm.where(report_community_id:report_community.id)
-    - community_growth_forms.each do |community_growth_form|
+    %span.col-lg-6
+      Growth Form :
+      = community_growth_form.description
+    %span.col-lg-6
+      Std Error of the mean :
+      = community_growth_form.std_error
+  -if community_growth_form.has_strong_competitor?
+    %h3
+      %span.col-lg-12 Strong Competitors
+    - community_covers = CommunityCover.where(community_growth_form_id:community_growth_form.id,competitor:0).order(:difference)
+    - total_percentage_cover = 0
+    - total_proportional_cover = 0
+    %table.table.table-striped.table-bordered
+      %th.col-lg-4 Species
+      %th.col-lg-2 Actual cover
+      %th.col-lg-2 Predicted
+      %th.col-lg-2 difference
+      %th.col-lg-2 Frequency
+      - objArray = Array.new
+      - community_covers.each do |community_cover|
+        - total_percentage_cover = total_percentage_cover + community_growth_form.percentage_cover
+        - total_proportional_cover = total_proportional_cover + community_growth_form.proportional_cover
+        %tr
+          %td
+            = community_cover.species.name
+          %td
+            = community_growth_form.percentage_cover.round(2)
+          %td
+            = community_cover.predicted_cover.round(2)
+          %td
+            = community_cover.difference.round(2)
+          %td
+            = community_cover.count
       %tr
         %td
           %b
-            Growth form
+            Total percentage cover
         %td
-          = community_growth_form.description
-        %td
-        %td
-      - community_covers_strong = CommunityCover.where(community_growth_form_id:community_growth_form.id,competitor:0)
-      - community_covers_normal = CommunityCover.where(community_growth_form_id:community_growth_form.id,competitor:1)
-      - community_covers_weak = CommunityCover.where(community_growth_form_id:community_growth_form.id,competitor:2)
-      - if community_covers_strong.count > 0
-        %tr
-
-          %td
-            %b Strong Competitors
-          %td
-          %td
-          %td
-        - community_covers_strong.each do |community_cover|
-          %tr
-
-            %td
-              = community_cover.species.name
-            %td
-            %td
-            %td
-      - if community_covers_normal.count > 0
-        %tr
-          %td
-          %td
-          %td
-          %td
-            %b Normal Competitors
-        - community_covers_normal.each do |community_cover|
-          %tr
-
-            %td
-              = community_cover.species.name
-            %td
-            %td
-            %td
-      - if community_covers_weak.count > 0
-        %tr
-          %td
-            %b Weak Competitors
-          %td
-          %td
-          %td
-        - community_covers_weak.each do |community_cover|
-          %tr
-            %td
-              = community_cover.species.name
-            %td
-            %td
-            %td
+          = total_percentage_cover.round(2)
       %tr
         %td
           %b
-            Percentage cover for GF
+            Total propotional cover
         %td
-          = community_growth_form.percentage_cover.round(2)
-        %td
-        %td
-      %tr
-        %td
-          %b
-            Proportional cover for GF
-        %td
-          = community_growth_form.proportional_cover.round(2)
-        %td
-        %td
-%h1.page-header
-  Appendix B
-  %small
-    Community Composition
-    %br
-    With data
-%h2
-  Date:
-  %small
-    = DateTime.now
-%table.table.table-striped
-  %th Species
-  %th
-  %th
-  %th
-  - objArray = Array.new
-  - @community.report_communities.each do |report_community|
-    - community_growth_forms = CommunityGrowthForm.where(report_community_id:report_community.id)
-    - community_growth_forms.each do |community_growth_form|
-      %tr
-        %td
-          %b
-            Growth form
-        %td
-          = community_growth_form.description
-        %td
-        %td
-      - community_covers_strong = CommunityCover.where(community_growth_form_id:community_growth_form.id,competitor:0)
-      - community_covers_normal = CommunityCover.where(community_growth_form_id:community_growth_form.id,competitor:1)
-      - community_covers_weak = CommunityCover.where(community_growth_form_id:community_growth_form.id,competitor:2)
-      - if community_covers_strong.count > 0
-        %tr
-
-          %td
-            %b Strong Competitors
-          %td
-          %td
-          %td
-        - community_covers_strong.each do |community_cover|
-          %tr
-
-            %td
-              = community_cover.species.name
-            %td
-            %td
-            %td
-      - if community_covers_normal.count > 0
+          = total_proportional_cover.round(2)
+  -if community_growth_form.has_normal_competitor?
+    %h3
+      %span.col-lg-12 Normal Competitors
+    - community_covers = CommunityCover.where(community_growth_form_id:community_growth_form.id,competitor:1).order(:difference)
+    - total_percentage_cover = 0
+    - total_proportional_cover = 0
+    %table.table.table-striped.table-bordered
+      %th.col-lg-4 Species
+      %th.col-lg-2 Actual cover
+      %th.col-lg-2 Predicted
+      %th.col-lg-2 difference
+      %th.col-lg-2 Frequency
+      - objArray = Array.new
+      - community_covers.each do |community_cover|
+        - total_percentage_cover = total_percentage_cover + community_growth_form.percentage_cover
+        - total_proportional_cover = total_proportional_cover + community_growth_form.proportional_cover
         %tr
           %td
+            = community_cover.species.name
           %td
+            = community_growth_form.percentage_cover.round(2)
           %td
+            = community_cover.predicted_cover.round(2)
           %td
-            %b Normal Competitors
-        - community_covers_normal.each do |community_cover|
-          %tr
+            = community_cover.difference.round(2)
+          %td
+            = community_cover.count
+      %tr
+        %td
+          %b
+            Total percentage cover
+        %td
+          = total_percentage_cover.round(2)
+      %tr
+        %td
+          %b
+            Total propotional cover
+        %td
+          = total_proportional_cover.round(2)
 
-            %td
-              = community_cover.species.name
-            %td
-            %td
-            %td
-      - if community_covers_weak.count > 0
+  -if community_growth_form.has_weak_competitor?
+    %h3 Normal Competitors
+    - community_covers = CommunityCover.where(community_growth_form_id:community_growth_form.id,competitor:2).order(:difference)
+    - total_percentage_cover = 0
+    - total_proportional_cover = 0
+    %table.table.table-striped.table-bordered
+      %th.col-lg-4 Species
+      %th.col-lg-2 Actual cover
+      %th.col-lg-2 Predicted
+      %th.col-lg-2 difference
+      %th.col-lg-2 Frequency
+      - objArray = Array.new
+      - community_covers.each do |community_cover|
+        - total_percentage_cover = total_percentage_cover + community_growth_form.percentage_cover
+        - total_proportional_cover = total_proportional_cover + community_growth_form.proportional_cover
         %tr
           %td
-            %b Weak Competitors
+            = community_cover.species.name
           %td
+            = community_growth_form.percentage_cover.round(2)
           %td
+            = community_cover.predicted_cover.round(2)
           %td
-        - community_covers_weak.each do |community_cover|
-          %tr
-            %td
-              = community_cover.species.name
-            %td
-            %td
-            %td
+            = community_cover.difference.round(2)
+          %td
+            = community_cover.count
       %tr
         %td
           %b
-            Percentage cover for GF
+            Total percentage cover
         %td
-          = community_growth_form.percentage_cover.round(2)
-        %td
-        %td
+          = total_percentage_cover.round(2)
       %tr
         %td
           %b
-            Proportional cover for GF
+            Total propotional cover
         %td
-          = community_growth_form.proportional_cover.round(2)
-        %td
-        %td
+          = total_proportional_cover.round(2)
