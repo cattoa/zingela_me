@@ -11,10 +11,10 @@
 #admin.password_confirmation = 'Password123'
 #admin.save!
 # admin = Admin.new
-# admin.email = 'murraycatto@live.co.za'
-# admin.password = 'Password123'
-# admin.password_confirmation = 'Password123'
-# admin.save!
+admin.email = 'allistair@bobcatt.co.za'
+admin.password = 'Qwerty1!'
+admin.password_confirmation = 'Qwerty1!'
+admin.save!
 
 File.open("#{Rails.root}/db/Species.csv", "r") do |f|
   f.each_line do |line|
