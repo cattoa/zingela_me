@@ -66,6 +66,7 @@ class ReportsController < ApplicationController
 
             mean_canopy_diameter = (crown_diameter.lower_crown_diameter.to_f + crown_diameter.upper_crown_diameter.to_f)/2
             puts("------- Mean Canopy Diameter #{mean_canopy_diameter}")
+            puts("------- Plant Cover Percentage  #{plant_cover.percentage}  Code #{plant_cover.code}")
             if community_cover.percentage_cover.nil?
               community_cover.percentage_cover = plant_cover.percentage
             else
