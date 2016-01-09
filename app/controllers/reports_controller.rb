@@ -184,9 +184,13 @@ class ReportsController < ApplicationController
               community_growth_form.slope = community_growth_form.slope/slope_divisor
               if count2 > 0
                 a = (community_growth_form.std_error**2).to_f
+                puts(a)
                 b=(yysquare-a/slope_divisor).to_f
-                c=(b/count2).to_f
-                std_error = (c**0.5).to_f
+                puts(b)
+                c=(b/count2)
+                puts(c)
+                std_error = (c**0.5)
+                puts(std_error)
                 community_growth_form.std_error=std_error.round(8)
               else
                 community_growth_form.std_error = 0
