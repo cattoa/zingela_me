@@ -153,8 +153,8 @@ class ReportsController < ApplicationController
                   community_growth_form.std_error = community_growth_form.std_error+std_error
                 end
 
-                slope_divisor = (slope_divisor+(community_cover.count-community_growth_form.occurance_mean)**2)
-                yysquare = (yysquare+(community_cover.percentage_cover-community_growth_form.percentage_cover_mean)**2)
+                slope_divisor = (slope_divisor+(community_cover.count-community_growth_form.occurance_mean)**2).to_f
+                yysquare = (yysquare+(community_cover.percentage_cover-community_growth_form.percentage_cover_mean)**2).to_f
                 if community_growth_form.percentage_cover.nil?
                   community_growth_form.percentage_cover = community_cover.percentage_cover
                 else
@@ -183,7 +183,7 @@ class ReportsController < ApplicationController
             if slope_divisor > 0
               community_growth_form.slope = community_growth_form.slope/slope_divisor
               if count2 > 0
-                std_error = (((yysquare-((community_growth_form.std_error**2)/slope_divisor))/count2)**0.5)
+                std_error = (((yysquare-((community_growth_form.std_error**2)/slope_divisor))/count2)**0.5).to_f
                 community_growth_form.std_error=std_error.round(8)
               else
                 community_growth_form.std_error = 0
@@ -193,11 +193,11 @@ class ReportsController < ApplicationController
               community_growth_form.std_error = 0
             end
             if community_growth_form.count > 0
-              community_growth_form.std_deviation = ((community_growth_form.std_deviation/community_growth_form.count)**0.5)
+              community_growth_form.std_deviation = ((community_growth_form.std_deviation/community_growth_form.count)**0.5).to_f
             else
               community_growth_form.std_deviation = 0
             end
-            community_growth_form.intercept = (community_growth_form.percentage_cover_mean-(community_growth_form.occurance_mean*community_growth_form.slope))
+            community_growth_form.intercept = (community_growth_form.percentage_cover_mean-(community_growth_form.occurance_mean*community_growth_form.slope)).to_f
 
             community_growth_form.save!
             # community_covers = CommunityCover.where(community_growth_form_id:community_growth_form.id)
