@@ -65,6 +65,7 @@ class ReportsController < ApplicationController
             community_cover = CommunityCover.find_or_create_by(species_id:species.id,community_growth_form_id:community_growth_form.id)
 
             mean_canopy_diameter = (crown_diameter.lower_crown_diameter.to_f + crown_diameter.upper_crown_diameter.to_f)/2
+            puts("------- Mean Canopy Diameter #{mean_canopy_diameter}")
             if community_cover.percentage_cover.nil?
               community_cover.percentage_cover = plant_cover.percentage
             else
