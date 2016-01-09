@@ -108,7 +108,7 @@
       - objArray = Array.new
       - community_covers.each do |community_cover|
         - total_percentage_cover = total_percentage_cover + community_cover.percentage_cover
-        - total_proportional_cover = total_proportional_cover + community_growth_form.proportional_cover
+        - total_proportional_cover = total_proportional_cover + community_cover.proportional_cover
         %tr
           %td
             = community_cover.species.name
