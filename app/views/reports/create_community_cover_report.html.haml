@@ -28,8 +28,8 @@
         %td
           = community_cover.species.name
         %td
-          = community_cover.percentage_cover_mean.round(2)
-          - total_percentage_cover_mean = total_percentage_cover_mean + community_cover.percentage_cover_mean
+          = community_cover.percentage_cover.round(2)
+          - total_percentage_cover_mean = total_percentage_cover_mean + community_cover.percentage_cover
         %td
           = community_cover.mean_canopy_diameter.round(2)
           - total_mean_canopy_diameter = total_mean_canopy_diameter + community_cover.mean_canopy_diameter
