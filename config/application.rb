@@ -25,4 +25,12 @@ module Zingela
     config.middleware.use "PDFKit::Middleware", :print_media_type => true
 
   end
+  module RailsPdf
+  class Application < Rails::Application
+      config.middleware.use PDFKit::Middleware
+      .
+      .
+      .
+  end
+end
 end
