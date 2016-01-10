@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     get 'create/species/report/'   => :create_species_report
     get 'new/community_cover/report/'   => :new_community_cover_report
     post 'create/community_cover/report/'   => :create_community_cover_report
-    get 'create/community_cover/report/'   => :create_community_cover_report
+    get 'create/community_cover/report/'   => :root
     get 'new/community_composition/report/'   => :new_community_composition_report
     post 'create/community_composition/report/'   => :create_community_composition_report
     get 'create/community_composition/report/'   => :root
