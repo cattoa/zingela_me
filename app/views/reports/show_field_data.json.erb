@@ -1,1 +1,29 @@
-<% @field_datum.each do |field_data| %>{"field_data":<%= field_data.to_json.html_safe  %>}{"observations":<%= Observation.where(field_datum_id:field_data.id).to_json.html_safe  %>}<% end %>
+<% @field_datum.each do |field_data| %>
+  "field_data":{
+    "date","<%=field_data.date%>",
+    "location":"<%=field_data.location%>",
+    "observer":"<%=field_data.observer%>",
+    "community":"<%=Community.find(field_data.community_id).description%>",
+    "observations":
+  <% @observations = Observation.where(field_datum_id:field_data.id)  %>
+    [
+    <% @observations.each do |observation| %>
+      <% @plant_cover =  PlantCover.find_by(observation_id:observation.id) %>
+      <% @growth_form =  GrowthForm.find_by(observation_id:observation.id) %>
+      <% @crown_diameter =  CrownDiameter.find_by(observation_id:observation.id) %>
+      "observation":{
+        "notes":<%=observation.notes%>,
+        "plant_cover":{
+          "code":"<%= @plant_cover.code%>"
+        },
+        "growth_form":{
+          "code":"<%= @growth_form.code%>"
+        },
+        "crown_diameter":{
+          "code":"<%= @crown_diameter.code%>"
+        },
+      }
+    <% end %>
+    ]
+  }
+<% end %>
