@@ -1,0 +1,4 @@
+<% @field_datum.each do |field_data| %>
+  <%= field_data.to_json.html_safe  %>
+  <%= Observation.where(field_datum_id:field_data.id).to_json.html_safe  %>
+<% end %>
