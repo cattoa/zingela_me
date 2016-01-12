@@ -11,8 +11,10 @@ Rails.application.routes.draw do
   devise_for :users
   get '/sign_out' => 'devise/sessions#destroy'
   controller :show do
-    get 'show/alldata/' => :alldata
-    post 'show/alldata/' => :alldata
+    get 'show/all/' => :alldata
+    post 'show/all/' => :alldata
+    get 'show/all/field_data/' => :all_field_data
+    post 'show/all/field_data/' => :all_field_data
   end
   controller :reports do
     get 'new/species/report/'   => :new_species_report

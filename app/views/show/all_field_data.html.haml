@@ -1,0 +1,81 @@
+%h1.page-header
+  Show All Field Data
+%table.table
+  %tr
+    %th
+      PrjId
+    %th
+      Project
+    %th
+      FldId
+    %th
+      Date
+    %th
+      Releve Number
+
+    %th
+      Location
+
+    %th
+      Lat Hr
+    %th
+      Lat Min
+    %th
+      Lat Sec
+    %th
+      Long Hr
+    %th
+      Long Min
+    %th
+      Long Sec
+    %th
+      Observer
+    %th
+      Scale
+    %th
+      Habitat description
+    %th
+      Growth form
+    %th
+      Species
+    %th
+      Crown diameter
+    %th
+      Plant Count
+    %th
+      Notes
+  -@field_data.each do |field_datum|
+    - field_datum.observations.each do |observation|
+      %tr
+        %td
+          = field_datum.project.id
+        %td
+          = field_datum.project.name
+        %td
+          =field_datum.id
+
+        %td
+          = field_datum.date
+        %td
+          = field_datum.releve_number
+        %td
+          = field_datum.location
+        %td
+          = field_datum.latitude_degree
+        %td
+          = field_datum.latitude_minutes
+        %td
+          = field_datum.latitude_seconds
+        %td
+          = field_datum.longitude_degree
+          %td
+          = field_datum.longitude_minutes
+        %td
+          = field_datum.longitude_seconds
+        %td
+          = field_datum.observer
+        %td
+          = field_datum.scale
+        %td
+          = field_datum.habitat_description
+= link_to 'Back', field_data_path, class: "btn btn-default"
