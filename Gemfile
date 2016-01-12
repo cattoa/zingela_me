@@ -18,7 +18,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 # gem 'cocoon' For nested forms
 gem "cocoon"
-#gem 'pdfkit' for pdfs 
+gem 'json_builder'
+#gem 'pdfkit' for pdfs
 gem 'pdfkit'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
