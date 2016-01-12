@@ -1,0 +1,86 @@
+%h1.page-header
+  Show All Field Data
+%table.table
+  %tr
+    %th
+      PrjId
+    %th
+      Project
+    %th
+      FldId
+    %th
+      Date
+    %th
+      Releve Number
+
+    %th
+      Location
+
+    %th
+      Latitude
+    %th
+      Longitude
+    %th
+      Observer
+    %th
+      Scale
+    %th
+      Habitat description
+    %th
+      Growth form
+    %th
+      Species
+    %th
+      Crown diameter
+    %th
+      Plant Count
+    %th
+      Notes
+  -@field_data.each do |field_datum|
+    - field_datum.observations.each do |observation|
+
+      %tr
+        %td
+          = field_datum.project.id
+        %td
+          = field_datum.project.name
+        %td
+          =field_datum.id
+
+        %td
+          = field_datum.date
+        %td
+          = field_datum.releve_number
+        %td
+          = field_datum.location
+        %td
+          = "#{field_datum.latitude_degree} &deg;".html_safe
+          = "#{field_datum.latitude_minutes} '"
+          = "#{field_datum.latitude_seconds} ''"
+        %td
+          = "#{field_datum.longitude_degree} &deg;".html_safe
+          = "#{field_datum.longitude_minutes} '"
+          = "#{field_datum.longitude_seconds} ''"
+        %td
+          = field_datum.observer
+        %td
+          = field_datum.scale
+        %td
+          = field_datum.habitat_description
+        %td
+          - if observation.growth_forms.count > 0
+            - observation.growth_forms.each do |grow|
+              = grow.code
+        %td
+          = observation.species.name
+        %td
+          - if observation.crown_diameters.count > 0
+            - observation.crown_diameters.each do |crown|
+              = crown.code
+        %td
+          - if observation.plant_covers.count > 0
+            - observation.plant_covers.each do |plant|
+              = plant.code
+        %td
+          = observation.notes
+= link_to 'Back', field_data_path, class: "btn btn-default"

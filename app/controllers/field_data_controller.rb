@@ -13,6 +13,7 @@ class FieldDataController < ApplicationController
   def show
   end
 
+
   # GET /field_data/new
   def new
     @field_datum = FieldDatum.new
