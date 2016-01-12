@@ -22,7 +22,7 @@
         "crown_diameter":{
           "code":"<%= @crown_diameter.code%>"
         },
-      }
+      }<%if observation.id != @observations.last.id%>,<%end%>
     <% end %>
     ]
   }
