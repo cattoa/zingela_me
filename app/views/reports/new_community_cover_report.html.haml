@@ -11,4 +11,5 @@
     .clear-20
     .actions
       = f.submit 'Create Report', class: "btn btn-info pull-right"
+      = f.submit 'Download Report', format: 'pdf', class: "btn btn-primary pdf_exclude"
       = link_to 'Back', root_path, class: "btn btn-danger"

@@ -29,13 +29,13 @@
       %th.col-lg-2 Frequency
       - objArray = Array.new
       - community_covers.each do |community_cover|
-        - total_percentage_cover = total_percentage_cover + community_growth_form.percentage_cover
-        - total_proportional_cover = total_proportional_cover + community_growth_form.proportional_cover
+        - total_percentage_cover = total_percentage_cover + community_cover.percentage_cover
+        - total_proportional_cover = total_proportional_cover + community_cover.proportional_cover
         %tr
           %td
             = community_cover.species.name
           %td
-            = community_growth_form.percentage_cover.round(2)
+            = community_cover.percentage_cover.round(2)
           %td
             = community_cover.predicted_cover.round(2)
           %td
@@ -51,7 +51,7 @@
       %tr
         %td
           %b
-            Total propotional cover
+            Total proportional cover
         %td
           = total_proportional_cover.round(2)
   -if community_growth_form.has_normal_competitor?
@@ -107,13 +107,13 @@
       %th.col-lg-2 Frequency
       - objArray = Array.new
       - community_covers.each do |community_cover|
-        - total_percentage_cover = total_percentage_cover + community_growth_form.percentage_cover
-        - total_proportional_cover = total_proportional_cover + community_growth_form.proportional_cover
+        - total_percentage_cover = total_percentage_cover + community_cover.percentage_cover
+        - total_proportional_cover = total_proportional_cover + community_cover.proportional_cover
         %tr
           %td
             = community_cover.species.name
           %td
-            = community_growth_form.percentage_cover.round(2)
+            = community_cover.percentage_cover.round(2)
           %td
             = community_cover.predicted_cover.round(2)
           %td
@@ -129,6 +129,6 @@
       %tr
         %td
           %b
-            Total propotional cover
+            Total proportional cover
         %td
           = total_proportional_cover.round(2)
