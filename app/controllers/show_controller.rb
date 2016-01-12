@@ -8,10 +8,9 @@ class ShowController < ApplicationController
   end
 
   def all_field_data
-    @article = Article.find(params[:id])
     respond_to do |format|
       format.html
-      format.json { render json: @article }
+      format.json { render json: @field_data }
     end
   end
 
