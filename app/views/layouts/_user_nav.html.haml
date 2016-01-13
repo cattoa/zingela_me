@@ -60,3 +60,12 @@
       =link_to 'Community composition report'.html_safe, new_community_composition_report_path
     %li
       =link_to 'Species report'.html_safe, create_species_report_path
+%li
+  %a{"data-target" => "#report", "data-toggle" => "collapse", :href => "javascript:;"}
+    %i.fa.fa-file-text-o
+    Imports
+    %i.fa.fa-fw.fa-caret-down
+  %ul#report.collapse
+    %li
+      =link_to 'Import Data'.html_safe, import_data_path
+    

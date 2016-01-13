@@ -16,6 +16,10 @@ Rails.application.routes.draw do
     get 'show/all/field_data/' => :all_field_data
     post 'show/all/field_data/' => :all_field_data
   end
+  controller :import do
+    get 'import/show/' => :import_data_path
+    post 'import/show/' => :import_data_path
+  end
   controller :reports do
     get 'new/species/report/'   => :new_species_report
     post 'create/species/report/'   => :create_species_report
