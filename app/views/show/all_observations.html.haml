@@ -1,0 +1,15 @@
+%h1.page-header
+  Show All Observations
+%table.table
+  %tr
+    %th
+      Growth form
+    %th
+      Species
+    %th
+      Crown diameter
+    %th
+      Plant Count
+    %th
+      Notes
+  - field_datum.observations.each do |observation|
