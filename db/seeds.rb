@@ -10,11 +10,13 @@
 #admin.password = 'Password123'
 #admin.password_confirmation = 'Password123'
 #admin.save!
-admin = Admin.new
-admin.email = 'allistair@bobcatt.co.za'
-admin.password = 'Qwerty1!'
-admin.password_confirmation = 'Qwerty1!'
-admin.save!
+
+
+# admin = Admin.new
+# admin.email = 'allistair@bobcatt.co.za'
+# admin.password = 'Qwerty1!'
+# admin.password_confirmation = 'Qwerty1!'
+# admin.save!
 
 File.open("#{Rails.root}/db/Species.csv", "r") do |f|
   f.each_line do |line|
@@ -41,4 +43,31 @@ File.open("#{Rails.root}/db/Species.csv", "r") do |f|
           ).first_or_create
       end
   end
+end
+
+require 'rubygems'
+require 'json'
+
+
+json = File.read("#{Rails.root}/db/zingela_data.json")
+
+ActiveSupport::JSON.decode(json)["field_data"].each do |fd|
+  puts fd["id"]
+  FieldDatum.where(
+    :id => fd["id"],
+    :date => fd["date"],
+  	:location => fd["location"],
+  	:latitude_degree => fd["latitude_degree"],
+  	:longitude_degree => fd["longitude_degree"],
+  	:habitat_description => fd["habitat_description"],
+  	:project_id => fd["project_id"],
+  	:scale => fd["scale"],
+  	:releve_number => fd["releve_number"],
+  	:observer => fd["observer"],
+  	:community_id => fd["community_id"],
+  	:longitude_seconds => fd["longitude_seconds"],
+  	:latitude_seconds => fd["latitude_seconds"],
+  	:latitude_minutes => fd["latitude_minutes"],
+  	:longitude_minutes => fd["longitude_minutes"]
+  ).first_or_create
 end
