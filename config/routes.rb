@@ -10,11 +10,14 @@ Rails.application.routes.draw do
   devise_for :admins
   devise_for :users
   get '/sign_out' => 'devise/sessions#destroy'
-  controller :show do
-    get 'show/all/' => :alldata
-    post 'show/all/' => :alldata
-    get 'show/all/field_data/' => :all_field_data
-    post 'show/all/field_data/' => :all_field_data
+  controller :export do
+    get 'export/companies/' => :export_companies
+    get 'export/projects/' => :export_projects
+    get 'export/field_data/' => :export_field_data
+    get 'export/observations/' => :export_observations
+    get 'export/growth_forms/' => :export_groth_forms
+    get 'export/crown_diameter/' => :export_crown_diameter
+    get 'export/plant_count/' => :export_plant_count
   end
   controller :import do
     get 'import/show/' => :import_data_path

@@ -61,8 +61,16 @@
     %li
       =link_to 'Species report'.html_safe, create_species_report_path
 %li
-  %a{"data-target" => "#report", "data-toggle" => "collapse", :href => "javascript:;"}
+  %a{"data-target" => "#imports", "data-toggle" => "collapse", :href => "javascript:;"}
     %i.fa.fa-file-text-o
-    Imports
+    Exports
     %i.fa.fa-fw.fa-caret-down
-  
+  %ul#report.collapse
+    %li
+      =link_to 'Companies'.html_safe, new_community_cover_report_path
+    %li
+      =link_to 'Projects'.html_safe, new_community_composition_report_path
+    %li
+      =link_to 'Field Data'.html_safe, create_species_report_path
+    %li
+      =link_to 'Observations'.html_safe, create_species_report_path  
