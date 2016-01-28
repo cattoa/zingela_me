@@ -48,13 +48,27 @@ end
 require 'rubygems'
 require 'json'
 
+json = File.read("#{Rails.root}/db/zingela_projects.json")
+puts "--------------------- Projects-------------------------------------------"
+ActiveSupport::JSON.decode(json)["projects"].each do |fd|
+  puts fd["id"]
+  Project.where(:id => fd["id"]).first_or_create(
+    :name => fd["name"],
+    :start_date => fd["start_date"],
+    :expected_delivery_date => fd["expected_delivery_date"],
+    :actual_delivery_date => fd["actual_delivery_date"],
+    :active => fd["active"],
+    :user_id => fd["user_id"],
+    :company_id => fd["company_id"]
+  )
+end
 
 json = File.read("#{Rails.root}/db/zingela_data.json")
+puts "--------------------- Field Data-------------------------------------------"
 
 ActiveSupport::JSON.decode(json)["field_data"].each do |fd|
   puts fd["id"]
-  FieldDatum.where(
-    :id => fd["id"],
+  FieldDatum.where(:id => fd["id"]).first_or_create(
     :date => fd["date"],
   	:location => fd["location"],
   	:latitude_degree => fd["latitude_degree"],
@@ -69,5 +83,17 @@ ActiveSupport::JSON.decode(json)["field_data"].each do |fd|
   	:latitude_seconds => fd["latitude_seconds"],
   	:latitude_minutes => fd["latitude_minutes"],
   	:longitude_minutes => fd["longitude_minutes"]
-  ).first_or_create
+  )
+end
+
+json = File.read("#{Rails.root}/db/zingela_observations.json")
+puts "--------------------- Observations-------------------------------------------"
+
+ActiveSupport::JSON.decode(json)["observations"].each do |fd|
+  puts fd["id"]
+  Observation.where(:id => fd["id"]).first_or_create(
+  :notes => fd["notes"],
+  :field_datum_id => fd["field_datum_id"],
+  :species_id => fd["species_id"]
+  )
 end
