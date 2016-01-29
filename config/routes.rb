@@ -18,6 +18,14 @@ Rails.application.routes.draw do
     get 'export/growth_forms/' => :export_groth_forms
     get 'export/crown_diameter/' => :export_crown_diameter
     get 'export/plant_count/' => :export_plant_count
+
+    post 'export/companies/' => :export_companies
+    post 'export/projects/' => :export_projects
+    post 'export/field_data/' => :export_field_data
+    post 'export/observations/' => :export_observations
+    post 'export/growth_forms/' => :export_groth_forms
+    post 'export/crown_diameter/' => :export_crown_diameter
+    post 'export/plant_count/' => :export_plant_count
   end
   controller :import do
     get 'import/show/' => :import_data_path
