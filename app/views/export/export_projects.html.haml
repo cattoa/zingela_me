@@ -1,0 +1,48 @@
+%h1.page-header
+  Show All Project Data
+-if(@project_data)
+  %table.table
+    %tr
+      %th
+        Project Id
+      %th
+        Name
+      %th
+        Start Date
+      %th
+        Expected Delivery Date
+      %th
+        Actual Delivery datetime
+      %th
+        Active
+      %th
+        Date Changed
+      %th
+        User Id
+      %th
+        Company Id
+
+    -@project_data.each do |project_datum|
+      %tr
+        %td
+          = project_datum.id
+        %td
+          = project_datum.name
+        %td
+          = project_datum.start_date
+        %td
+          = project_datum.expected_delivery_date
+        %td
+          = project_datum.actual_delivery_date
+        %td
+          = project_datum.active
+        %td
+          = project_datum.date_changed
+        %td
+          = project_datum.user_id
+        %td
+          = project_datum.company_id
+        
+-else
+  %p No data found
+= link_to 'Back', field_data_path, class: "btn btn-default"

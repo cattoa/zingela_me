@@ -1,0 +1,35 @@
+%h1.page-header
+  Show All Crown Diameter
+-if(@crown_diameters)
+  %table.table
+    %tr
+      %th
+        Id
+      %th
+        Obsevation
+      %th
+        Lower Crown Diameter
+      %th
+        Upper Crown Diameter
+      %th
+        Transcet Length
+      %th
+        Code
+    -@crown_diameters.each do |crown_diameter|
+      %tr
+        %td
+          = crown_diameter.id
+        %td
+          = crown_diameter.observation_id
+        %td
+          = crown_diameter.lower_crown_diameter
+        %td
+          = crown_diameter.upper_crown_diameter
+        %td
+          = crown_diameter.transect_length
+        %td
+          = crown_diameter.code
+
+-else
+  %p No data found
+= link_to 'Back', field_data_path, class: "btn btn-default"

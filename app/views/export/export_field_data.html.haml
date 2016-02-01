@@ -4,10 +4,6 @@
   %table.table
     %tr
       %th
-        PrjId
-      %th
-        Project
-      %th
         FldId
       %th
         Date
@@ -37,10 +33,6 @@
         Habitat description
     -@field_data.each do |field_datum|
       %tr
-        %td
-          = field_datum.project.id
-        %td
-          = field_datum.project.name
         %td
           =field_datum.id
         %td

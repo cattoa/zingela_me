@@ -1,10 +1,38 @@
-class ExportsController < ApplicationController
-  before_action :set_welcome, only: [:show, :edit, :update, :destroy]
+class ExportController < ApplicationController
+  before_action :set_field_data, only: [:show, :edit, :update, :destroy]
   before_filter :deny_to_visitors
 
-  
+def export_field_data
+  set_field_data
+end
+
+def export_projects
+  @project_data = Project.all()
+end
+
+def export_crown_diameter
+  @crown_diameters = CrownDiameter.all()
+end
+
+def export_growth_forms
+  set_field_data
+end
+
+def export_observations
+  @observations = Observation.all()
+end
+
+def export_plant_count
+  set_field_data
+end
+
+def set_field_data
+
+  @field_data = FieldDatum.all()
+end
+
 protected
-  def project_report_params
+  def export_params
     params.require(:project_report).permit(:community_id)
   end
 private

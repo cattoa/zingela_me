@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     get 'export/projects/' => :export_projects
     get 'export/field_data/' => :export_field_data
     get 'export/observations/' => :export_observations
-    get 'export/growth_forms/' => :export_groth_forms
+    get 'export/growth_forms/' => :export_growth_forms
     get 'export/crown_diameter/' => :export_crown_diameter
     get 'export/plant_count/' => :export_plant_count
 

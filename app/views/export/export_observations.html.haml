@@ -1,0 +1,26 @@
+%h1.page-header
+  Show All Field Data
+-if(@observations)
+  %table.table
+    %tr
+      %th
+        Observation Id
+      %th
+        Species Id
+      %th
+        Field Data Id
+      %th
+        Notes
+    -@observations.each do |observation|
+      %tr
+        %td
+          = observation.id
+        %td
+          =observation.species_id
+        %td
+          =observation.field_datum_id
+        %td
+          = observation.notes
+-else
+  %p No data found
+= link_to 'Back', field_data_path, class: "btn btn-default"
