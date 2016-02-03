@@ -3,7 +3,7 @@ class ExportController < ApplicationController
   before_filter :deny_to_visitors
 
 def export_field_data
-  set_field_data
+  @field_data = FieldDatum.all()
 end
 
 def export_projects
@@ -15,20 +15,15 @@ def export_crown_diameter
 end
 
 def export_growth_forms
-  set_field_data
+  @growth_forms = GrowthForm.all()
 end
 
 def export_observations
   @observations = Observation.all()
 end
 
-def export_plant_count
-  set_field_data
-end
-
-def set_field_data
-
-  @field_data = FieldDatum.all()
+def export_plant_cover
+  @plant_covers = PlantCover.all()
 end
 
 protected

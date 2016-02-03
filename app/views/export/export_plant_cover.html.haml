@@ -1,0 +1,32 @@
+%h1.page-header
+  Show All Plant Cover
+-if(@plant_covers)
+  %table.table
+    %tr
+      %th
+        Id
+      %th
+        Code
+      %th
+        Upper Class Limit
+      %th
+        Lower Class Limit
+      %th
+        Percentage
+      %th
+        Class Interval
+    -@plant_covers.each do |plant_cover|
+      %tr
+        %td
+          = plant_cover.id
+        %td
+          = plant_cover.code
+        %td
+          = plant_cover.upper_class_limit
+        %td
+          = plant_cover.lower_class_limit
+        %td
+          = plant_cover.class_interval
+-else
+  %p No data found
+= link_to 'Back', field_data_path, class: "btn btn-default"

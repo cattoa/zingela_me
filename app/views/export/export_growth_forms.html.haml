@@ -1,72 +1,30 @@
 %h1.page-header
-  Show All Field Data
--if(@field_data)
+  Show All Growth Forms
+-if(@growth_forms)
   %table.table
     %tr
       %th
-        PrjId
+        Id
       %th
-        Project
+        Observation Id
       %th
-        FldId
+        Description
       %th
-        Date
+        Code
       %th
-        Releve Number
-
-      %th
-        Location
-
-      %th
-        Lat Hr
-      %th
-        Lat Min
-      %th
-        Lat Sec
-      %th
-        Long Hr
-      %th
-        Long Min
-      %th
-        Long Sec
-      %th
-        Observer
-      %th
-        Scale
-      %th
-        Habitat description
-    -@field_data.each do |field_datum|
+        Order
+    -@growth_forms.each do |growth_form|
       %tr
         %td
-          = field_datum.project.id
+          = growth_form.id
         %td
-          = field_datum.project.name
+          = growth_form.observation_id
         %td
-          =field_datum.id
+          =growth_form.description
         %td
-          = field_datum.date
+          = growth_form.code
         %td
-          = field_datum.releve_number
-        %td
-          = field_datum.location
-        %td
-          = field_datum.latitude_degree
-        %td
-          = field_datum.latitude_minutes
-        %td
-          = field_datum.latitude_seconds
-        %td
-          = field_datum.longitude_degree
-          %td
-          = field_datum.longitude_minutes
-        %td
-          = field_datum.longitude_seconds
-        %td
-          = field_datum.observer
-        %td
-          = field_datum.scale
-        %td
-          = field_datum.habitat_description
+          = growth_form.order
 -else
   %p No data found
 = link_to 'Back', field_data_path, class: "btn btn-default"
