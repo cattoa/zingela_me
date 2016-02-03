@@ -41,6 +41,7 @@ Rails.application.routes.draw do
     get 'new/community_composition/report/'   => :new_community_composition_report
     post 'create/community_composition/report/'   => :create_community_composition_report
     get 'create/community_composition/report/'   => :root
+    get 'all/field_data//'   => :all_field_data
   end
   controller :manage do
     get 'manage/users'   => :users

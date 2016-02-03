@@ -13,6 +13,10 @@ class ReportsController < ApplicationController
   def root
     redirect_to root_path
   end
+  respond_to :json
+  def all_field_data
+    @field_datum = FieldDatum.all
+  end
 
   def create_community_cover_report
     create_report_data
