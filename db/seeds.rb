@@ -118,7 +118,7 @@ ActiveSupport::JSON.decode(json)["observations"].each do |fd|
   )
 end
 
-Community.delete_all()
+Community.destoy_all()
 json = File.read("#{Rails.root}/db/zingela_communities.json")
 puts "--------------------- Communities-------------------------------------------"
 
