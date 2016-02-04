@@ -22,25 +22,25 @@ Species.delete_all()
 
 json = File.read("#{Rails.root}/db/zingela_species.json")
 puts "--------------------- Species -------------------------------------------"
-ActiveSupport::JSON.decode(json)["species"].each do |species|
-  puts species["id"]
-  Species.where(:id => species["id"]
-    :species_family_id => species["species_family_id"],
-    :potential_biomass => species["potential_biomass"],
-    :species => species["species"],
-    :name => species["name"],
-    :threat_status => species["threat_status"],
-    :sysnonym_of => species["sysnonym_of"],
-    :sa_endemic => species["sa_endemic"],
-    :common_name => species["common_name"],
-    :life_cycle => species["life_cycle"],
-    :growth_forms => species["growth_forms"],
-    :max_height => species["max_height"],
-    :min_hieght => species["min_hieght"],
-    :min_altitude => species["min_altitude"],
-    :max_altitude => species["max_altitude"],
+ActiveSupport::JSON.decode(json)["species"].each do |fd|
+  puts fd["id"]
+  Species.where(:id => fd["id"]).first_or_create(
+    :species_family_id => fd["species_family_id"],
+    :potential_biomass => fd["potential_biomass"],
+    :species => fd["species"],
+    :name => fd["name"],
+    :threat_status => fd["threat_status"],
+    :sysnonym_of => fd["sysnonym_of"],
+    :sa_endemic => fd["sa_endemic"],
+    :common_name => fd["common_name"],
+    :life_cycle => fd["life_cycle"],
+    :growth_forms => fd["growth_forms"],
+    :max_height => fd["max_height"],
+    :min_hieght => fd["min_hieght"],
+    :min_altitude => fd["min_altitude"],
+    :max_altitude => fd["max_altitude"],
     :distribution => species["distribution"]
-    ).first_or_create
+    )
   end
 end
 
