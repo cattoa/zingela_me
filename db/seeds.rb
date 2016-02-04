@@ -103,6 +103,8 @@ ActiveSupport::JSON.decode(json)["field_data"].each do |fd|
   )
 end
 
+
+
 json = File.read("#{Rails.root}/db/zingela_observations.json")
 puts "--------------------- Observations-------------------------------------------"
 
@@ -112,6 +114,17 @@ ActiveSupport::JSON.decode(json)["observations"].each do |fd|
   :notes => fd["notes"],
   :field_datum_id => fd["field_datum_id"],
   :species_id => fd["species_id"]
+  )
+end
+
+json = File.read("#{Rails.root}/db/zingela_communities.json")
+puts "--------------------- Communities-------------------------------------------"
+
+ActiveSupport::JSON.decode(json)["communities"].each do |fd|
+  puts fd["id"]
+  Community.where(:id => fd["id"]).first_or_create(
+  :description => fd["description"],
+  :project_id => fd["project_id"],
   )
 end
 
