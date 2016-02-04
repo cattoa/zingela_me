@@ -8,6 +8,8 @@
       %th
         Code
       %th
+        Observation Id
+      %th
         Upper Class Limit
       %th
         Lower Class Limit
@@ -22,9 +24,13 @@
         %td
           = plant_cover.code
         %td
+          = observation_id
+        %td
           = plant_cover.upper_class_limit
         %td
           = plant_cover.lower_class_limit
+        %td
+          = plant_cover.percentage
         %td
           = plant_cover.class_interval
 -else

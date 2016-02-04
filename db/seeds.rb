@@ -63,7 +63,7 @@ ActiveSupport::JSON.decode(json)["projects"].each do |fd|
   )
 end
 
-json = File.read("#{Rails.root}/db/zingela_data.json")
+json = File.read("#{Rails.root}/db/zingela_field_data.json")
 puts "--------------------- Field Data-------------------------------------------"
 
 ActiveSupport::JSON.decode(json)["field_data"].each do |fd|
@@ -97,3 +97,51 @@ ActiveSupport::JSON.decode(json)["observations"].each do |fd|
   :species_id => fd["species_id"]
   )
 end
+
+json = File.read("#{Rails.root}/db/zingela_crown_diameters.json")
+puts "--------------------- Crown Diameter -------------------------------------------"
+
+ActiveSupport::JSON.decode(json)["crown_diameters"].each do |fd|
+  puts fd["id"]
+  CrownDiameter.where(:id => fd["id"]).first_or_create(
+  :observation_id => fd["observation_id"],
+  :lower_crown_diameter => fd["lower_crown_diameter"],
+  :upper_crown_diameter => fd["upper_crown_diameter"]
+  :transect_length => fd["transect_length"],
+  :code => fd["code"],
+  )
+end
+
+json = File.read("#{Rails.root}/db/zingela_growth_forms.json")
+puts "--------------------- Growth Form -------------------------------------------"
+
+ActiveSupport::JSON.decode(json)["growth_forms"].each do |fd|
+  puts fd["id"]
+  GrowthForm.where(:id => fd["id"]).first_or_create(
+  :observation_id => fd["observation_id"],
+  :description => fd["description"],
+  :code => fd["code"]
+  :order => fd["order"],
+  )
+end
+
+json = File.read("#{Rails.root}/db/zingela_plant_covers.json")
+puts "--------------------- Plant Cover -------------------------------------------"
+
+ActiveSupport::JSON.decode(json)["plant_covers"].each do |fd|
+  puts fd["id"]
+  PlantCover.where(:id => fd["id"]).first_or_create(
+  :observation_id => fd["observation_id"],
+  :code => fd["code"],
+  :upper_class_limit => fd["upper_class_limit"],
+  :lower_class_limit => fd["lower_class_limit"]
+  :class_interval => fd["class_interval"],
+  :percentage => fd["percentage"],
+  )
+end
+
+json.id plant_cover.id
+json.code plant_cover.code
+json.upper_class_limit plant_cover.upper_class_limit
+json.lower_class_limit plant_cover.lower_class_limit
+json.class_interval plant_cover.class_interval
