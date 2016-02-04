@@ -3,27 +3,27 @@
     {
       "id": 2,
       "description": "Forest",
-      "url": "http://zingela.herokuapp.com/communities/2.json"
+      "project_id": 2
     },
     {
       "id": 3,
       "description": "Forest glade",
-      "url": "http://zingela.herokuapp.com/communities/3.json"
+      "project_id": 2
     },
     {
       "id": 4,
       "description": "Grassland",
-      "url": "http://zingela.herokuapp.com/communities/4.json"
+      "project_id": 2
     },
     {
       "id": 5,
       "description": "Shrubby veld",
-      "url": "http://zingela.herokuapp.com/communities/5.json"
+      "project_id": 2
     },
     {
       "id": 6,
       "description": "Sour veld",
-      "url": "http://zingela.herokuapp.com/communities/6.json"
+      "project_id": 2
     }
   ]
 }
