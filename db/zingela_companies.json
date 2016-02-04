@@ -2,13 +2,13 @@
   "companies": [
     {
       "id": 1,
-      "email": "allistair@bobcatt.co.za",
-      "company_name": "Bobcatt Consulting"
+      "email": "bobcatt@bobcatt.co.za",
+      "company_name": "Bobcatt"
     },
     {
       "id": 2,
-      "email": "allistair.catto@bobcatt.co.za",
-      "company_name": "Test1"
+      "email": "test@test.com",
+      "company_name": "Tet"
     },
     {
       "id": 3,

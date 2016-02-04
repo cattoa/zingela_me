@@ -1,0 +1,29 @@
+{
+  "communities": [
+    {
+      "id": 2,
+      "description": "Forest",
+      "project_id": 2
+    },
+    {
+      "id": 3,
+      "description": "Forest glade",
+      "project_id": 2
+    },
+    {
+      "id": 4,
+      "description": "Grassland",
+      "project_id": 2
+    },
+    {
+      "id": 5,
+      "description": "Shrubby veld",
+      "project_id": 2
+    },
+    {
+      "id": 6,
+      "description": "Sour veld",
+      "project_id": 2
+    }
+  ]
+}

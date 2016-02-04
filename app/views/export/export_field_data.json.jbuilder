@@ -1,5 +1,7 @@
 json.array! @field_data do |field_datum|
   json.id field_datum.id
+  jason.project_id field_datum.project_id
+  jason.community_id field_datum.community_id
   json.date field_datum.date
   json.releve_number field_datum.releve_number
   json.location field_datum.location

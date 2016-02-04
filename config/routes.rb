@@ -18,7 +18,7 @@ Rails.application.routes.draw do
     get 'export/growth_forms/' => :export_growth_forms
     get 'export/crown_diameter/' => :export_crown_diameter
     get 'export/plant_cover/' => :export_plant_cover
-
+    get 'export/communities/' => :export_communities
 
     post 'export/companies/' => :export_companies
     post 'export/projects/' => :export_projects
@@ -27,6 +27,8 @@ Rails.application.routes.draw do
     post 'export/growth_forms/' => :export_growth_forms
     post 'export/crown_diameter/' => :export_crown_diameter
     post 'export/plant_cover/' => :export_plant_cover
+    post 'export/communities/' => :export_communities
+
   end
   controller :import do
     get 'import/show/' => :import_data_path

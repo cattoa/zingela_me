@@ -1,0 +1,22 @@
+%h1.page-header
+  Show All Communities
+-if(@communities)
+  %table.table
+    %tr
+      %th
+        Id
+      %th
+        Description
+      %th
+        Project Id
+    -@communities.each do |community|
+      %tr
+        %td
+          = community.id
+        %td
+          = community.description
+        %td
+          = community.project_id
+-else
+  %p No data found
+= link_to 'Back', field_data_path, class: "btn btn-default"

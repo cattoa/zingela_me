@@ -14,6 +14,10 @@ def export_projects
   @project_data = Project.all()
 end
 
+def export_communities
+  @communities = Community.all()
+end
+
 def export_crown_diameter
   @crown_diameters = CrownDiameter.all()
 end
