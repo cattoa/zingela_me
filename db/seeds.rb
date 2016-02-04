@@ -24,7 +24,7 @@ json = File.read("#{Rails.root}/db/zingela_species.json")
 puts "--------------------- Species -------------------------------------------"
 ActiveSupport::JSON.decode(json)["species"].each do |species|
   puts species["id"]
-  Species.where(::id => species["id"]
+  Species.where(:id => species["id"]
     :species_family_id => species["species_family_id"],
     :potential_biomass => species["potential_biomass"],
     :species => species["species"],
