@@ -31,6 +31,8 @@
         Scale
       %th
         Habitat description
+      %th
+        Community Id
     -@field_data.each do |field_datum|
       %tr
         %td
@@ -49,7 +51,7 @@
           = field_datum.latitude_seconds
         %td
           = field_datum.longitude_degree
-          %td
+        %td
           = field_datum.longitude_minutes
         %td
           = field_datum.longitude_seconds
@@ -59,6 +61,8 @@
           = field_datum.scale
         %td
           = field_datum.habitat_description
+        %td
+          = field_datum.community_id
 -else
   %p No data found
 = link_to 'Back', field_data_path, class: "btn btn-default"
