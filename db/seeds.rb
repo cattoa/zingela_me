@@ -18,30 +18,29 @@
 # admin.password_confirmation = 'Qwerty1!'
 # admin.save!
 
-File.open("#{Rails.root}/db/Species.csv", "r") do |f|
-  f.each_line do |line|
-    species = line.split("|")
+Species.delete_all()
 
-      species.each do
-          SpeciesFamily.where(:name => species[0]).first_or_create
-          Species.where(
-          :species_family_id => SpeciesFamily.find_by_name(species[0]),
-          :potential_biomass => species[1],
-          :species => species[2],
-          :name => species[2],
-          :threat_status => species[3],
-          :sysnonym_of => species[5],
-          :sa_endemic => species[4],
-          :common_name => species[6],
-          :life_cycle => species[7],
-          :growth_forms => species[8],
-          :max_height => species[10],
-          :min_hieght => species[9],
-          :min_altitude => species[11],
-          :max_altitude => species[12],
-          :distribution => species[13]
-          ).first_or_create
-      end
+json = File.read("#{Rails.root}/db/zingela_species.json")
+puts "--------------------- Species -------------------------------------------"
+ActiveSupport::JSON.decode(json)["species"].each do |species|
+  puts species["id"]
+  Species.where(::id => species["id"]
+    :species_family_id => species["species_family_id"],
+    :potential_biomass => species["potential_biomass"],
+    :species => species["species"],
+    :name => species["name"],
+    :threat_status => species["threat_status"],
+    :sysnonym_of => species["sysnonym_of"],
+    :sa_endemic => species["sa_endemic"],
+    :common_name => species["common_name"],
+    :life_cycle => species["life_cycle"],
+    :growth_forms => species["growth_forms"],
+    :max_height => species["max_height"],
+    :min_hieght => species["min_hieght"],
+    :min_altitude => species["min_altitude"],
+    :max_altitude => species["max_altitude"],
+    :distribution => species["distribution"]
+    ).first_or_create
   end
 end
 
