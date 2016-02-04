@@ -55,6 +55,7 @@ ActiveSupport::JSON.decode(json)["companies"].each do |fd|
   Company.where(:id => fd["id"]).first_or_create(
     :company_name => fd["company_name"],
     :email => fd["email"],
+    :password => "Qwerty1!"
   )
 end
 
