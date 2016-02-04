@@ -10,12 +10,11 @@
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 #
 default: &default
-  host: localhost
   adapter: postgresql
   encoding: utf8
   pool: 5
-  username: postgres
-  password: 2
+  username: Murray
+  password:
 
 production:
   adapter: postgresql
@@ -24,12 +23,12 @@ production:
   timeout: 5000
 
 development:
-  <<: *default
-  database: zingela_development
-  # adapter: postgresql
-  # host: localhost
-  # username: user
-  # database: app-dev
+  # <<: *default
+  # database: zingela_development
+  adapter: postgresql
+  host: localhost
+  username: user
+  database: app-dev
   # Heroku
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
