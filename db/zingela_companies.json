@@ -1,0 +1,19 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "email": "allistair@bobcatt.co.za",
+      "company_name": "Bobcatt Consulting"
+    },
+    {
+      "id": 2,
+      "email": "allistair.catto@bobcatt.co.za",
+      "company_name": "Test1"
+    },
+    {
+      "id": 3,
+      "email": "mike@zingel.co.za",
+      "company_name": "Zingela Consulting"
+    }
+  ]
+}

@@ -1,3 +1,112 @@
-{"plant_covers":
-  [{"id":1,"observation_id":1,"code":"+","upper_class_limit":0.049,"lower_class_limit":0.0,"class_interval":0.049,"percentage":0.00999999977648258},{"id":2,"observation_id":2,"code":"+","upper_class_limit":0.049,"lower_class_limit":0.0,"class_interval":0.049,"percentage":0.00999999977648258},{"id":13,"observation_id":13,"code":"+","upper_class_limit":0.049,"lower_class_limit":0.0,"class_interval":0.049,"percentage":0.00999999977648258},{"id":14,"observation_id":14,"code":"2","upper_class_limit":0.654,"lower_class_limit":0.25,"class_interval":0.404,"percentage":0.400000005960464},{"id":15,"observation_id":15,"code":"3","upper_class_limit":1.259,"lower_class_limit":0.655,"class_interval":0.613,"percentage":0.910000026226044},{"id":8,"observation_id":8,"code":"+","upper_class_limit":0.049,"lower_class_limit":0.0,"class_interval":0.049,"percentage":0.00999999977648258},{"id":9,"observation_id":9,"code":"2","upper_class_limit":0.654,"lower_class_limit":0.25,"class_interval":0.404,"percentage":0.400000005960464},{"id":10,"observation_id":10,"code":"9","upper_class_limit":9.129,"lower_class_limit":7.315,"class_interval":1.814,"percentage":8.18000030517578},{"id":11,"observation_id":11,"code":"6","upper_class_limit":4.284,"lower_class_limit":3.075,"class_interval":1.209,"percentage":3.63000011444092},{"id":5,"observation_id":5,"code":"5","upper_class_limit":3.074,"lower_class_limit":2.065,"class_interval":1.009,"percentage":2.51999998092651},{"id":6,"observation_id":6,"code":"5","upper_class_limit":3.074,"lower_class_limit":2.065,"class_interval":1.009,"percentage":2.51999998092651},{"id":7,"observation_id":7,"code":"5","upper_class_limit":3.074,"lower_class_limit":2.065,"class_interval":1.009,"percentage":2.51999998092651}]
+{
+  "plant_covers": [
+    {
+      "id": 1,
+      "observation_id": 1,
+      "code": "+",
+      "upper_class_limit": 0.049,
+      "lower_class_limit": 0,
+      "class_interval": 0.049,
+      "percentage": 0.00999999977648258
+    },
+    {
+      "id": 2,
+      "observation_id": 2,
+      "code": "+",
+      "upper_class_limit": 0.049,
+      "lower_class_limit": 0,
+      "class_interval": 0.049,
+      "percentage": 0.00999999977648258
+    },
+    {
+      "id": 13,
+      "observation_id": 13,
+      "code": "+",
+      "upper_class_limit": 0.049,
+      "lower_class_limit": 0,
+      "class_interval": 0.049,
+      "percentage": 0.00999999977648258
+    },
+    {
+      "id": 14,
+      "observation_id": 14,
+      "code": "2",
+      "upper_class_limit": 0.654,
+      "lower_class_limit": 0.25,
+      "class_interval": 0.404,
+      "percentage": 0.400000005960464
+    },
+    {
+      "id": 15,
+      "observation_id": 15,
+      "code": "3",
+      "upper_class_limit": 1.259,
+      "lower_class_limit": 0.655,
+      "class_interval": 0.613,
+      "percentage": 0.910000026226044
+    },
+    {
+      "id": 8,
+      "observation_id": 8,
+      "code": "+",
+      "upper_class_limit": 0.049,
+      "lower_class_limit": 0,
+      "class_interval": 0.049,
+      "percentage": 0.00999999977648258
+    },
+    {
+      "id": 9,
+      "observation_id": 9,
+      "code": "2",
+      "upper_class_limit": 0.654,
+      "lower_class_limit": 0.25,
+      "class_interval": 0.404,
+      "percentage": 0.400000005960464
+    },
+    {
+      "id": 10,
+      "observation_id": 10,
+      "code": "9",
+      "upper_class_limit": 9.129,
+      "lower_class_limit": 7.315,
+      "class_interval": 1.814,
+      "percentage": 8.18000030517578
+    },
+    {
+      "id": 11,
+      "observation_id": 11,
+      "code": "6",
+      "upper_class_limit": 4.284,
+      "lower_class_limit": 3.075,
+      "class_interval": 1.209,
+      "percentage": 3.63000011444092
+    },
+    {
+      "id": 5,
+      "observation_id": 5,
+      "code": "5",
+      "upper_class_limit": 3.074,
+      "lower_class_limit": 2.065,
+      "class_interval": 1.009,
+      "percentage": 2.51999998092651
+    },
+    {
+      "id": 6,
+      "observation_id": 6,
+      "code": "5",
+      "upper_class_limit": 3.074,
+      "lower_class_limit": 2.065,
+      "class_interval": 1.009,
+      "percentage": 2.51999998092651
+    },
+    {
+      "id": 7,
+      "observation_id": 7,
+      "code": "5",
+      "upper_class_limit": 3.074,
+      "lower_class_limit": 2.065,
+      "class_interval": 1.009,
+      "percentage": 2.51999998092651
+    }
+  ]
 }

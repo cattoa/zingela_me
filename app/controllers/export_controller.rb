@@ -2,6 +2,10 @@ class ExportController < ApplicationController
   before_action :set_field_data, only: [:show, :edit, :update, :destroy]
   before_filter :deny_to_visitors
 
+def export_companies
+  @companies = Company.all()
+end
+
 def export_field_data
   @field_data = FieldDatum.all()
 end

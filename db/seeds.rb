@@ -48,6 +48,16 @@ end
 require 'rubygems'
 require 'json'
 
+json = File.read("#{Rails.root}/db/zingela_companies.json")
+puts "--------------------- Companies-------------------------------------------"
+ActiveSupport::JSON.decode(json)["companies"].each do |fd|
+  puts fd["id"]
+  Company.where(:id => fd["id"]).first_or_create(
+    :company_name => fd["company_name"],
+    :email => fd["email"],
+  )
+end
+
 json = File.read("#{Rails.root}/db/zingela_projects.json")
 puts "--------------------- Projects-------------------------------------------"
 ActiveSupport::JSON.decode(json)["projects"].each do |fd|
