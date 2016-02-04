@@ -57,6 +57,12 @@ ActiveSupport::JSON.decode(json)["companies"].each do |fd|
     :email => fd["email"],
     :password => "Qwerty1!"
   )
+  Company.update(
+    fd["id"],
+    :company_name => fd["company_name"],
+    :email => fd["email"],
+    :password => "Qwerty1!"
+  )
 end
 
 json = File.read("#{Rails.root}/db/zingela_projects.json")

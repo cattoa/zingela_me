@@ -1,12 +1,1884 @@
 {
   "crown_diameters": [
     {
-      "id": 1,
-      "observation_id": 1,
+      "id": 17,
+      "observation_id": 17,
       "lower_crown_diameter": "0.001",
       "upper_crown_diameter": "0.01",
       "transect_length": 0.15,
       "code": "A"
+    },
+    {
+      "id": 1,
+      "observation_id": 1,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 45,
+      "observation_id": 45,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 40,
+      "observation_id": 40,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 61,
+      "observation_id": 61,
+      "lower_crown_diameter": "3.771",
+      "upper_crown_diameter": "6.1",
+      "transect_length": 148.05,
+      "code": "N"
+    },
+    {
+      "id": 41,
+      "observation_id": 41,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 20,
+      "observation_id": 20,
+      "lower_crown_diameter": "0.001",
+      "upper_crown_diameter": "0.01",
+      "transect_length": 0.15,
+      "code": "A"
+    },
+    {
+      "id": 46,
+      "observation_id": 46,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 21,
+      "observation_id": 21,
+      "lower_crown_diameter": "6.101",
+      "upper_crown_diameter": "9.87",
+      "transect_length": 239.55,
+      "code": "O"
+    },
+    {
+      "id": 42,
+      "observation_id": 42,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 22,
+      "observation_id": 22,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 73,
+      "observation_id": 73,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 23,
+      "observation_id": 23,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 43,
+      "observation_id": 43,
+      "lower_crown_diameter": "0.021",
+      "upper_crown_diameter": "0.03",
+      "transect_length": 0.75,
+      "code": "C"
+    },
+    {
+      "id": 24,
+      "observation_id": 24,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 8,
+      "observation_id": 8,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 47,
+      "observation_id": 47,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 9,
+      "observation_id": 9,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 25,
+      "observation_id": 25,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 10,
+      "observation_id": 10,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 44,
+      "observation_id": 44,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 11,
+      "observation_id": 11,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 62,
+      "observation_id": 62,
+      "lower_crown_diameter": "0.891",
+      "upper_crown_diameter": "1.44",
+      "transect_length": 34.95,
+      "code": "K"
+    },
+    {
+      "id": 26,
+      "observation_id": 26,
+      "lower_crown_diameter": "0.891",
+      "upper_crown_diameter": "1.44",
+      "transect_length": 34.95,
+      "code": "K"
+    },
+    {
+      "id": 12,
+      "observation_id": 12,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 13,
+      "observation_id": 13,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 48,
+      "observation_id": 48,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 27,
+      "observation_id": 27,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 14,
+      "observation_id": 14,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 15,
+      "observation_id": 15,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 28,
+      "observation_id": 28,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 16,
+      "observation_id": 16,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 49,
+      "observation_id": 49,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 29,
+      "observation_id": 29,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 63,
+      "observation_id": 63,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 30,
+      "observation_id": 30,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 50,
+      "observation_id": 50,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 31,
+      "observation_id": 31,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 32,
+      "observation_id": 32,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 74,
+      "observation_id": 74,
+      "lower_crown_diameter": "0.891",
+      "upper_crown_diameter": "1.44",
+      "transect_length": 34.95,
+      "code": "K"
+    },
+    {
+      "id": 51,
+      "observation_id": 51,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 33,
+      "observation_id": 33,
+      "lower_crown_diameter": "3.771",
+      "upper_crown_diameter": "6.1",
+      "transect_length": 148.05,
+      "code": "N"
+    },
+    {
+      "id": 64,
+      "observation_id": 64,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 34,
+      "observation_id": 34,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 52,
+      "observation_id": 52,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 53,
+      "observation_id": 53,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 65,
+      "observation_id": 65,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 54,
+      "observation_id": 54,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 75,
+      "observation_id": 75,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 55,
+      "observation_id": 55,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 66,
+      "observation_id": 66,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 56,
+      "observation_id": 56,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 57,
+      "observation_id": 57,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 67,
+      "observation_id": 67,
+      "lower_crown_diameter": "3.771",
+      "upper_crown_diameter": "6.1",
+      "transect_length": 148.05,
+      "code": "N"
+    },
+    {
+      "id": 58,
+      "observation_id": 58,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 76,
+      "observation_id": 76,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 59,
+      "observation_id": 59,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 68,
+      "observation_id": 68,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 60,
+      "observation_id": 60,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 69,
+      "observation_id": 69,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 77,
+      "observation_id": 77,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 70,
+      "observation_id": 70,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 71,
+      "observation_id": 71,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 78,
+      "observation_id": 78,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 72,
+      "observation_id": 72,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 79,
+      "observation_id": 79,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 80,
+      "observation_id": 80,
+      "lower_crown_diameter": "0.051",
+      "upper_crown_diameter": "0.08",
+      "transect_length": 1.95,
+      "code": "E"
+    },
+    {
+      "id": 81,
+      "observation_id": 81,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 82,
+      "observation_id": 82,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 83,
+      "observation_id": 83,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 109,
+      "observation_id": 109,
+      "lower_crown_diameter": "3.771",
+      "upper_crown_diameter": "6.1",
+      "transect_length": 148.05,
+      "code": "N"
+    },
+    {
+      "id": 84,
+      "observation_id": 84,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 119,
+      "observation_id": 119,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 85,
+      "observation_id": 85,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 110,
+      "observation_id": 110,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 86,
+      "observation_id": 86,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 87,
+      "observation_id": 87,
+      "lower_crown_diameter": "3.771",
+      "upper_crown_diameter": "6.1",
+      "transect_length": 148.05,
+      "code": "N"
+    },
+    {
+      "id": 111,
+      "observation_id": 111,
+      "lower_crown_diameter": "0.891",
+      "upper_crown_diameter": "1.44",
+      "transect_length": 34.95,
+      "code": "K"
+    },
+    {
+      "id": 88,
+      "observation_id": 88,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 120,
+      "observation_id": 120,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 89,
+      "observation_id": 89,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 112,
+      "observation_id": 112,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 90,
+      "observation_id": 90,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 91,
+      "observation_id": 91,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 113,
+      "observation_id": 113,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 92,
+      "observation_id": 92,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 121,
+      "observation_id": 121,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 93,
+      "observation_id": 93,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 114,
+      "observation_id": 114,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 94,
+      "observation_id": 94,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 95,
+      "observation_id": 95,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 115,
+      "observation_id": 115,
+      "lower_crown_diameter": "0.891",
+      "upper_crown_diameter": "1.44",
+      "transect_length": 34.95,
+      "code": "K"
+    },
+    {
+      "id": 96,
+      "observation_id": 96,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 122,
+      "observation_id": 122,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 97,
+      "observation_id": 97,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 123,
+      "observation_id": 123,
+      "lower_crown_diameter": "3.771",
+      "upper_crown_diameter": "6.1",
+      "transect_length": 148.05,
+      "code": "N"
+    },
+    {
+      "id": 99,
+      "observation_id": 99,
+      "lower_crown_diameter": "2.331",
+      "upper_crown_diameter": "3.77",
+      "transect_length": 91.5,
+      "code": "M"
+    },
+    {
+      "id": 100,
+      "observation_id": 100,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 124,
+      "observation_id": 124,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 101,
+      "observation_id": 101,
+      "lower_crown_diameter": "2.331",
+      "upper_crown_diameter": "3.77",
+      "transect_length": 91.5,
+      "code": "M"
+    },
+    {
+      "id": 102,
+      "observation_id": 102,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 125,
+      "observation_id": 125,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 103,
+      "observation_id": 103,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 104,
+      "observation_id": 104,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 126,
+      "observation_id": 126,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 105,
+      "observation_id": 105,
+      "lower_crown_diameter": "2.331",
+      "upper_crown_diameter": "3.77",
+      "transect_length": 91.5,
+      "code": "M"
+    },
+    {
+      "id": 106,
+      "observation_id": 106,
+      "lower_crown_diameter": "2.331",
+      "upper_crown_diameter": "3.77",
+      "transect_length": 91.5,
+      "code": "M"
+    },
+    {
+      "id": 127,
+      "observation_id": 127,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 107,
+      "observation_id": 107,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 108,
+      "observation_id": 108,
+      "lower_crown_diameter": "0.891",
+      "upper_crown_diameter": "1.44",
+      "transect_length": 34.95,
+      "code": "K"
+    },
+    {
+      "id": 128,
+      "observation_id": 128,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 116,
+      "observation_id": 116,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 117,
+      "observation_id": 117,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 118,
+      "observation_id": 118,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 129,
+      "observation_id": 129,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 130,
+      "observation_id": 130,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 131,
+      "observation_id": 131,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 132,
+      "observation_id": 132,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 133,
+      "observation_id": 133,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 134,
+      "observation_id": 134,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 135,
+      "observation_id": 135,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 161,
+      "observation_id": 161,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 136,
+      "observation_id": 136,
+      "lower_crown_diameter": "2.331",
+      "upper_crown_diameter": "3.77",
+      "transect_length": 91.5,
+      "code": "M"
+    },
+    {
+      "id": 137,
+      "observation_id": 137,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 164,
+      "observation_id": 164,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 162,
+      "observation_id": 162,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 138,
+      "observation_id": 138,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 139,
+      "observation_id": 139,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 182,
+      "observation_id": 182,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 140,
+      "observation_id": 140,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 165,
+      "observation_id": 165,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 141,
+      "observation_id": 141,
+      "lower_crown_diameter": "0.891",
+      "upper_crown_diameter": "1.44",
+      "transect_length": 34.95,
+      "code": "K"
+    },
+    {
+      "id": 142,
+      "observation_id": 142,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 166,
+      "observation_id": 166,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 143,
+      "observation_id": 143,
+      "lower_crown_diameter": "0.891",
+      "upper_crown_diameter": "1.44",
+      "transect_length": 34.95,
+      "code": "K"
+    },
+    {
+      "id": 183,
+      "observation_id": 183,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 144,
+      "observation_id": 144,
+      "lower_crown_diameter": "3.771",
+      "upper_crown_diameter": "6.1",
+      "transect_length": 148.05,
+      "code": "N"
+    },
+    {
+      "id": 167,
+      "observation_id": 167,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 145,
+      "observation_id": 145,
+      "lower_crown_diameter": "0.891",
+      "upper_crown_diameter": "1.44",
+      "transect_length": 34.95,
+      "code": "K"
+    },
+    {
+      "id": 146,
+      "observation_id": 146,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 168,
+      "observation_id": 168,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 147,
+      "observation_id": 147,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 184,
+      "observation_id": 184,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 148,
+      "observation_id": 148,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 169,
+      "observation_id": 169,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 149,
+      "observation_id": 149,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 150,
+      "observation_id": 150,
+      "lower_crown_diameter": "0.891",
+      "upper_crown_diameter": "1.44",
+      "transect_length": 34.95,
+      "code": "K"
+    },
+    {
+      "id": 170,
+      "observation_id": 170,
+      "lower_crown_diameter": "3.771",
+      "upper_crown_diameter": "6.1",
+      "transect_length": 148.05,
+      "code": "N"
+    },
+    {
+      "id": 151,
+      "observation_id": 151,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 185,
+      "observation_id": 185,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 152,
+      "observation_id": 152,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 171,
+      "observation_id": 171,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 153,
+      "observation_id": 153,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 154,
+      "observation_id": 154,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 172,
+      "observation_id": 172,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 155,
+      "observation_id": 155,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 186,
+      "observation_id": 186,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 156,
+      "observation_id": 156,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 173,
+      "observation_id": 173,
+      "lower_crown_diameter": "0.891",
+      "upper_crown_diameter": "1.44",
+      "transect_length": 34.95,
+      "code": "K"
+    },
+    {
+      "id": 157,
+      "observation_id": 157,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 158,
+      "observation_id": 158,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 174,
+      "observation_id": 174,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 159,
+      "observation_id": 159,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 187,
+      "observation_id": 187,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 160,
+      "observation_id": 160,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 175,
+      "observation_id": 175,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 163,
+      "observation_id": 163,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 176,
+      "observation_id": 176,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 188,
+      "observation_id": 188,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 177,
+      "observation_id": 177,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 178,
+      "observation_id": 178,
+      "lower_crown_diameter": "0.891",
+      "upper_crown_diameter": "1.44",
+      "transect_length": 34.95,
+      "code": "K"
+    },
+    {
+      "id": 189,
+      "observation_id": 189,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 179,
+      "observation_id": 179,
+      "lower_crown_diameter": "2.331",
+      "upper_crown_diameter": "3.77",
+      "transect_length": 91.5,
+      "code": "M"
+    },
+    {
+      "id": 180,
+      "observation_id": 180,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 190,
+      "observation_id": 190,
+      "lower_crown_diameter": "2.331",
+      "upper_crown_diameter": "3.77",
+      "transect_length": 91.5,
+      "code": "M"
+    },
+    {
+      "id": 181,
+      "observation_id": 181,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 191,
+      "observation_id": 191,
+      "lower_crown_diameter": "2.331",
+      "upper_crown_diameter": "3.77",
+      "transect_length": 91.5,
+      "code": "M"
+    },
+    {
+      "id": 192,
+      "observation_id": 192,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 193,
+      "observation_id": 193,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 194,
+      "observation_id": 194,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 195,
+      "observation_id": 195,
+      "lower_crown_diameter": "2.331",
+      "upper_crown_diameter": "3.77",
+      "transect_length": 91.5,
+      "code": "M"
+    },
+    {
+      "id": 221,
+      "observation_id": 221,
+      "lower_crown_diameter": "0.051",
+      "upper_crown_diameter": "0.08",
+      "transect_length": 1.95,
+      "code": "E"
+    },
+    {
+      "id": 196,
+      "observation_id": 196,
+      "lower_crown_diameter": "3.771",
+      "upper_crown_diameter": "6.1",
+      "transect_length": 148.05,
+      "code": "N"
+    },
+    {
+      "id": 233,
+      "observation_id": 233,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 197,
+      "observation_id": 197,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 222,
+      "observation_id": 222,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 198,
+      "observation_id": 198,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 199,
+      "observation_id": 199,
+      "lower_crown_diameter": "0.891",
+      "upper_crown_diameter": "1.44",
+      "transect_length": 34.95,
+      "code": "K"
+    },
+    {
+      "id": 223,
+      "observation_id": 223,
+      "lower_crown_diameter": "2.331",
+      "upper_crown_diameter": "3.77",
+      "transect_length": 91.5,
+      "code": "M"
+    },
+    {
+      "id": 200,
+      "observation_id": 200,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 234,
+      "observation_id": 234,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 201,
+      "observation_id": 201,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 224,
+      "observation_id": 224,
+      "lower_crown_diameter": "6.101",
+      "upper_crown_diameter": "9.87",
+      "transect_length": 239.55,
+      "code": "O"
+    },
+    {
+      "id": 202,
+      "observation_id": 202,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 203,
+      "observation_id": 203,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 225,
+      "observation_id": 225,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 204,
+      "observation_id": 204,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 235,
+      "observation_id": 235,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 205,
+      "observation_id": 205,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 226,
+      "observation_id": 226,
+      "lower_crown_diameter": "6.101",
+      "upper_crown_diameter": "9.87",
+      "transect_length": 239.55,
+      "code": "O"
+    },
+    {
+      "id": 206,
+      "observation_id": 206,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 207,
+      "observation_id": 207,
+      "lower_crown_diameter": "2.331",
+      "upper_crown_diameter": "3.77",
+      "transect_length": 91.5,
+      "code": "M"
+    },
+    {
+      "id": 227,
+      "observation_id": 227,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 208,
+      "observation_id": 208,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 236,
+      "observation_id": 236,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 209,
+      "observation_id": 209,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 228,
+      "observation_id": 228,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 210,
+      "observation_id": 210,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 211,
+      "observation_id": 211,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 229,
+      "observation_id": 229,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 212,
+      "observation_id": 212,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 237,
+      "observation_id": 237,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 213,
+      "observation_id": 213,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 214,
+      "observation_id": 214,
+      "lower_crown_diameter": "3.771",
+      "upper_crown_diameter": "6.1",
+      "transect_length": 148.05,
+      "code": "N"
+    },
+    {
+      "id": 238,
+      "observation_id": 238,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 215,
+      "observation_id": 215,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 216,
+      "observation_id": 216,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 239,
+      "observation_id": 239,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 217,
+      "observation_id": 217,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 218,
+      "observation_id": 218,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 240,
+      "observation_id": 240,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 219,
+      "observation_id": 219,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 220,
+      "observation_id": 220,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 241,
+      "observation_id": 241,
+      "lower_crown_diameter": "2.331",
+      "upper_crown_diameter": "3.77",
+      "transect_length": 91.5,
+      "code": "M"
+    },
+    {
+      "id": 230,
+      "observation_id": 230,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 242,
+      "observation_id": 242,
+      "lower_crown_diameter": "2.331",
+      "upper_crown_diameter": "3.77",
+      "transect_length": 91.5,
+      "code": "M"
+    },
+    {
+      "id": 231,
+      "observation_id": 231,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 232,
+      "observation_id": 232,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 243,
+      "observation_id": 243,
+      "lower_crown_diameter": "0.891",
+      "upper_crown_diameter": "1.44",
+      "transect_length": 34.95,
+      "code": "K"
+    },
+    {
+      "id": 244,
+      "observation_id": 244,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 245,
+      "observation_id": 245,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 246,
+      "observation_id": 246,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 247,
+      "observation_id": 247,
+      "lower_crown_diameter": "0.891",
+      "upper_crown_diameter": "1.44",
+      "transect_length": 34.95,
+      "code": "K"
+    },
+    {
+      "id": 248,
+      "observation_id": 248,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 249,
+      "observation_id": 249,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
     },
     {
       "id": 2,
@@ -17,12 +1889,180 @@
       "code": "A"
     },
     {
+      "id": 275,
+      "observation_id": 275,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 250,
+      "observation_id": 250,
+      "lower_crown_diameter": "0.051",
+      "upper_crown_diameter": "0.08",
+      "transect_length": 1.95,
+      "code": "E"
+    },
+    {
+      "id": 251,
+      "observation_id": 251,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 284,
+      "observation_id": 284,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 276,
+      "observation_id": 276,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 252,
+      "observation_id": 252,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 253,
+      "observation_id": 253,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 277,
+      "observation_id": 277,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 254,
+      "observation_id": 254,
+      "lower_crown_diameter": "3.771",
+      "upper_crown_diameter": "6.1",
+      "transect_length": 148.05,
+      "code": "N"
+    },
+    {
+      "id": 255,
+      "observation_id": 255,
+      "lower_crown_diameter": "0.551",
+      "upper_crown_diameter": "0.89",
+      "transect_length": 21.6,
+      "code": "J"
+    },
+    {
+      "id": 285,
+      "observation_id": 285,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 278,
+      "observation_id": 278,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 256,
+      "observation_id": 256,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 257,
+      "observation_id": 257,
+      "lower_crown_diameter": "0.051",
+      "upper_crown_diameter": "0.08",
+      "transect_length": 1.95,
+      "code": "E"
+    },
+    {
       "id": 5,
       "observation_id": 5,
       "lower_crown_diameter": "0.001",
       "upper_crown_diameter": "0.01",
       "transect_length": 0.15,
       "code": "A"
+    },
+    {
+      "id": 279,
+      "observation_id": 279,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 258,
+      "observation_id": 258,
+      "lower_crown_diameter": "0.891",
+      "upper_crown_diameter": "1.44",
+      "transect_length": 34.95,
+      "code": "K"
+    },
+    {
+      "id": 286,
+      "observation_id": 286,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 259,
+      "observation_id": 259,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 260,
+      "observation_id": 260,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 287,
+      "observation_id": 287,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 261,
+      "observation_id": 261,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
     },
     {
       "id": 6,
@@ -33,6 +2073,54 @@
       "code": "A"
     },
     {
+      "id": 262,
+      "observation_id": 262,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 288,
+      "observation_id": 288,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 263,
+      "observation_id": 263,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 264,
+      "observation_id": 264,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 289,
+      "observation_id": 289,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 265,
+      "observation_id": 265,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
       "id": 7,
       "observation_id": 7,
       "lower_crown_diameter": "0.001",
@@ -41,60 +2129,156 @@
       "code": "A"
     },
     {
-      "id": 8,
-      "observation_id": 8,
-      "lower_crown_diameter": "0.001",
-      "upper_crown_diameter": "0.01",
-      "transect_length": 0.15,
-      "code": "A"
+      "id": 266,
+      "observation_id": 266,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
     },
     {
-      "id": 9,
-      "observation_id": 9,
-      "lower_crown_diameter": "0.011",
-      "upper_crown_diameter": "0.02",
-      "transect_length": 0.45,
-      "code": "B"
+      "id": 290,
+      "observation_id": 290,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
     },
     {
-      "id": 10,
-      "observation_id": 10,
+      "id": 267,
+      "observation_id": 267,
+      "lower_crown_diameter": "0.891",
+      "upper_crown_diameter": "1.44",
+      "transect_length": 34.95,
+      "code": "K"
+    },
+    {
+      "id": 268,
+      "observation_id": 268,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 291,
+      "observation_id": 291,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
+    },
+    {
+      "id": 269,
+      "observation_id": 269,
+      "lower_crown_diameter": "0.891",
+      "upper_crown_diameter": "1.44",
+      "transect_length": 34.95,
+      "code": "K"
+    },
+    {
+      "id": 270,
+      "observation_id": 270,
+      "lower_crown_diameter": "0.891",
+      "upper_crown_diameter": "1.44",
+      "transect_length": 34.95,
+      "code": "K"
+    },
+    {
+      "id": 292,
+      "observation_id": 292,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 271,
+      "observation_id": 271,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 272,
+      "observation_id": 272,
+      "lower_crown_diameter": "1.441",
+      "upper_crown_diameter": "2.33",
+      "transect_length": 56.55,
+      "code": "L"
+    },
+    {
+      "id": 293,
+      "observation_id": 293,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 273,
+      "observation_id": 273,
+      "lower_crown_diameter": "0.341",
+      "upper_crown_diameter": "0.55",
+      "transect_length": 13.35,
+      "code": "I"
+    },
+    {
+      "id": 274,
+      "observation_id": 274,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 280,
+      "observation_id": 280,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
+    },
+    {
+      "id": 281,
+      "observation_id": 281,
+      "lower_crown_diameter": "0.081",
+      "upper_crown_diameter": "0.13",
+      "transect_length": 3.15,
+      "code": "F"
+    },
+    {
+      "id": 282,
+      "observation_id": 282,
       "lower_crown_diameter": "0.551",
       "upper_crown_diameter": "0.89",
       "transect_length": 21.6,
       "code": "J"
     },
     {
-      "id": 11,
-      "observation_id": 11,
-      "lower_crown_diameter": "0.021",
-      "upper_crown_diameter": "0.03",
-      "transect_length": 0.75,
-      "code": "C"
+      "id": 283,
+      "observation_id": 283,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
     },
     {
-      "id": 12,
-      "observation_id": 13,
-      "lower_crown_diameter": "0.001",
-      "upper_crown_diameter": "0.01",
-      "transect_length": 0.15,
-      "code": "A"
+      "id": 296,
+      "observation_id": 296,
+      "lower_crown_diameter": "0.211",
+      "upper_crown_diameter": "0.34",
+      "transect_length": 8.25,
+      "code": "H"
     },
     {
-      "id": 13,
-      "observation_id": 14,
-      "lower_crown_diameter": "0.011",
-      "upper_crown_diameter": "0.02",
-      "transect_length": 0.45,
-      "code": "B"
-    },
-    {
-      "id": 14,
-      "observation_id": 15,
-      "lower_crown_diameter": "0.021",
-      "upper_crown_diameter": "0.03",
-      "transect_length": 0.75,
-      "code": "C"
+      "id": 294,
+      "observation_id": 294,
+      "lower_crown_diameter": "0.131",
+      "upper_crown_diameter": "0.21",
+      "transect_length": 5.1,
+      "code": "G"
     }
   ]
 }
