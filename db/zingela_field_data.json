@@ -2,6 +2,8 @@
   "field_data": [
     {
       "id": 1,
+      "project_id": null,
+      "community_id": null,
       "date": "2015-11-22",
       "releve_number": null,
       "location": null,
@@ -17,6 +19,8 @@
     },
     {
       "id": 5,
+      "project_id": 1,
+      "community_id": null,
       "date": "2015-11-29",
       "releve_number": null,
       "location": "1",
@@ -32,6 +36,8 @@
     },
     {
       "id": 6,
+      "project_id": 1,
+      "community_id": null,
       "date": "2015-11-30",
       "releve_number": null,
       "location": "1",
@@ -47,6 +53,8 @@
     },
     {
       "id": 2,
+      "project_id": 1,
+      "community_id": 1,
       "date": "2015-11-26",
       "releve_number": null,
       "location": "1",
@@ -62,6 +70,8 @@
     },
     {
       "id": 3,
+      "project_id": 1,
+      "community_id": 1,
       "date": "2015-11-28",
       "releve_number": null,
       "location": "1",
@@ -77,6 +87,8 @@
     },
     {
       "id": 4,
+      "project_id": 1,
+      "community_id": 1,
       "date": "2015-11-28",
       "releve_number": null,
       "location": "1",
@@ -92,6 +104,8 @@
     },
     {
       "id": 13,
+      "project_id": 2,
+      "community_id": 4,
       "date": "2014-02-06",
       "releve_number": 6,
       "location": "Stanley",
@@ -107,6 +121,8 @@
     },
     {
       "id": 12,
+      "project_id": 2,
+      "community_id": 5,
       "date": "2014-04-02",
       "releve_number": 5,
       "location": "Newlands",
@@ -122,6 +138,8 @@
     },
     {
       "id": 11,
+      "project_id": 2,
+      "community_id": 5,
       "date": "2014-01-08",
       "releve_number": 4,
       "location": "Stanley",
@@ -137,6 +155,8 @@
     },
     {
       "id": 21,
+      "project_id": 2,
+      "community_id": 6,
       "date": "2014-01-08",
       "releve_number": 15,
       "location": "Stanley",
@@ -152,6 +172,8 @@
     },
     {
       "id": 10,
+      "project_id": 2,
+      "community_id": 6,
       "date": "2014-04-01",
       "releve_number": 3,
       "location": "Newlands",
@@ -167,6 +189,8 @@
     },
     {
       "id": 19,
+      "project_id": 2,
+      "community_id": 3,
       "date": "2014-02-06",
       "releve_number": 13,
       "location": "Stanley",
@@ -182,6 +206,8 @@
     },
     {
       "id": 20,
+      "project_id": 2,
+      "community_id": 4,
       "date": "2014-01-09",
       "releve_number": 14,
       "location": "Stanley",
@@ -197,6 +223,8 @@
     },
     {
       "id": 18,
+      "project_id": 2,
+      "community_id": 2,
       "date": "2014-02-07",
       "releve_number": 12,
       "location": "Stanley",
@@ -212,6 +240,8 @@
     },
     {
       "id": 17,
+      "project_id": 2,
+      "community_id": 4,
       "date": "2014-04-04",
       "releve_number": 11,
       "location": "Toppingvale",
@@ -227,6 +257,8 @@
     },
     {
       "id": 16,
+      "project_id": 2,
+      "community_id": 2,
       "date": "2014-04-04",
       "releve_number": 10,
       "location": "Toppingvale",
@@ -242,6 +274,8 @@
     },
     {
       "id": 15,
+      "project_id": 2,
+      "community_id": 5,
       "date": "2014-04-01",
       "releve_number": 9,
       "location": "Toppingvale",
@@ -257,6 +291,8 @@
     },
     {
       "id": 14,
+      "project_id": 2,
+      "community_id": 3,
       "date": "2014-04-04",
       "releve_number": 8,
       "location": "Stanley",
@@ -272,6 +308,8 @@
     },
     {
       "id": 7,
+      "project_id": 2,
+      "community_id": 2,
       "date": "2014-04-03",
       "releve_number": 7,
       "location": "Newlands",
@@ -287,6 +325,8 @@
     },
     {
       "id": 9,
+      "project_id": 2,
+      "community_id": 2,
       "date": "2014-04-02",
       "releve_number": 2,
       "location": "Newlands",
@@ -302,6 +342,8 @@
     },
     {
       "id": 8,
+      "project_id": 2,
+      "community_id": 6,
       "date": "2014-04-01",
       "releve_number": 1,
       "location": "Newlands",
