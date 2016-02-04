@@ -65,6 +65,7 @@ ActiveSupport::JSON.decode(json)["companies"].each do |fd|
   )
 end
 
+Project.delete_all()
 json = File.read("#{Rails.root}/db/zingela_projects.json")
 puts "--------------------- Projects-------------------------------------------"
 ActiveSupport::JSON.decode(json)["projects"].each do |fd|
@@ -79,7 +80,7 @@ ActiveSupport::JSON.decode(json)["projects"].each do |fd|
     :company_id => fd["company_id"]
   )
 end
-
+FieldDatum.delete_all()
 json = File.read("#{Rails.root}/db/zingela_field_data.json")
 puts "--------------------- Field Data-------------------------------------------"
 
@@ -104,7 +105,7 @@ ActiveSupport::JSON.decode(json)["field_data"].each do |fd|
 end
 
 
-
+Observation.delete_all()
 json = File.read("#{Rails.root}/db/zingela_observations.json")
 puts "--------------------- Observations-------------------------------------------"
 
@@ -117,6 +118,7 @@ ActiveSupport::JSON.decode(json)["observations"].each do |fd|
   )
 end
 
+Community.delete_all()
 json = File.read("#{Rails.root}/db/zingela_communities.json")
 puts "--------------------- Communities-------------------------------------------"
 
@@ -128,6 +130,7 @@ ActiveSupport::JSON.decode(json)["communities"].each do |fd|
   )
 end
 
+CrownDiameter.delete_all()
 json = File.read("#{Rails.root}/db/zingela_crown_diameters.json")
 puts "--------------------- Crown Diameter -------------------------------------------"
 
@@ -145,6 +148,7 @@ end
 json = File.read("#{Rails.root}/db/zingela_growth_forms.json")
 puts "--------------------- Growth Form -------------------------------------------"
 
+GrowthForm.delete_all()
 ActiveSupport::JSON.decode(json)["growth_forms"].each do |fd|
   puts fd["id"]
   GrowthForm.where(:id => fd["id"]).first_or_create(
@@ -155,6 +159,7 @@ ActiveSupport::JSON.decode(json)["growth_forms"].each do |fd|
   )
 end
 
+PlantCover.delete_all()
 json = File.read("#{Rails.root}/db/zingela_plant_covers.json")
 puts "--------------------- Plant Cover -------------------------------------------"
 
