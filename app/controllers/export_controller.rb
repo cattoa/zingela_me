@@ -10,6 +10,10 @@ def export_field_data
   @field_data = FieldDatum.all()
 end
 
+def export_species_families
+  @species_families = SpeciesFamily.all()
+end
+
 def export_projects
   @project_data = Project.all()
 end
