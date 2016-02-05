@@ -8,8 +8,9 @@
   %thead
     %tr
       %th Date
-      %th Location
       %th Project
+      %th Location
+      %th Releve
       %th Observer
       %th
       %th
@@ -19,8 +20,9 @@
       -# -if field_datum.project.company_id == current_user.company_id
       %tr
         %td= field_datum.date
-        %td= field_datum.location
         %td= field_datum.project.name
+        %td= field_datum.location
+        %td= field_datum.project.releve_number
         %td= field_datum.observer
         %td= link_to 'Show', field_datum, class: "btn btn-primary"
         %td= link_to 'Edit', edit_field_datum_path(field_datum), class: "btn btn-default"
