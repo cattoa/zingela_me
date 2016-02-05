@@ -39,7 +39,7 @@ ActiveSupport::JSON.decode(json)["species"].each do |fd|
     :min_hieght => fd["min_hieght"],
     :min_altitude => fd["min_altitude"],
     :max_altitude => fd["max_altitude"],
-    :distribution => species["distribution"]
+    :distribution => fd["distribution"]
     )
 end
 
