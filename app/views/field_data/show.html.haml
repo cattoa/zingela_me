@@ -45,7 +45,7 @@
   .col-lg-6.no-padding
     %h4
       %b Community:
-      = @field_datum.community_id
+      = Community.find(@field_datum.community_id).description 
   .col-lg-12.no-padding
     %h4
       %b Habitat description:
