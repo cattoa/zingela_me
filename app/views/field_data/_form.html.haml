@@ -25,16 +25,16 @@
   .field.col-lg-6.no-padding-right
     = f.label :location
     = f.text_field :location,:class=>'form-control'
-  .field.col-lg-4.no-padding-left
+  .field.col-lg-3.no-padding-left
     = f.label :latitude_degree
     = f.number_field :latitude_degree,:class=>'form-control'
-  .field.col-lg-4
+  .field.col-lg-3.no-padding
     = f.label :latitude_minutes
     = f.text_field :latitude_minutes,:class=>'form-control'
-  .field.col-lg-4.no-padding-left
+  .field.col-lg-3.no-padding
     = f.label :longitude_degree
     = f.number_field :longitude_degree,:class=>'form-control'
-  .field.col-lg-4
+  .field.col-lg-3.no-padding
     = f.label :longitude_minutes
     = f.text_field :longitude_minutes,:class=>'form-control'
   .field.col-lg-6.no-padding-left
@@ -42,10 +42,11 @@
     = f.number_field :altitude,:class=>'form-control'
   .field.col-lg-6.no-padding-right
     = f.label :community_id
+    = f.collection_select(:community_id, Community.select(:id, :description), :id, :description, {},{:class=>'form-control'} )
   .field.col-lg-12.no-padding-left
     = f.label :habitat_description
     = f.text_field :habitat_description,:class=>'form-control'
-    = f.collection_select(:community_id, Community.select(:id, :description), :id, :description, {},{:class=>'form-control'} )
+
   -#Community.where(project_id:f.collection_select(:project_id,Project.where(company_id:current_user.company_id),:id,:name,{})), :id, :description, {}, {:class=>'form-control'})
   -# .field
   -#   = f.label :habitat_description
