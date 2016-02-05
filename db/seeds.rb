@@ -24,10 +24,9 @@ json = File.read("#{Rails.root}/db/zingela_species_families.json")
 puts "--------------------- Species Families -------------------------------------------"
 ActiveSupport::JSON.decode(json)["species_families"].each do |fd|
   puts fd["id"]
-  Species.where(:id => fd["id"]).first_or_create(
+  SpeciesFamily.where(:id => fd["id"]).first_or_create(
     :name => fd["name"],
-    :company_id => fd["company_id"],
-    )
+  )
 end
 
 Species.delete_all()
