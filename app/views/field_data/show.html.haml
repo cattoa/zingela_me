@@ -24,13 +24,11 @@
       %b Latitude:
       = "#{@field_datum.latitude_degree} &deg;".html_safe
       = "#{@field_datum.latitude_minutes} '"
-      = "#{@field_datum.latitude_seconds} ''"
   .col-lg-6.no-padding
     %h4
       %b Longitude:
       = "#{@field_datum.longitude_degree} &deg;".html_safe
       = "#{@field_datum.longitude_minutes} '"
-      = "#{@field_datum.longitude_seconds} ''"
   .col-lg-6.no-padding
     %h4
       %b Observer:
@@ -39,6 +37,15 @@
     %h4
       %b Scale:
       = @field_datum.scale
+
+  .col-lg-6.no-padding
+    %h4
+      %b Altitude (m):
+      = @field_datum.altitude
+  .col-lg-6.no-padding
+    %h4
+      %b Community:
+      = @field_datum.community_id
   .col-lg-12.no-padding
     %h4
       %b Habitat description:
