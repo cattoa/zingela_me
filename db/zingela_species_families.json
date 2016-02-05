@@ -1,0 +1,459 @@
+{
+  "species_families": [
+    {
+      "id": 1,
+      "name": "AGAPANTHACEAE",
+      "company_id": null
+    },
+    {
+      "id": 2,
+      "name": "AIZOACEAE",
+      "company_id": null
+    },
+    {
+      "id": 3,
+      "name": "AMARANTHACEAE",
+      "company_id": null
+    },
+    {
+      "id": 4,
+      "name": "AMARYLLIDACEAE",
+      "company_id": null
+    },
+    {
+      "id": 5,
+      "name": "ANACARDIACEAE",
+      "company_id": null
+    },
+    {
+      "id": 6,
+      "name": "APIACEAE",
+      "company_id": null
+    },
+    {
+      "id": 7,
+      "name": "APOCYNACEAE",
+      "company_id": null
+    },
+    {
+      "id": 8,
+      "name": "ASPARAGACEAE",
+      "company_id": null
+    },
+    {
+      "id": 9,
+      "name": "ASPHODELACEAE",
+      "company_id": null
+    },
+    {
+      "id": 10,
+      "name": "ASPLENIACEAE",
+      "company_id": null
+    },
+    {
+      "id": 11,
+      "name": "ASTERACEAE",
+      "company_id": null
+    },
+    {
+      "id": 12,
+      "name": "FABACEAE",
+      "company_id": null
+    },
+    {
+      "id": 13,
+      "name": "FLACOURTIACEAE",
+      "company_id": null
+    },
+    {
+      "id": 14,
+      "name": "FUMARIACEAE",
+      "company_id": null
+    },
+    {
+      "id": 15,
+      "name": "GENTIANACEAE",
+      "company_id": null
+    },
+    {
+      "id": 16,
+      "name": "GERANIACEAE",
+      "company_id": null
+    },
+    {
+      "id": 17,
+      "name": "GESNERIACEAE",
+      "company_id": null
+    },
+    {
+      "id": 18,
+      "name": "HYACINTHACEAE",
+      "company_id": null
+    },
+    {
+      "id": 19,
+      "name": "HYPOXIDACEAE",
+      "company_id": null
+    },
+    {
+      "id": 20,
+      "name": "IRIDACEAE",
+      "company_id": null
+    },
+    {
+      "id": 21,
+      "name": "JUNCACEAE",
+      "company_id": null
+    },
+    {
+      "id": 22,
+      "name": "LAMIACEAE",
+      "company_id": null
+    },
+    {
+      "id": 23,
+      "name": "LINACEAE",
+      "company_id": null
+    },
+    {
+      "id": 24,
+      "name": "LOBELIACEAE",
+      "company_id": null
+    },
+    {
+      "id": 25,
+      "name": "MALVACEAE",
+      "company_id": null
+    },
+    {
+      "id": 26,
+      "name": "MESEMBRYANTHEMACEAE",
+      "company_id": null
+    },
+    {
+      "id": 27,
+      "name": "METEORIACEAE",
+      "company_id": null
+    },
+    {
+      "id": 28,
+      "name": "NECKERACEAE",
+      "company_id": null
+    },
+    {
+      "id": 29,
+      "name": "NYCTAGINACEAE",
+      "company_id": null
+    },
+    {
+      "id": 30,
+      "name": "OLEACEAE",
+      "company_id": null
+    },
+    {
+      "id": 31,
+      "name": "ORCHIDACEAE",
+      "company_id": null
+    },
+    {
+      "id": 32,
+      "name": "OXALIDACEAE",
+      "company_id": null
+    },
+    {
+      "id": 33,
+      "name": "PLUMBAGINACEAE",
+      "company_id": null
+    },
+    {
+      "id": 34,
+      "name": "POACEAE",
+      "company_id": null
+    },
+    {
+      "id": 35,
+      "name": "PODOCARPACEAE",
+      "company_id": null
+    },
+    {
+      "id": 36,
+      "name": "POLYGALACEAE",
+      "company_id": null
+    },
+    {
+      "id": 37,
+      "name": "POLYGONACEAE",
+      "company_id": null
+    },
+    {
+      "id": 38,
+      "name": "POLYPODIACEAE",
+      "company_id": null
+    },
+    {
+      "id": 39,
+      "name": "PORTULACACEAE",
+      "company_id": null
+    },
+    {
+      "id": 40,
+      "name": "POTTIACEAE",
+      "company_id": null
+    },
+    {
+      "id": 41,
+      "name": "PRIONODONTACEAE",
+      "company_id": null
+    },
+    {
+      "id": 42,
+      "name": "PTAEROXYLACEAE",
+      "company_id": null
+    },
+    {
+      "id": 43,
+      "name": "PTERIDACEAE",
+      "company_id": null
+    },
+    {
+      "id": 44,
+      "name": "RHAMNACEAE",
+      "company_id": null
+    },
+    {
+      "id": 45,
+      "name": "ROSACEAE",
+      "company_id": null
+    },
+    {
+      "id": 46,
+      "name": "RUBIACEAE",
+      "company_id": null
+    },
+    {
+      "id": 47,
+      "name": "RUTACEAE",
+      "company_id": null
+    },
+    {
+      "id": 48,
+      "name": "SALICACEAE",
+      "company_id": null
+    },
+    {
+      "id": 49,
+      "name": "SAPINDACEAE",
+      "company_id": null
+    },
+    {
+      "id": 50,
+      "name": "SCROPHULARIACEAE",
+      "company_id": null
+    },
+    {
+      "id": 51,
+      "name": "SINOPTERIDACEAE",
+      "company_id": null
+    },
+    {
+      "id": 52,
+      "name": "SOLANACEAE",
+      "company_id": null
+    },
+    {
+      "id": 53,
+      "name": "THELYPTERIDACEAE",
+      "company_id": null
+    },
+    {
+      "id": 54,
+      "name": "THYMELAEACEAE",
+      "company_id": null
+    },
+    {
+      "id": 55,
+      "name": "VERBENACEAE",
+      "company_id": null
+    },
+    {
+      "id": 56,
+      "name": "VISCACEAE",
+      "company_id": null
+    },
+    {
+      "id": 57,
+      "name": "ZYGOPHYLLACEAE",
+      "company_id": null
+    },
+    {
+      "id": 58,
+      "name": "CHENOPODIACEAE",
+      "company_id": null
+    },
+    {
+      "id": 59,
+      "name": "ACANTHACEAE",
+      "company_id": null
+    },
+    {
+      "id": 60,
+      "name": "BLECHNACEAE",
+      "company_id": null
+    },
+    {
+      "id": 61,
+      "name": "BRYACEAE",
+      "company_id": null
+    },
+    {
+      "id": 62,
+      "name": "BUDDLEJACEAE",
+      "company_id": null
+    },
+    {
+      "id": 63,
+      "name": "CYPERACEAE",
+      "company_id": null
+    },
+    {
+      "id": 64,
+      "name": "CELASTRACEAE",
+      "company_id": null
+    },
+    {
+      "id": 65,
+      "name": "EUPHORBIACEAE",
+      "company_id": null
+    },
+    {
+      "id": 66,
+      "name": "COLCHICACEAE",
+      "company_id": null
+    },
+    {
+      "id": 67,
+      "name": "SANTALACEAE",
+      "company_id": null
+    },
+    {
+      "id": 68,
+      "name": "COMBRETACEAE",
+      "company_id": null
+    },
+    {
+      "id": 69,
+      "name": "COMMELINACEAE",
+      "company_id": null
+    },
+    {
+      "id": 70,
+      "name": "CRASSULACEAE",
+      "company_id": null
+    },
+    {
+      "id": 71,
+      "name": "CORNACEAE",
+      "company_id": null
+    },
+    {
+      "id": 72,
+      "name": "CONVOLVULACEAE",
+      "company_id": null
+    },
+    {
+      "id": 73,
+      "name": "ARALIACEAE",
+      "company_id": null
+    },
+    {
+      "id": 74,
+      "name": "VITACEAE",
+      "company_id": null
+    },
+    {
+      "id": 75,
+      "name": "DRYOPTERIDACEAE",
+      "company_id": null
+    },
+    {
+      "id": 76,
+      "name": "WOODSIACEAE",
+      "company_id": null
+    },
+    {
+      "id": 77,
+      "name": "DIOSCOREACEAE",
+      "company_id": null
+    },
+    {
+      "id": 78,
+      "name": "EBENACEAE",
+      "company_id": null
+    },
+    {
+      "id": 79,
+      "name": "BORAGINACEAE",
+      "company_id": null
+    },
+    {
+      "id": 80,
+      "name": "ZAMIACEAE",
+      "company_id": null
+    },
+    {
+      "id": 81,
+      "name": "ERICACEAE",
+      "company_id": null
+    },
+    {
+      "id": 82,
+      "name": "BRASSICACEAE",
+      "company_id": null
+    },
+    {
+      "id": 83,
+      "name": "CACTACEAE",
+      "company_id": null
+    },
+    {
+      "id": 84,
+      "name": "CARYOPHYLLACEAE",
+      "company_id": null
+    },
+    {
+      "id": 85,
+      "name": "CAMPANULACEAE",
+      "company_id": null
+    },
+    {
+      "id": 86,
+      "name": "ANTHERICACEAE",
+      "company_id": null
+    },
+    {
+      "id": 87,
+      "name": "ASCLEPIADACEAE",
+      "company_id": null
+    },
+    {
+      "id": 88,
+      "name": "ULMACEAE",
+      "company_id": null
+    },
+    {
+      "id": 89,
+      "name": "LUZURIAGACEAE",
+      "company_id": null
+    },
+    {
+      "id": 90,
+      "name": "CUCURBITACEAE",
+      "company_id": null
+    },
+    {
+      "id": 91,
+      "name": "OCHNACEAE",
+      "company_id": null
+    }
+  ]
+}
