@@ -41,7 +41,6 @@ ActiveSupport::JSON.decode(json)["species"].each do |fd|
     :max_altitude => fd["max_altitude"],
     :distribution => species["distribution"]
     )
-  end
 end
 
 require 'rubygems'
