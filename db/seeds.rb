@@ -18,6 +18,18 @@
 # admin.password_confirmation = 'Qwerty1!'
 # admin.save!
 
+SpeciesFamily.delete_all()
+
+json = File.read("#{Rails.root}/db/zingela_species_families.json")
+puts "--------------------- Species Families -------------------------------------------"
+ActiveSupport::JSON.decode(json)["species_families"].each do |fd|
+  puts fd["id"]
+  Species.where(:id => fd["id"]).first_or_create(
+    :name => fd["name"],
+    :company_id => fd["company_id"],
+    )
+end
+
 Species.delete_all()
 
 json = File.read("#{Rails.root}/db/zingela_species.json")

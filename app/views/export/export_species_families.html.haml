@@ -1,0 +1,22 @@
+%h1.page-header
+  Show All Species Families
+-if(@species_families)
+  %table.table
+    %tr
+      %th
+        Id
+      %th
+        Name
+      %th
+        Company Id
+    -@species_families.each do |species_family|
+      %tr
+        %td
+          = species_family.id
+        %td
+          = species_family.name
+        %td
+          = species_family.company_id
+-else
+  %p No data found
+= link_to 'Back', field_data_path, class: "btn btn-default"
