@@ -13,6 +13,14 @@
       = @field_datum.date
   .col-lg-6.no-padding
     %h4
+      %b Observer:
+      = @field_datum.observer
+  .col-lg-6.no-padding
+    %h4
+      %b Scale:
+      = @field_datum.scale
+  .col-lg-6.no-padding
+    %h4
       %b Releve Number:
       = @field_datum.releve_number
   .col-lg-6.no-padding
@@ -29,14 +37,6 @@
       %b Longitude:
       = "#{@field_datum.longitude_degree} &deg;".html_safe
       = "#{@field_datum.longitude_minutes} '"
-  .col-lg-6.no-padding
-    %h4
-      %b Observer:
-      = @field_datum.observer
-  .col-lg-6.no-padding
-    %h4
-      %b Scale:
-      = @field_datum.scale
 
   .col-lg-6.no-padding
     %h4
