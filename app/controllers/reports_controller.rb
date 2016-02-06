@@ -10,6 +10,10 @@ class ReportsController < ApplicationController
     @project_report = ProjectReport.new
   end
 
+  def new_comparative_growth_report
+    @project_report = ProjectReport.new
+  end
+
   def root
     redirect_to root_path
   end
@@ -23,6 +27,10 @@ class ReportsController < ApplicationController
   end
 
   def create_community_composition_report
+    create_report_data
+  end
+
+  def create_comparative_growth_report
     create_report_data
   end
 

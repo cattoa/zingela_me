@@ -41,6 +41,7 @@ gem "wkhtmltopdf-binary"
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+gem "flot-rails"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'haml-rails'

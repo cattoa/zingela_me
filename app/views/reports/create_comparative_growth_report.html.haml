@@ -1,0 +1,54 @@
+:javascript
+  $(function() {
+      -# var d1 = [];
+      -# for (var i = 0; i < 14; i += 0.5) {
+      -#     d1.push([i, Math.sin(i)]);
+      -# }
+      var d2 = [[0, 3], [4, 8], [8, 5], [9, 13]];
+      -# // A null signifies separate line segments
+      -# var d3 = [[0, 12], [7, 12], null, [7, 2.5], [12, 2.5]];
+      -# var d1 =[{label: "y = 3",  data: [[0, 3], [10, 3]] }]
+      $.plot("#placeholder",  [ [[0, 0], [1, 1]] ], { yaxis: { max: 1 } });
+  });
+%h1.page-header
+  Appendix C - Comparative Growth
+.row
+  %div{:class => "col-md-8"}
+    %h2
+      =@community.description
+  %div{:class => "col-md-4"}
+    %h2
+      Date Created :
+      = DateTime.now.to_s(:db)
+- report_community = @community.report_communities.first
+- community_growth_forms = CommunityGrowthForm.where(report_community_id:report_community.id).order(:order)
+.row
+  %div{:class => "col-md-6"}
+    #placeholder{:style => "width:90%;height:300px"}
+  %div{:class => "col-md-6"}
+    %div{:class => "col-md-12"}
+      - total_percentage_cover = 0
+      - total_proportional_cover = 0
+      %table.table.table-striped.table-bordered
+        %th.col-lg-6 Description
+        %th.col-lg-3 Percentage Cover
+        %th.col-lg-3 Proportional Cover
+        - objArray = Array.new
+        - community_growth_forms.each do |community_growth_form|
+          - total_percentage_cover = total_percentage_cover + community_growth_form.percentage_cover
+          - total_proportional_cover = total_proportional_cover + community_growth_form.proportional_cover
+          %tr
+            %td
+              = community_growth_form.description
+            %td
+              = community_growth_form.percentage_cover.round(2)
+            %td
+              = community_growth_form.proportional_cover.round(2)
+        %tr
+          %td
+            %b
+              Growth form totals
+          %td
+            = total_percentage_cover.round(2)
+          %td
+            = total_proportional_cover.round(2)

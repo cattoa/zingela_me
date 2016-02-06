@@ -1,0 +1,15 @@
+%h1.page-header
+  New
+  %small
+    Comparative Growth report
+.col-lg-8
+  = form_for(@project_report, url: "/create/comparative_growth/report/") do |f|
+    .field
+      %label
+        Select a project
+      = f.collection_select(:community_id, Community.where(project_id:Project.where(company_id:current_user.company_id)), :id, :description, {}, {:class=>'form-control'})
+    .clear-20
+    .actions
+      = f.submit 'Create Report', class: "btn btn-info pull-right"
+      = f.submit 'Download Report', format: 'pdf', class: "btn btn-primary pdf_exclude"
+      = link_to 'Back', root_path, class: "btn btn-danger"

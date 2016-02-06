@@ -95,7 +95,8 @@
           = total_proportional_cover.round(2)
 
   -if community_growth_form.has_weak_competitor?
-    %h3 Normal Competitors
+    %h3
+      %span.col-lg-12 Weak Competitors
     - community_covers = CommunityCover.where(community_growth_form_id:community_growth_form.id,competitor:2).order(:difference)
     - total_percentage_cover = 0
     - total_proportional_cover = 0

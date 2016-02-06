@@ -15,6 +15,9 @@
 //= require turbolinks
 //= require_tree .
 //= require cocoon
+//= require jquery.flot
+//= require jquery.flot.resize
+
 var ready;
 ready = function() {
   if($(".add_fields").length == 1&& $("#edit").length == 0){
