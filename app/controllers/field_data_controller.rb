@@ -5,7 +5,7 @@ class FieldDataController < ApplicationController
   # GET /field_data.json
   def index
     projects = Project.where(company_id:current_user.company_id)
-    @field_data = FieldDatum.where(project: projects)
+    @field_data = FieldDatum.where(project: projects).order(:releve_number)
   end
 
   # GET /field_data/1
