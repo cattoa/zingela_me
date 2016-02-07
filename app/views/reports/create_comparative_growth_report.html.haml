@@ -1,15 +1,9 @@
 :javascript
   $(function() {
-      -# var d1 = [];
-      -# for (var i = 0; i < 14; i += 0.5) {
-      -#     d1.push([i, Math.sin(i)]);
-      -# }
-      var d2 = [[0, 3], [4, 8], [8, 5], [9, 13]];
-      -# // A null signifies separate line segments
-      -# var d3 = [[0, 12], [7, 12], null, [7, 2.5], [12, 2.5]];
-      -# var d1 =[{label: "y = 3",  data: [[0, 3], [10, 3]] }]
-      $.plot("#placeholder",  [ [[0, 0], [1, 1]] ], { yaxis: { max: 1 } });
-  });
+      //var d1 = gon.graph_data;
+      //alert data;
+      $.plot("#placeholder", gon.graph_data,gon.config);
+      });
 %h1.page-header
   Appendix C - Comparative Growth
 .row
@@ -24,7 +18,8 @@
 - community_growth_forms = CommunityGrowthForm.where(report_community_id:report_community.id).order(:order)
 .row
   %div{:class => "col-md-6"}
-    #placeholder{:style => "width:90%;height:300px"}
+    #placeholder{:style => "width:95%;height:450px"}
+
   %div{:class => "col-md-6"}
     %div{:class => "col-md-12"}
       - total_percentage_cover = 0

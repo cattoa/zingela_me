@@ -32,6 +32,7 @@ class ReportsController < ApplicationController
 
   def create_comparative_growth_report
     create_report_data
+    create_graph_data
   end
 
   def create_species_report
@@ -277,6 +278,80 @@ class ReportsController < ApplicationController
         end # End of if community_growth_forms exist
     end # End of if field_datum
   end # End of function create_community_cover_report
+
+
+  def create_graph_data
+    report_community = @community.report_communities.first
+    community_growth_forms = CommunityGrowthForm.where(report_community_id:report_community.id).order(:order)
+    data_perc = []
+    data_prop = []
+    data_ticks = []
+    i = 1
+    community_growth_forms.each do |community_growth_form|
+      if (community_growth_form)
+        # data_perc.push([community_growth_form.description,community_growth_form.percentage_cover.round(2)])
+        data_perc.push([i,community_growth_form.percentage_cover.round(2)])
+        i = i + 1
+        data_prop.push([i,community_growth_form.proportional_cover.round(2)])
+        tick =[i-0.5,community_growth_form.description]
+        data_ticks.push(tick)
+        i = i + 1
+      end
+    end
+    data1 =
+        {
+           label: "Percentage Cover",
+           data: data_perc,
+           bars: {
+               show: true,
+               fill: true,
+               lineWidth: 1,
+               barWidth: 0.5,
+               order: 1,
+               fillColor:  "#C2DEE4"
+           },
+           color: "#C2DEE4"
+       }
+     data2 =
+         {
+            label: "Proportional Cover",
+            data: data_prop,
+            bars: {
+                show: true,
+                fill: true,
+                lineWidth: 1,
+                barWidth: 0.5,
+                order: 2,
+                fillColor:  "#154561"
+            },
+            color: "#154561"
+        }
+    axes = {
+      xaxis: {
+          min: 0,
+          max: i,
+          axisLabel: "Growth Forms",
+          axisLabelUseCanvas: true,
+          axisLabelFontSizePixels: 12,
+          axisLabelFontFamily: 'Verdana, Arial, Helvetica, Tahoma, sans-serif',
+          axisLabelPadding: 5,
+          ticks: data_ticks,
+          tickLength: 0,
+
+      },
+      yaxis: {
+
+          axisLabel: "Percentage",
+          axisLabelUseCanvas: true,
+          axisLabelFontSizePixels: 12,
+          axisLabelFontFamily: 'Verdana, Arial, Helvetica, Tahoma, sans-serif',
+          axisLabelPadding: 5
+      }
+    }
+    gon.graph_data = [data1,data2]
+    gon.config = axes
+  end
+
 protected
   def project_report_params
     params.require(:project_report).permit(:community_id)

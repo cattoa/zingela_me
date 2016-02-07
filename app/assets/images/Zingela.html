@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html><head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>Zingela</title>
+    <link href="Zingela_files/css.css" rel="stylesheet" type="text/css">
+    <link href="Zingela_files/bootstrap.css" rel="stylesheet">
+    <link href="Zingela_files/font-awesome.css" rel="stylesheet">
+    <link href="Zingela_files/jquery-ui.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script>
+    //<![CDATA[
+    window.gon={};gon.graph_data=[{"label":"Percentage Cover","data":[[1,9.54],[2,1.95],[3,47.52],[4,11.76]],"bars":{"show":true,"fill":true,"lineWidth":1,"barWidth":0.25,"order":1,"fillColor":"#AA4643"},"color":"#AA4643"}];
+    //]]>
+    </script>
+    <link rel="stylesheet" media="all" href="Zingela_files/bootstrap_admin.css" data-turbolinks-track="true">
+    <link rel="stylesheet" media="all" href="Zingela_files/welcomes.css" data-turbolinks-track="true">
+    <link rel="stylesheet" media="all" href="Zingela_files/application.css" data-turbolinks-track="true">
+    <script src="Zingela_files/jquery_002.js" data-turbolinks-track="true"></script>
+    <script src="Zingela_files/jquery_ujs.js" data-turbolinks-track="true"></script>
+    <script src="Zingela_files/turbolinks.js" data-turbolinks-track="true"></script>
+    <script src="Zingela_files/autocomplete.js" data-turbolinks-track="true"></script>
+    <script src="Zingela_files/cocoon.js" data-turbolinks-track="true"></script>
+    <script src="Zingela_files/jquery.js" data-turbolinks-track="true"></script>
+    <script src="Zingela_files/jquery_003.js" data-turbolinks-track="true"></script>
+    <script src="Zingela_files/application.js" data-turbolinks-track="true"></script>
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token" content="NKmwToOkSgCJhKuRJrUFq1kRcs3tAaGFS+sxE/m/kZ5ID8hpZen60nRna7nbZ7VkBedFjbjwRrft2cP5HDEoPQ==">
+    <script src="Zingela_files/bootstrap.js" type="text/javascript"></script>
+    <script src="Zingela_files/jquery-ui.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid z-index">
+        <div class="navbar-header">
+          <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="http://localhost:3000/"><img class="navbar-brand" src="Zingela_files/zingela_logo-6b00d0597e4939f0a05458cbd283f16762d94408641a0c5.png" alt="Zingela logo 6b00d0597e4939f0a05458cbd283f16762d94408641a0c5adeadad8ccc416d49"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav"></ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-user"></i>
+                allistair@bobcatt.co.za
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="http://localhost:3000/" onclick="return false;">
+                    Zingela Consulting
+                    <i class="fa fa-building"></i>
+                  </a>
+                </li>
+                <li>
+                  <a rel="nofollow" data-method="delete" href="http://localhost:3000/users/sign_out">Logout <i class="fa fa-fw fa-power-off"></i></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul class="nav navbar-nav side-nav">
+        <li>
+          <a data-target="#projects" data-toggle="collapse" href="javascript:;">
+            <i class="fa fa-files-o"></i>
+            Projects
+            <i class="fa fa-fw fa-caret-down"></i>
+          </a>
+          <ul class="collapse" id="projects">
+            <li>
+              <a href="http://localhost:3000/projects/new">New <i class="fa fa-fw fa-plus"></i></a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/projects">Manage <i class="fa fa-fw fa-pencil"></i></a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a data-target="#field_data" data-toggle="collapse" href="javascript:;">
+            <i class="fa fa-database"></i>
+            Field Data
+            <i class="fa fa-fw fa-caret-down"></i>
+          </a>
+          <ul class="collapse" id="field_data">
+            <li>
+              <a href="http://localhost:3000/field_data/new">New <i class="fa fa-fw fa-plus"></i></a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/field_data">Manage <i class="fa fa-fw fa-pencil"></i></a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a data-target="#species_family" data-toggle="collapse" href="javascript:;">
+            <i class="fa fa-globe"></i>
+            Species Family
+            <i class="fa fa-fw fa-caret-down"></i>
+          </a>
+          <ul class="collapse" id="species_family">
+            <li>
+              <a href="http://localhost:3000/species_families/new">New <i class="fa fa-fw fa-plus"></i></a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/species_families">Manage <i class="fa fa-fw fa-pencil"></i></a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a data-target="#species" data-toggle="collapse" href="javascript:;">
+            <i class="fa fa-pagelines"></i>
+            Species
+            <i class="fa fa-fw fa-caret-down"></i>
+          </a>
+          <ul class="collapse" id="species">
+            <li>
+              <a href="http://localhost:3000/species/new">New <i class="fa fa-fw fa-plus"></i></a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/species">Manage <i class="fa fa-fw fa-pencil"></i></a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a data-target="#communities" data-toggle="collapse" href="javascript:;">
+            <i class="fa fa-users"></i>
+            Communities
+            <i class="fa fa-fw fa-caret-down"></i>
+          </a>
+          <ul class="collapse" id="communities">
+            <li>
+              <a href="http://localhost:3000/communities/new">New <i class="fa fa-fw fa-plus"></i></a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/communities">Manage <i class="fa fa-fw fa-pencil"></i></a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a data-target="#report" data-toggle="collapse" href="javascript:;">
+            <i class="fa fa-file-text-o"></i>
+            Reports
+            <i class="fa fa-fw fa-caret-down"></i>
+          </a>
+          <ul class="collapse" id="report">
+            <li>
+              <a href="http://localhost:3000/new/community_cover/report">Community cover report</a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/new/community_composition/report">Community composition report</a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/new/comparative_growth/report">Comparative growth report</a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/create/species/report">Species report</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a data-target="#imports" data-toggle="collapse" href="javascript:;">
+            <i class="fa fa-file-text-o"></i>
+            Exports
+            <i class="fa fa-fw fa-caret-down"></i>
+          </a>
+          <ul class="collapse" id="imports">
+            <li>
+              <a href="http://localhost:3000/export/species_families">Species Family</a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/export/companies">Companies</a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/export/projects">Projects</a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/export/communities">Communities</a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/export/field_data">Field Data</a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/export/observations">Observations</a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/export/growth_forms">Growth forms</a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/export/crown_diameter">Crown Diameter</a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/export/plant_cover">Plant Cover</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div id="wrapper">
+      <div id="page-wrapper">
+        <div class="container-fluid">
+          <script>
+            $(function() {
+                var d1 = gon.graph_data;
+                //alert data;
+                $.plot("#placeholder", d1);
+                });
+          </script>
+          <h1 class="page-header">
+            Appendix C - Comparative Growth
+          </h1>
+          <div class="row">
+            <div class="col-md-8">
+              <h2>
+                Sour veld
+              </h2>
+            </div>
+            <div class="col-md-4">
+              <h2>
+                Date Created :
+                2016-02-07 12:12:34
+              </h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div id="placeholder" style="width: 90%; height: 300px; padding: 0px; position: relative;"><canvas height="300" width="686" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 686px; height: 300px;" class="flot-base"></canvas><div style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);" class="flot-text"><div style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;" class="flot-x-axis flot-x1-axis xAxis x1Axis"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 282px; left: 12px; text-align: center;">1.0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 282px; left: 113px; text-align: center;">1.5</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 282px; left: 214px; text-align: center;">2.0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 282px; left: 316px; text-align: center;">2.5</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 282px; left: 417px; text-align: center;">3.0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 282px; left: 518px; text-align: center;">3.5</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 282px; left: 620px; text-align: center;">4.0</div></div><div style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;" class="flot-y-axis flot-y1-axis yAxis y1Axis"><div class="flot-tick-label tickLabel" style="position: absolute; top: 269px; left: 8px; text-align: right;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 215px; left: 2px; text-align: right;">10</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 161px; left: 2px; text-align: right;">20</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 108px; left: 2px; text-align: right;">30</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 54px; left: 2px; text-align: right;">40</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 0px; left: 2px; text-align: right;">50</div></div></div><canvas height="300" width="686" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 686px; height: 300px;" class="flot-overlay"></canvas><div class="legend"><div style="position: absolute; width: 102px; height: 16px; top: 13px; right: 13px; background-color: rgb(255, 255, 255); opacity: 0.85;"> </div><table style="position:absolute;top:13px;right:13px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #AA4643;overflow:hidden"></div></div></td><td class="legendLabel">Percentage Cover</td></tr></tbody></table></div></div>
+            </div>
+            <div class="col-md-6">
+              <div class="col-md-12">
+                <table class="table table-striped table-bordered">
+                  <tbody><tr><th class="col-lg-6">Description</th>
+                  <th class="col-lg-3">Percentage Cover</th>
+                  <th class="col-lg-3">Proportional Cover</th>
+                  </tr><tr>
+                    <td>
+                      Dwarf Shrubs
+                    </td>
+                    <td>
+                      9.54
+                    </td>
+                    <td>
+                      50.0
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Forbs
+                    </td>
+                    <td>
+                      1.95
+                    </td>
+                    <td>
+                      50.0
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Grasses
+                    </td>
+                    <td>
+                      47.52
+                    </td>
+                    <td>
+                      50.0
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Shrubs
+                    </td>
+                    <td>
+                      11.76
+                    </td>
+                    <td>
+                      50.0
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <b>
+                        Growth form totals
+                      </b>
+                    </td>
+                    <td>
+                      70.77
+                    </td>
+                    <td>
+                      200.0
+                    </td>
+                  </tr>
+                </tbody></table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+</body></html>

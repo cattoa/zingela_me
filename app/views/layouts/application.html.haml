@@ -9,11 +9,13 @@
     %link{:href => "http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css", :rel => "stylesheet"}/
 
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    = include_gon
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
     %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js", :type => "text/javascript"}
     %script{:src => "http://code.jquery.com/ui/1.11.4/jquery-ui.min.js", :type => "text/javascript"}
+    %script{:src => "https://raw.github.com/xuanluo/flot-axislabels/master/jquery.flot.axislabels.js"}
   %body
     = render "layouts/header"
     #wrapper
