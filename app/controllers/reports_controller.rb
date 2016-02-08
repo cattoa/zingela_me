@@ -86,7 +86,7 @@ class ReportsController < ApplicationController
             else
               community_cover.percentage_cover = community_cover.percentage_cover+plant_cover.percentage
             end
-            logger.info "------- Percentage cover #{community_cover.percentage_cover} "
+            logger.debug "------- Percentage cover #{community_cover.percentage_cover} "
             if community_cover.mean_canopy_diameter.nil?
               community_cover.mean_canopy_diameter = mean_canopy_diameter
             else
