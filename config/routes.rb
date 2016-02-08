@@ -20,6 +20,8 @@ Rails.application.routes.draw do
     get 'export/plant_cover/' => :export_plant_cover
     get 'export/communities/' => :export_communities
     get 'export/species_families/' => :export_species_families
+    get 'export/community_growth_form/' => :export_community_growth_forms
+    get 'export/report_communities/' => :export_report_communities
 
     post 'export/companies/' => :export_companies
     post 'export/projects/' => :export_projects
@@ -30,6 +32,9 @@ Rails.application.routes.draw do
     post 'export/plant_cover/' => :export_plant_cover
     post 'export/communities/' => :export_communities
     post 'export/species_families/' => :export_species_families
+    post 'export/community_growth_form/' => :export_community_growth_forms
+    post 'export/report_communities/' => :export_report_communities
+
   end
   controller :import do
     get 'import/show/' => :import_data_path

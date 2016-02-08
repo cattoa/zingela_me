@@ -70,14 +70,15 @@
         %th
           = cfg.std_error
         %th
-          has_strong_competitor
+          = cfg.has_strong_competitor
         %th
-          has_normal_competitor
+          = cfg.has_normal_competitor
         %th
-          has_weak_competitor
+          = cfg.has_weak_competitor
         %th
-          report_community
+          = Community.find(cfg.report_community_id)
         %th
+          = cfg.order
 
 -else
   %p No data found

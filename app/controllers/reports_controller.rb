@@ -25,7 +25,12 @@ class ReportsController < ApplicationController
   def create_community_cover_report
     create_report_data
   end
-
+  def community_growth_forms
+    @community_growth_forms = CommunityGrowthForm.all
+  end
+  def report_communities
+    @report_communities - ReportCommunity.all
+  end
   def create_community_composition_report
     create_report_data
   end
