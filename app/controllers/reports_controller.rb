@@ -68,7 +68,7 @@ class ReportsController < ApplicationController
           observations.each do |observation|
             growth_form = GrowthForm.find_by(observation_id:observation.id)
             description = growth_form.description
-            logger.info "--------------------------#{description}"
+            logger.debug "--------------------------#{description}"
             community_growth_form =CommunityGrowthForm.find_or_create_by(description:description,report_community_id:@report_community.id)
             community_growth_form.order = growth_form.order
             community_growth_form.save!
@@ -79,8 +79,8 @@ class ReportsController < ApplicationController
             community_cover = CommunityCover.find_or_create_by(species_id:species.id,community_growth_form_id:community_growth_form.id)
 
             mean_canopy_diameter = (crown_diameter.lower_crown_diameter.to_f + crown_diameter.upper_crown_diameter.to_f)/2
-            logger.info "------- Species #{species} Mean Canopy Diameter #{mean_canopy_diameter}"
-            logger.info "------- Plant Cover Percentage  #{plant_cover.percentage}  Code #{plant_cover.code}"
+            logger.debug "------- Species #{species} Mean Canopy Diameter #{mean_canopy_diameter}"
+            logger.debug "------- Plant Cover Percentage  #{plant_cover.percentage}  Code #{plant_cover.code}"
             if community_cover.percentage_cover.nil?
               community_cover.percentage_cover = plant_cover.percentage
             else
@@ -92,7 +92,7 @@ class ReportsController < ApplicationController
             else
               community_cover.mean_canopy_diameter = community_cover.mean_canopy_diameter+mean_canopy_diameter
             end
-            logger.info "------- Mean canopy diameter  #{community_cover.mean_canopy_diameter} "
+            logger.debug "------- Mean canopy diameter  #{community_cover.mean_canopy_diameter} "
             if community_cover.count.nil?
               community_cover.count = 1
             else
@@ -238,8 +238,8 @@ class ReportsController < ApplicationController
               #      0 = Strong
               #      1 = Normal
               #      2 = Weak
-              logger.info "Diffrence #{community_cover.difference}"
-              logger.info "std Error #{community_growth_form.std_error}"
+              logger.debug "Diffrence #{community_cover.difference}"
+              logger.debug "std Error #{community_growth_form.std_error}"
               if community_cover.difference>community_growth_form.std_error
                 community_cover.competitor = 0
                 community_growth_form.has_strong_competitor = true
