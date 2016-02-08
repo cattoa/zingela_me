@@ -1,0 +1,39 @@
+%h1.page-header
+  Show Report Comunities
+-if(@report_communities)
+  %table.table
+    %tr
+      %th
+        Id
+      %th
+        Percentage Cover
+      %th
+        Mean Canopy Diameter
+      %th
+        individual per hectre
+      %th
+        Community
+    -@report_communities.each do |report_community|
+      %tr
+        %td
+          = report_community.id
+        %td
+          = report_community.percentage_cover
+        %td
+          = report_community.mean_canopy_diameter
+        %td
+          = report_community.individuals_per_hectare
+        %td
+          = Community.find(report_community.community_id).description
+-else
+  %p No data found
+= link_to 'Back', field_data_path, class: "btn btn-default"
+
+  -# create_table "report_communities", force: :cascade do |t|
+  -#   t.float    "percentage_cover"
+  -#   t.float    "mean_canopy_diameter"
+  -#   t.float    "individuals_per_hectare"
+  -#   t.integer  "community_id"
+  -#   t.datetime "created_at",              null: false
+  -#   t.datetime "updated_at",              null: false
+  -# end
