@@ -33,6 +33,7 @@ class CommunityGrowthFormsController < ApplicationController
       if @community_growth_form.save
         format.html { redirect_to @community_growth_form, notice: 'Community growth form was successfully created.' }
         format.json { render :show, status: :created, location: @community_growth_form }
+        logger.info "New community growth form: #{@community_growth_form.attributes.inspect}"
       else
         format.html { render :new }
         format.json { render json: @community_growth_form.errors, status: :unprocessable_entity }
@@ -47,6 +48,7 @@ class CommunityGrowthFormsController < ApplicationController
       if @community_growth_form.update(community_growth_form_params)
         format.html { redirect_to @community_growth_form, notice: 'Community growth form was successfully updated.' }
         format.json { render :show, status: :ok, location: @community_growth_form }
+        logger.info "New community growth form: #{@community_growth_form.attributes.inspect}"
       else
         format.html { render :edit }
         format.json { render json: @community_growth_form.errors, status: :unprocessable_entity }

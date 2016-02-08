@@ -33,6 +33,7 @@ class ReportCommunitiesController < ApplicationController
       if @report_community.save
         format.html { redirect_to @report_community, notice: 'Report community was successfully created.' }
         format.json { render :show, status: :created, location: @report_community }
+        logger.info "New report community: #{@report_community.attributes.inspect}"
       else
         format.html { render :new }
         format.json { render json: @report_community.errors, status: :unprocessable_entity }
@@ -47,6 +48,7 @@ class ReportCommunitiesController < ApplicationController
       if @report_community.update(report_community_params)
         format.html { redirect_to @report_community, notice: 'Report community was successfully updated.' }
         format.json { render :show, status: :ok, location: @report_community }
+        logger.info "New report community: #{@report_community.attributes.inspect}"
       else
         format.html { render :edit }
         format.json { render json: @report_community.errors, status: :unprocessable_entity }
