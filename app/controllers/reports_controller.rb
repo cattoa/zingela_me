@@ -28,9 +28,11 @@ class ReportsController < ApplicationController
   def community_growth_forms
     @community_growth_forms = CommunityGrowthForm.all
   end
+
   def report_communities
     @report_communities - ReportCommunity.all
   end
+
   def create_community_composition_report
     create_report_data
   end
@@ -51,7 +53,7 @@ class ReportsController < ApplicationController
 
     #------------------------------------
     # DELETE OLD REPORT COMMUNITIES
-    report_communities = ReportCommunity.where(community:@community)
+    report_communities = ReportCommunity.all()
     if (report_communities)
       report_communities.each do |report_community|
         report_community.destroy

@@ -52,56 +52,34 @@
         %th
           = cgf.percentage_cover_mean
         %th
-          = cgf.occurance_mMean
+          = cgf.occurance_mean
         %th
           = cgf.slope
         %th
           = cgf.intercept
         %th
-          = cgf.precentage_cover
+          = cgf.percentage_cover
         %th
-          = cfg.proportional_cover
+          = cgf.proportional_cover
         %th
-          = cfg.mean_canopy_diameter
+          = cgf.mean_canopy_diameter
         %th
-          = cfg.individuals_per_hectare
+          = cgf.individuals_per_hectare
         %th
-          = cfg.std_deviation
+          = cgf.std_deviation
         %th
-          = cfg.std_error
+          = cgf.std_error
         %th
-          = cfg.has_strong_competitor
+          = cgf.has_strong_competitor
         %th
-          = cfg.has_normal_competitor
+          = cgf.has_normal_competitor
         %th
-          = cfg.has_weak_competitor
+          = cgf.has_weak_competitor
         %th
-          = Community.find(cfg.report_community_id)
+          = cgf.report_community_id
         %th
-          = cfg.order
+          = cgf.order
 
 -else
   %p No data found
 = link_to 'Back', field_data_path, class: "btn btn-default"
-
--# create_table "community_growth_forms", force: :cascade do |t|
--#   t.string   "description"
--#   t.integer  "count"
--#   t.float    "percentage_cover_mean"
--#   t.float    "occurance_mean"
--#   t.float    "slope"
--#   t.float    "intercept"
--#   t.float    "percentage_cover"
--#   t.float    "proportional_cover"
--#   t.float    "mean_canopy_diameter"
--#   t.float    "individuals_per_hectare"
--#   t.float    "std_deviation"
--#   t.float    "std_error"
--#   t.boolean  "has_strong_competitor"
--#   t.boolean  "has_normal_competitor"
--#   t.boolean  "has_weak_competitor"
--#   t.datetime "created_at",              null: false
--#   t.datetime "updated_at",              null: false
--#   t.integer  "report_community_id"
--#   t.integer  "order"
--# end

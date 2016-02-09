@@ -18,6 +18,10 @@ def export_projects
   @project_data = Project.all()
 end
 
+def export_community_covers
+  @community_covers = CommunityCover.all()
+end
+
 def export_communities
   @communities = Community.all()
 end
@@ -28,6 +32,14 @@ end
 
 def export_growth_forms
   @growth_forms = GrowthForm.all()
+end
+
+def export_community_growth_forms
+  @community_growth_forms = CommunityGrowthForm.all
+end
+
+def export_report_communities
+  @report_communities = ReportCommunity.all
 end
 
 def export_observations
