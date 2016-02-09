@@ -57,6 +57,8 @@
           = cc.competitor
         %th
           = cc.community_growth_form_id
+
+
 -else
   %p No data found
 = link_to 'Back', field_data_path, class: "btn btn-default"
