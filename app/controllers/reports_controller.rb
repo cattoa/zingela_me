@@ -105,6 +105,7 @@ class ReportsController < ApplicationController
             else
               community_cover.count = community_cover.count+1
             end
+            community_cover.number_of_communiunities = number_of_sites
             community_cover.save!
           end # Observation loop
         end # If observation
