@@ -83,7 +83,7 @@ class ReportsController < ApplicationController
             species = observation.species
             crown_diameter = CrownDiameter.find_by(observation_id:observation.id)
 
-            community_cover = CommunityCover.find_or_create_by(species_id:species.id,community_growth_form_id:community_growth_form.id,observation_id:observation.id)
+            community_cover = CommunityCover.find_or_create_by(species_id:species.id,community_growth_form_id:community_growth_form.id)
 
             mean_canopy_diameter = (crown_diameter.lower_crown_diameter.to_f + crown_diameter.upper_crown_diameter.to_f)/2
             logger.debug "------- Species #{species} Mean Canopy Diameter #{mean_canopy_diameter}"
