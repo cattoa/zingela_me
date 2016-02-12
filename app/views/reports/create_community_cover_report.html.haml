@@ -13,7 +13,7 @@
   %h3
     Growth Form -
     = community_growth_form.description
-  - community_covers = CommunityCover.where(community_growth_form_id:community_growth_form.id)
+  - community_covers = CommunityCover.where(community_growth_form_id:community_growth_form.id).order(:percentage_cover)
   - total_percentage_cover_mean = 0
   - total_mean_canopy_diameter = 0
   - total_individual_per_hectare = 0
@@ -31,10 +31,10 @@
           = community_cover.percentage_cover.round(2)
           - total_percentage_cover_mean = total_percentage_cover_mean + community_cover.percentage_cover
         %td
-          = community_cover.mean_canopy_diameter.round(2)
+          = community_cover.mean_canopy_diameter.round(3)
           - total_mean_canopy_diameter = total_mean_canopy_diameter + community_cover.mean_canopy_diameter
         %td
-          = community_cover.individual_per_hectare.round(2)
+          = community_cover.individual_per_hectare.round(0)
           - total_individual_per_hectare = total_individual_per_hectare + community_cover.individual_per_hectare
     %tr
       %td
@@ -43,6 +43,6 @@
       %td
         = total_percentage_cover_mean.round(2)
       %td
-        = total_mean_canopy_diameter.round(2)
+        = total_mean_canopy_diameter.round(3)
       %td
-        = total_individual_per_hectare.round(2)
+        = total_individual_per_hectare.round(0)
