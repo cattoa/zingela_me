@@ -48,7 +48,7 @@ class ReportsController < ApplicationController
 
   def create_report_data
     @community = Community.find(project_report_params[:community_id])
-    puts("-------------------------------------Community : #{@community.description}")
+    logger.debug "-------------------------------------Community : #{@community.description}"
     #@project = Project.find(@community.project_id)
 
     #------------------------------------
@@ -75,7 +75,6 @@ class ReportsController < ApplicationController
           observations.each do |observation|
             growth_form = GrowthForm.find_by(observation_id:observation.id)
             description = growth_form.description
-            logger.debug "--------------------------#{description}"
             community_growth_form =CommunityGrowthForm.find_or_create_by(description:description,report_community_id:@report_community.id)
             community_growth_form.order = growth_form.order
             community_growth_form.save!
@@ -86,20 +85,16 @@ class ReportsController < ApplicationController
             community_cover = CommunityCover.find_or_create_by(species_id:species.id,community_growth_form_id:community_growth_form.id)
 
             mean_canopy_diameter = (crown_diameter.lower_crown_diameter.to_f + crown_diameter.upper_crown_diameter.to_f)/2
-            logger.debug "------- Species #{species} Mean Canopy Diameter #{mean_canopy_diameter}"
-            logger.debug "------- Plant Cover Percentage  #{plant_cover.percentage}  Code #{plant_cover.code}"
             if community_cover.percentage_cover.nil?
               community_cover.percentage_cover = plant_cover.percentage
             else
               community_cover.percentage_cover = community_cover.percentage_cover+plant_cover.percentage
             end
-            logger.debug "------- Percentage cover #{community_cover.percentage_cover} "
             if community_cover.mean_canopy_diameter.nil?
               community_cover.mean_canopy_diameter = mean_canopy_diameter
             else
               community_cover.mean_canopy_diameter = community_cover.mean_canopy_diameter+mean_canopy_diameter
             end
-            logger.debug "------- Mean canopy diameter  #{community_cover.mean_canopy_diameter} "
             if community_cover.count.nil?
               community_cover.count = 1
             else
@@ -122,7 +117,7 @@ class ReportsController < ApplicationController
         # community_growth_forms.each do |community_growth_form|
 
         # 1st Loop
-      total_percentage_cover = 0.0
+      cfg_total_percentage_cover = 0.0
       community_growth_forms = CommunityGrowthForm.where(report_community_id:@report_community.id)
       if (community_growth_forms)
           community_growth_forms.each do |community_growth_form|
@@ -172,15 +167,14 @@ class ReportsController < ApplicationController
                 else
                   community_growth_form.std_deviation = community_growth_form.std_deviation+std_deviation
                 end
-                # puts "(#{community_growth_form.std_error} = (#{community_cover_count}-#{community_growth_form.occurance_mean})*(#{community_cover.percentage_cover}-#{community_growth_form.percentage_cover_mean})"
                 if community_growth_form.std_error.nil?
                   community_growth_form.std_error = std_error
                 else
                   community_growth_form.std_error = community_growth_form.std_error+std_error
                 end
 
-                slope_divisor = (slope_divisor+(community_cover.count-community_growth_form.occurance_mean)**2).to_f
-                yysquare = (yysquare+(community_cover.percentage_cover-community_growth_form.percentage_cover_mean)**2).to_f
+                slope_divisor = (slope_divisor+((community_cover.count-community_growth_form.occurance_mean)**2)).to_f
+                yysquare = (yysquare+((community_cover.percentage_cover-community_growth_form.percentage_cover_mean)**2)).to_f
                 if community_growth_form.percentage_cover.nil?
                   community_growth_form.percentage_cover = community_cover.percentage_cover
                 else
@@ -206,21 +200,22 @@ class ReportsController < ApplicationController
             else
               count2 = 1
             end
+            logger.debug "slope divisor : #{slope_divisor}"
+            logger.debug "community growth form slope: #{community_growth_form.slope}"
+            logger.debug "count2 : #{count2}"
             if slope_divisor > 0
               community_growth_form.slope = community_growth_form.slope/slope_divisor
+              # pow((round(($yysquare - (pow($FinalCommunityGrowthForm/StdError,2) div $SlopeDivisor)),8) div $Count2),0.5) else
               if count2 > 0
-                a = (community_growth_form.std_error**2).to_f
-                puts(a)
-                b=((yysquare-a)/slope_divisor).to_f
-                puts(b)
+                a = ((community_growth_form.std_error**2)/slope_divisor).to_f
+                b=((yysquare-a).to_f).round(8)
                 c=(b/count2)
-                puts(c)
                 if (c > 0.000000001)
                   std_error = (c**0.5)
-                  puts(std_error)
                 else
                   std_error = 0
                 end
+                logger.debug "Std Error : #{std_error}"
                 community_growth_form.std_error=std_error.round(8)
               else
                 community_growth_form.std_error = 0
@@ -246,8 +241,6 @@ class ReportsController < ApplicationController
               #      0 = Strong
               #      1 = Normal
               #      2 = Weak
-              logger.debug "Diffrence #{community_cover.difference}"
-              logger.debug "std Error #{community_growth_form.std_error}"
               if community_cover.difference>community_growth_form.std_error
                 community_cover.competitor = 0
                 community_growth_form.has_strong_competitor = true
@@ -276,17 +269,20 @@ class ReportsController < ApplicationController
               @report_community.individuals_per_hectare = @report_community.individuals_per_hectare+community_growth_form.individuals_per_hectare
             end
             @report_community.save!
-            total_percentage_cover=total_percentage_cover+community_growth_form.percentage_cover
+            cfg_total_percentage_cover=cfg_total_percentage_cover+community_growth_form.percentage_cover
             community_growth_form.save!
-            if total_percentage_cover >0
-              community_growth_form.proportional_cover = (community_growth_form.percentage_cover/total_percentage_cover)*100
+          end # community_growth_forms loop
+          community_growth_forms.each do |community_growth_form|
+            if cfg_total_percentage_cover >0
+              community_growth_form.proportional_cover = (community_growth_form.percentage_cover/cfg_total_percentage_cover)*100
             else
               community_growth_form.proportional_cover = 0
             end
             community_growth_form.save!
-
-          end # community_growth_forms loop
+          end
         end # End of if community_growth_forms exist
+
+
     end # End of if field_datum
   end # End of function create_community_cover_report
 

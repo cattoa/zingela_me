@@ -14,7 +14,7 @@
       = community_growth_form.description
     %span.col-lg-6
       Std Error of the mean :
-      = community_growth_form.std_error
+      = community_growth_form.std_error.round(3)
   -if community_growth_form.has_strong_competitor?
     %h3
       %span.col-lg-12 Strong Competitors
