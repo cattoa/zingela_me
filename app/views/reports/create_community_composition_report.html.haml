@@ -42,18 +42,6 @@
             = community_cover.difference.round(3)
           %td
             = community_cover.count
-      %tr
-        %td
-          %b
-            Total percentage cover
-        %td
-          = total_percentage_cover.round(2)
-      %tr
-        %td
-          %b
-            Total proportional cover
-        %td
-          = total_proportional_cover.round(2)
   -if community_growth_form.has_normal_competitor?
     %h3
       %span.col-lg-12 Normal Competitors
@@ -81,18 +69,6 @@
             = community_cover.difference.round(3)
           %td
             = community_cover.count
-      %tr
-        %td
-          %b
-            Total percentage cover
-        %td
-          = total_percentage_cover.round(2)
-      %tr
-        %td
-          %b
-            Total propotional cover
-        %td
-          = total_proportional_cover.round(2)
 
   -if community_growth_form.has_weak_competitor?
     %h3
@@ -121,15 +97,19 @@
             = community_cover.difference.round(3)
           %td
             = community_cover.count
-      %tr
-        %td
-          %b
-            Total percentage cover
-        %td
-          = total_percentage_cover.round(2)
-      %tr
-        %td
-          %b
-            Total proportional cover
-        %td
-          = total_proportional_cover.round(2)
+  %table.table.table-striped.table-bordered
+    %tr
+      %td.col-lg-4
+        %b
+          Total percentage cover
+      %td.col-lg-2
+        %b
+          = community_growth_form.percentage_cover.round(2)
+      %td.col-lg-6
+    %tr
+      %td.col-lg-4
+        %b
+          Total proportional cover
+      %td.col-lg-2
+        %b
+          = community_growth_form.proportional_cover.round(2)
